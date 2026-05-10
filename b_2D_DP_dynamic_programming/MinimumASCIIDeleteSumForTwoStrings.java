@@ -12,6 +12,8 @@ public class MinimumASCIIDeleteSumForTwoStrings {
             }
         }
 
+        int total = 0;
+
         return total - 2 * dp[n][m];
     }
 }
