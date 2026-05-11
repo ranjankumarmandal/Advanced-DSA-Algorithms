@@ -15,6 +15,21 @@ public class CountDifferentPalindroicSubsequence {
                 for (int k = 0; k < 4; k++) {
                     char c = (char) ('a' + k);
 
+                    if (s.charAt(i) == c && s.charAt(j) == c) {
+                        dp[i][j][k] = 2;
+                        if (i + 1 <= j - 1) {
+                            for (int t = 0; t < 4; t++) {
+                                dp[i][j][k] += dp[i + 1][j - 1][t];
+                            }
+                        }
+                    } else if (s.charAt(i) == c) {
+                        dp[i][j][k] = dp[i][j - 1][k];
+                    } else if (s.charAt(j) == c) {
+                        dp[i][j][k] = dp[i + 1][j][k];
+                    } else {
+                        dp[i][j][k] = i + 1 <= j - 1 ? dp[i + 1][j - 1][k] : 0;
+                    }
+
                     dp[i][j][k] %= mod;
                 }
             }
