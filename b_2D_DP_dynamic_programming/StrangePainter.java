@@ -8,6 +8,10 @@ public class StrangePainter {
             for (int j = i + 1; j < n; j++) {
                 dp[i][j] = dp[i + 1][j] + 1;
                 for (int k = i + 1; k <= j; k++) {
+                    if (s.charAt(i) == s.charAt(k)) {
+                        dp[i][j] = Math.min(dp[i][j],
+                                dp[i][k - 1] + (k + 1 <= j ? dp[k + 1][j] : 0));
+                    }
                 }
             }
         }
