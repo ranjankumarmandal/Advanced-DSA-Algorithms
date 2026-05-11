@@ -15,6 +15,15 @@ public class NumberOfMatchingSubsequence2 {
             int i = 0;
             int j = 0;
 
+            while(i<ch.length && j<temp.length){
+                if(ch[i]==temp[j]){
+                    i++;
+                    j++;
+                }else{
+                    i++;
+                }
+            }
+
             if(j==temp.length){
                 ans+=map.get(str);
             }
