@@ -26,6 +26,16 @@ public class SplitArrayWithSameAverage {
 
         dp.get(0).add(0);
 
+        for (int num : nums) {
+            for (int k = n / 2; k >= 1; k--) {
+                Set<Integer> prev = new HashSet<>(dp.get(k - 1));
+
+                for (int sum : prev) {
+                    dp.get(k).add(sum + num);
+                }
+            }
+        }
+
         for (int k = 1; k <= n / 2; k++) {
             if ((totalSum * k) % n == 0) {
                 int target = (totalSum * k) / n;
