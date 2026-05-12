@@ -8,6 +8,8 @@ public class ChampagneTower {
                 if (tower[r][c] > 1.0) {
                     double excess = (tower[r][c] - 1.0) / 2.0;
                     tower[r][c] = 1.0;
+                    tower[r + 1][c] += excess;
+                    tower[r + 1][c + 1] += excess;
                 }
             }
         }
