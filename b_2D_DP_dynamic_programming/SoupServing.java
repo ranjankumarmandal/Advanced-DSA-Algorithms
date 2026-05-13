@@ -17,7 +17,12 @@ public class SoupServing {
 
         if (cache[soupA][soupB] != null) return cache[soupA][soupB];
 
-
+        double prob = 0.25 * (
+                calcProb(soupA - 4, soupB) +
+                        calcProb(soupA - 3, soupB - 1) +
+                        calcProb(soupA - 2, soupB - 2) +
+                        calcProb(soupA - 1, soupB - 3)
+        );
 
         cache[soupA][soupB] = prob;
         return prob;
