@@ -16,7 +16,19 @@ public class LargestSumOfAverages {
             return lastPartitionSum / (end - start);
         }
 
+        double max = 0;
+        for(int i = start+1; i < end; i++) {
+            double res = divide(nums, i, end, k-1, dp);
 
+            double currPartitionSum = 0;
+            for(int j = start; j < i; j++) {
+                currPartitionSum += nums[j];
+            }
+            double avg = currPartitionSum / (i - start);
+            max = Math.max(res + avg, max);
+        }
+
+        dp[start][k] = max;
 
         return max;
     }
