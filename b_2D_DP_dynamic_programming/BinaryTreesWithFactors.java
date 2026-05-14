@@ -15,7 +15,15 @@ public class BinaryTreesWithFactors {
         for (int i = 0; i < arr.length; i++) {
             long ways = 1;
 
+            for (int j = 0; j < i; j++) {
+                if (arr[i] % arr[j] == 0) {
+                    int right = arr[i] / arr[j];
 
+                    if (set.contains(right)) {
+                        ways = (ways + dp.get(arr[j]) * dp.get(right)) % mod;
+                    }
+                }
+            }
 
             dp.put(arr[i], ways);
             result = (result + ways) % mod;
