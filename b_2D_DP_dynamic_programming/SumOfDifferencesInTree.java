@@ -40,4 +40,15 @@ public class SumOfDifferencesInTree {
             count[node] += count[next];
         }
     }
+
+    private void dfs2(int node, int parent) {
+        for (int next : graph[node]) {
+            if (next == parent) {
+                continue;
+            }
+
+            ans[next] = ans[node] - count[next] + (n - count[next]);
+            dfs2(next, node);
+        }
+    }
 }
