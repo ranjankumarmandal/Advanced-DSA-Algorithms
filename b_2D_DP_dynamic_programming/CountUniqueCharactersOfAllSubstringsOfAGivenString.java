@@ -10,7 +10,18 @@ public class CountUniqueCharactersOfAllSubstringsOfAGivenString {
 
         int result = 0;
 
+        for (int i = 0; i < n; i++) {
+            int c = s.charAt(i) - 'A';
 
+            result += (i - pos[c][1]) * (pos[c][1] - pos[c][0]);
+
+            pos[c][0] = pos[c][1];
+            pos[c][1] = i;
+        }
+
+        for (int c = 0; c < 26; c++) {
+            result += (n - pos[c][1]) * (pos[c][1] - pos[c][0]);
+        }
 
         return result;
     }
