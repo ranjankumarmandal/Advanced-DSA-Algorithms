@@ -16,6 +16,14 @@ public class AllPossibleFullBinaryTree {
             return memo.get(n);
         }
 
+        List<TreeNode> res = new ArrayList<>();
+
+        for (int left = 1; left < n; left += 2) {
+            int right = n - 1 - left;
+
+
+        }
+
         memo.put(n, res);
         return res;
     }
