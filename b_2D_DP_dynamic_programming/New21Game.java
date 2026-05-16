@@ -8,6 +8,19 @@ public class New21Game {
         double windowSum = 1.0;
         double result = 0.0;
 
+        for (int i = 1; i <= n; i++) {
+            dp[i] = windowSum / maxPts;
+
+            if (i < k) {
+                windowSum += dp[i];
+            } else {
+                result += dp[i];
+            }
+
+            if (i - maxPts >= 0) {
+                windowSum -= dp[i - maxPts];
+            }
+        }
 
         return result;
     }
