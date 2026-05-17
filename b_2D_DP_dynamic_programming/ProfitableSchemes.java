@@ -18,6 +18,10 @@ public class ProfitableSchemes {
 
         int ans = 0;
 
+        for (int members = 0; members <= n; members++) {
+            ans = (ans + dp[members][minProfit]) % mod;
+        }
+
         return ans;
     }
 }
