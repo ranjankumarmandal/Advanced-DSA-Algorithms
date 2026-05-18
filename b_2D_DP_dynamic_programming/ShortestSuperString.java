@@ -78,6 +78,12 @@ public class ShortestSuperString {
 
         StringBuilder sb = new StringBuilder(words[path[0]]);
 
+        for (int i = 1; i < n; i++) {
+            int a = path[i - 1];
+            int b = path[i];
+
+            sb.append(words[b].substring(overlap[a][b]));
+        }
 
         return sb.toString();
     }
