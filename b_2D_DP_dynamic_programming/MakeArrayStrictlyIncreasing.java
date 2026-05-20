@@ -41,5 +41,19 @@ public class MakeArrayStrictlyIncreasing {
         return dp[n - 1] >= INF ? -1 : dp[n - 1];
     }
 
-    p
+    private int lowerBound(int[] arr, int n, int target) {
+        int l = 0, r = n;
+
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+
+            if (arr[mid] >= target) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+
+        return l;
+    }
 }
