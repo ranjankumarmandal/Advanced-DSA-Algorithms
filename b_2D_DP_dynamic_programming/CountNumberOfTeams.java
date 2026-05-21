@@ -3,6 +3,13 @@ public class CountNumberOfTeams {
         int n = rating.length;
         int ans = 0;
 
+        for (int j = 0; j < n; j++) {
+            int leftLess = 0, leftGreater = 0;
+            int rightLess = 0, rightGreater = 0;
+
+
+        }
+
         return ans;
     }
 }
