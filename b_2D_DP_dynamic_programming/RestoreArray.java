@@ -8,6 +8,7 @@ public class RestoreArray {
         for (int i = n - 1; i >= 0; i--) {
             if (s.charAt(i) == '0') continue;
 
+            long num = 0;
 
         }
 
