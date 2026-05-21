@@ -9,6 +9,11 @@ public class CountNumberOfTeams {
 
 
 
+            for (int k = j + 1; k < n; k++) {
+                if (rating[k] < rating[j]) rightLess++;
+                else if (rating[k] > rating[j]) rightGreater++;
+            }
+
             ans += leftLess * rightGreater + leftGreater * rightLess;
         }
 
