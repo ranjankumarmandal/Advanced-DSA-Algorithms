@@ -8,6 +8,8 @@ public class CountNumberOfTeams {
             int rightLess = 0, rightGreater = 0;
 
 
+
+            ans += leftLess * rightGreater + leftGreater * rightLess;
         }
 
         return ans;
