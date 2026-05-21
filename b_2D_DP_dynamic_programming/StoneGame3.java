@@ -6,6 +6,11 @@ public class StoneGame3 {
         for (int i = n - 1; i >= 0; i--) {
             dp[i] = Integer.MIN_VALUE;
             int sum = 0;
+
+            for (int j = i; j < Math.min(i + 3, n); j++) {
+                sum += stoneValue[j];
+                dp[i] = Math.max(dp[i], sum - dp[j + 1]);
+            }
         }
     }
 }
