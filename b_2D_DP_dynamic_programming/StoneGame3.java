@@ -12,5 +12,9 @@ public class StoneGame3 {
                 dp[i] = Math.max(dp[i], sum - dp[j + 1]);
             }
         }
+
+        if (dp[0] > 0) return "Alice";
+        if (dp[0] < 0) return "Bob";
+        return "Tie";
     }
 }
