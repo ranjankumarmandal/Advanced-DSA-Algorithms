@@ -25,7 +25,13 @@ public class SmallestSufficientTeam {
         for (int i = 0; i < people.size(); i++) {
             int skill = personMask[i];
 
+            for (int mask = 0; mask < (1 << n); mask++) {
+                if (dp[mask] == null) continue;
 
+                int newMask = mask | skill;
+
+
+            }
         }
 
         List<Integer> ans = dp[(1 << n) - 1];
