@@ -9,7 +9,9 @@ public class MinHeightShelves {
             int width = 0;
             int height = 0;
 
-
+            for (int j = i; j >= 1; j--) {
+                width += books[j - 1][0];
+            }
         }
 
         return dp[n];
