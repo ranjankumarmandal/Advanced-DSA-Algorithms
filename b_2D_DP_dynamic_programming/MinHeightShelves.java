@@ -11,6 +11,14 @@ public class MinHeightShelves {
 
             for (int j = i; j >= 1; j--) {
                 width += books[j - 1][0];
+
+                if (width > shelfWidth) {
+                    break;
+                }
+
+                height = Math.max(height, books[j - 1][1]);
+
+                dp[i] = Math.min(dp[i], dp[j - 1] + height);
             }
         }
 
