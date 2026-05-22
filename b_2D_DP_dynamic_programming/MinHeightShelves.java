@@ -3,7 +3,10 @@ public class MinHeightShelves {
         int n = books.length;
         int[] dp = new int[n + 1];
 
+        for (int i = 1; i <= n; i++) {
 
+
+        }
 
         return dp[n];
     }
