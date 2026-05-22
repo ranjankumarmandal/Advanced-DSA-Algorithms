@@ -30,7 +30,11 @@ public class SmallestSufficientTeam {
 
                 int newMask = mask | skill;
 
-
+                if (dp[newMask] == null || dp[newMask].size() > dp[mask].size() + 1) {
+                    List<Integer> team = new ArrayList<>(dp[mask]);
+                    team.add(i);
+                    dp[newMask] = team;
+                }
             }
         }
 
