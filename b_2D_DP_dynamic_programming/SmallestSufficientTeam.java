@@ -22,7 +22,11 @@ public class SmallestSufficientTeam {
         List<Integer>[] dp = new ArrayList[1 << n];
         dp[0] = new ArrayList<>();
 
+        for (int i = 0; i < people.size(); i++) {
+            int skill = personMask[i];
 
+
+        }
 
         List<Integer> ans = dp[(1 << n) - 1];
         int[] res = new int[ans.size()];
