@@ -27,6 +27,12 @@ public class LeadOperatorsToExpressNumber {
         }
         sum /= x;
 
+        int ops = power + dfs(x, target - sum);
+
+        if (sum * x - target < target) {
+            ops = Math.min(ops, power + 1 + dfs(x, sum * x - target));
+        }
+
         memo.put(key, ops);
         return ops;
     }
