@@ -19,6 +19,14 @@ public class LeadOperatorsToExpressNumber {
             return ops;
         }
 
+        long sum = x;
+        int power = 0;
+        while (sum <= target) {
+            sum *= x;
+            power++;
+        }
+        sum /= x;
+
         memo.put(key, ops);
         return ops;
     }
