@@ -18,6 +18,21 @@ public class CreateMaxNumber {
 
 
 
+    private int[] merge(int[] a, int[] b) {
+        int n = a.length, m = b.length;
+        int[] res = new int[n + m];
+        int i = 0, j = 0, r = 0;
+        while (i < n || j < m) {
+            if (greater(a, i, b, j)) {
+                res[r++] = a[i++];
+            } else {
+                res[r++] = b[j++];
+            }
+        }
+
+        return res;
+    }
+
     public int[] maxNumber(int[] nums1, int[] nums2, int k) {
         int n = nums1.length, m = nums2.length;
         int[] res = new int[k];
