@@ -8,6 +8,9 @@ public class PatchingArray {
             if (i < nums.length && nums[i] <= reach) {
                 reach += nums[i];
                 i++;
+            } else {
+                reach += reach;
+                patches++;
             }
         }
 
