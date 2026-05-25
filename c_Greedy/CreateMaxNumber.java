@@ -16,7 +16,14 @@ public class CreateMaxNumber {
         return st;
     }
 
+    private boolean greater(int[] a, int i, int[] b, int j) {
+        while (i < a.length && j < b.length && a[i] == b[j]) {
+            i++;
+            j++;
+        }
 
+        return j == b.length || (i < a.length && a[i] > b[j]);
+    }
 
     private int[] merge(int[] a, int[] b) {
         int n = a.length, m = b.length;
