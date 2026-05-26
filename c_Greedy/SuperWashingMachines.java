@@ -12,6 +12,10 @@ public class SuperWashingMachines {
             return -1;
         }
 
+        int target = total / n;
+        int balance = 0;
+        int moves = 0;
+
         return moves;
     }
 }
