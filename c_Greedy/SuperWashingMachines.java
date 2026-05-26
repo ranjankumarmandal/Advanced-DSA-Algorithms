@@ -16,6 +16,11 @@ public class SuperWashingMachines {
         int balance = 0;
         int moves = 0;
 
+        for (int dresses : machines) {
+            balance += dresses - target;
+            moves = Math.max(moves, Math.max(Math.abs(balance), dresses - target));
+        }
+
         return moves;
     }
 }
