@@ -4,6 +4,10 @@ public class ValidTriangleNumber {
         int n = nums.length;
         int ans = 0;
 
+        for (int k = n - 1; k >= 2; k--) {
+
+        }
+
         return ans;
     }
 }
