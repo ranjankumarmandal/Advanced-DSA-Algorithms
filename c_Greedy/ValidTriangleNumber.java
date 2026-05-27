@@ -10,6 +10,9 @@ public class ValidTriangleNumber {
             while (i < j) {
                 if (nums[i] + nums[j] > nums[k]) {
                     ans += j - i;
+                    j--;
+                } else {
+                    i++;
                 }
             }
         }
