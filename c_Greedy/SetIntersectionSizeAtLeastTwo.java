@@ -5,6 +5,8 @@ public class SetIntersectionSizeAtLeastTwo {
             return a[1] - b[1];
         });
 
+        int a = -1, b = -1, ans = 0;
+
 
 
         return ans;
