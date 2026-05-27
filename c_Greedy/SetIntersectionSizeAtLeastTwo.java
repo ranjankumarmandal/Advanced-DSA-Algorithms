@@ -7,7 +7,11 @@ public class SetIntersectionSizeAtLeastTwo {
 
         int a = -1, b = -1, ans = 0;
 
+        for (int[] in : intervals) {
+            int l = in[0], r = in[1];
 
+
+        }
 
         return ans;
     }
