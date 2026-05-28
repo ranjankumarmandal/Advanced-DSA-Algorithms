@@ -7,6 +7,9 @@ public class MaxDistanceInArrays {
         for (int i = 1; i < arrays.size(); i++) {
             List<Integer> arr = arrays.get(i);
             int first = arr.get(0);
+            int last = arr.get(arr.size() - 1);
+
+            ans = Math.max(ans, Math.max(Math.abs(last - min), Math.abs(max - first)));
 
         return ans;
     }
