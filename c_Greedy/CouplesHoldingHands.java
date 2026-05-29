@@ -16,7 +16,14 @@ public class CouplesHoldingHands {
             if (row[i + 1] != partner) {
                 swaps++;
 
+                int partnerPos = pos[partner];
+                int second = row[i + 1];
 
+                row[partnerPos] = second;
+                pos[second] = partnerPos;
+
+                row[i + 1] = partner;
+                pos[partner] = i + 1;
             }
         }
 
