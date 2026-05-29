@@ -7,7 +7,14 @@ public class CouplesHoldingHands {
             pos[row[i]] = i;
         }
 
+        int swaps = 0;
 
+        for (int i = 0; i < n; i += 2) {
+            int first = row[i];
+            int partner = first ^ 1;
+
+
+        }
 
         return swaps;
     }
