@@ -13,7 +13,11 @@ public class CouplesHoldingHands {
             int first = row[i];
             int partner = first ^ 1;
 
+            if (row[i + 1] != partner) {
+                swaps++;
 
+
+            }
         }
 
         return swaps;
