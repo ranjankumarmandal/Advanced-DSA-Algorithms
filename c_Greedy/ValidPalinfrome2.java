@@ -12,4 +12,7 @@ public class ValidPalinfrome2 {
 
         return true;
     }
+
+    private boolean isPalindrome(String s, int left, int right) {
+    }
 }
