@@ -9,5 +9,11 @@ public class MonotoneIncreasingDigits {
                 marker = i;
             }
         }
+
+        for (int i = marker; i < digits.length; i++) {
+            digits[i] = '9';
+        }
+
+        return Integer.parseInt(new String(digits));
     }
 }
