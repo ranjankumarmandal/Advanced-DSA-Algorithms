@@ -11,6 +11,13 @@ public class MaxChunksToMakeSorted2 {
         int chunks = 0;
         int leftMax = Integer.MIN_VALUE;
 
+        for (int i = 0; i < n; i++) {
+            leftMax = Math.max(leftMax, arr[i]);
+            if (leftMax <= rightMin[i + 1]) {
+                chunks++;
+            }
+        }
+
         return chunks;
     }
 }
