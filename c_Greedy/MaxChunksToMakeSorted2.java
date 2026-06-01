@@ -8,6 +8,8 @@ public class MaxChunksToMakeSorted2 {
             rightMin[i] = Math.min(rightMin[i + 1], arr[i]);
         }
 
+        int chunks = 0;
+        int leftMax = Integer.MIN_VALUE;
 
         return chunks;
     }
