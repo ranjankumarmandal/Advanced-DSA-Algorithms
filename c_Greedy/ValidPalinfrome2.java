@@ -14,6 +14,9 @@ public class ValidPalinfrome2 {
     }
 
     private boolean isPalindrome(String s, int left, int right) {
+        while (left < right) {
+        }
+
         return true;
     }
 }
