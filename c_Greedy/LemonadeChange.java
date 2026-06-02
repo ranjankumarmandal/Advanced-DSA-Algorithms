@@ -9,6 +9,11 @@ public class LemonadeChange {
                 if (five == 0) return false;
                 five--;
                 ten++;
+            } else {
+                if (ten > 0 && five > 0) {
+                    ten--;
+                    five--;
+                }
             }
         }
 
