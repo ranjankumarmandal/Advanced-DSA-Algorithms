@@ -5,6 +5,10 @@ public class LemonadeChange {
         for (int bill : bills) {
             if (bill == 5) {
                 five++;
+            } else if (bill == 10) {
+                if (five == 0) return false;
+                five--;
+                ten++;
             }
         }
 
