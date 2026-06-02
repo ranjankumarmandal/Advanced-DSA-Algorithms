@@ -26,5 +26,7 @@ public class HandOfStraights {
                 }
             }
         }
+
+        return true;
     }
 }
