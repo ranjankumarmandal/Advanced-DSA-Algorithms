@@ -9,5 +9,11 @@ public class MinCostToHireKWorkders {
             workers[i][0] = (double) wage[i] / quality[i];
             workers[i][1] = quality[i];
         }
+
+        Arrays.sort(workers, (a, b) -> Double.compare(a[0], b[0]));
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        long qualitySum = 0;
+        double ans = Double.MAX_VALUE;
     }
 }
