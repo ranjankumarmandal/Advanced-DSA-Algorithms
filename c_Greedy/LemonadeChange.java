@@ -13,6 +13,10 @@ public class LemonadeChange {
                 if (ten > 0 && five > 0) {
                     ten--;
                     five--;
+                } else if (five >= 3) {
+                    five -= 3;
+                } else {
+                    return false;
                 }
             }
         }
