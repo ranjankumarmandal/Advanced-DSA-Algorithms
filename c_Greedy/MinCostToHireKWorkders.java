@@ -15,5 +15,19 @@ public class MinCostToHireKWorkders {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         long qualitySum = 0;
         double ans = Double.MAX_VALUE;
+
+        for (double[] worker : workers) {
+            int q = (int) worker[1];
+            qualitySum += q;
+            maxHeap.offer(q);
+
+            if (maxHeap.size() > k) {
+                qualitySum -= maxHeap.poll();
+            }
+
+            if (maxHeap.size() == k) {
+                ans = Math.min(ans, qualitySum * worker[0]);
+            }
+        }
     }
 }
