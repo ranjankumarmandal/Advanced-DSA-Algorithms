@@ -29,5 +29,7 @@ public class MinCostToHireKWorkders {
                 ans = Math.min(ans, qualitySum * worker[0]);
             }
         }
+
+        return ans;
     }
 }
