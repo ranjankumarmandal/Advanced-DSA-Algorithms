@@ -15,6 +15,11 @@ public class AdvantageShuffle {
         int l = 0, r = n - 1;
 
         for (int i = n - 1; i >= 0; i--) {
+            if (nums1[r] > arr[i][0]) {
+                ans[arr[i][1]] = nums1[r--];
+            } else {
+                ans[arr[i][1]] = nums1[l++];
+            }
         }
 
         return ans;
