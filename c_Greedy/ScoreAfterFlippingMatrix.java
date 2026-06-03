@@ -14,6 +14,9 @@ public class ScoreAfterFlippingMatrix {
                     ones += 1 - grid[i][j];
                 }
             }
+
+            ones = Math.max(ones, m - ones);
+            ans += ones * (1 << (n - 1 - j));
         }
 
         return ans;
