@@ -10,6 +10,8 @@ public class ScoreAfterFlippingMatrix {
             for (int i = 0; i < m; i++) {
                 if (grid[i][0] == 1) {
                     ones += grid[i][j];
+                } else {
+                    ones += 1 - grid[i][j];
                 }
             }
         }
