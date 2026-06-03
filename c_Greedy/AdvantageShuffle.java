@@ -13,5 +13,10 @@ public class AdvantageShuffle {
 
         int[] ans = new int[n];
         int l = 0, r = n - 1;
+
+        for (int i = n - 1; i >= 0; i--) {
+        }
+
+        return ans;
     }
 }
