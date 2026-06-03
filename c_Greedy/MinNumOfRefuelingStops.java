@@ -6,6 +6,8 @@ public class MinNumOfRefuelingStops {
         int stops = 0;
 
         for (int i = 0; i <= stations.length; i++) {
+            int pos = i == stations.length ? target : stations[i][0];
+            fuel -= pos - prev;
 
             prev = pos;
         }
