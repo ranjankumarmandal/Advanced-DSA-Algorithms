@@ -4,6 +4,9 @@ public class ScoreAfterFlippingMatrix {
         int n = grid[0].length;
         int ans = 0;
 
+        for (int j = 0; j < n; j++) {
+        }
+
         return ans;
     }
 }
