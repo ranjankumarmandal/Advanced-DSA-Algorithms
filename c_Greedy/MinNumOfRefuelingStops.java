@@ -14,6 +14,14 @@ public class MinNumOfRefuelingStops {
                 stops++;
             }
 
+            if (fuel < 0) {
+                return -1;
+            }
+
+            if (i < stations.length) {
+                pq.offer(stations[i][1]);
+            }
+
             prev = pos;
         }
 
