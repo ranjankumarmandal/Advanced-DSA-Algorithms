@@ -8,5 +8,10 @@ public class AdvantageShuffle {
             arr[i][0] = nums2[i];
             arr[i][1] = i;
         }
+
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
+
+        int[] ans = new int[n];
+        int l = 0, r = n - 1;
     }
 }
