@@ -9,6 +9,11 @@ public class MinNumOfRefuelingStops {
             int pos = i == stations.length ? target : stations[i][0];
             fuel -= pos - prev;
 
+            while (fuel < 0 && !pq.isEmpty()) {
+                fuel += pq.poll();
+                stops++;
+            }
+
             prev = pos;
         }
 
