@@ -50,4 +50,7 @@ public class StampingTheSequence {
 
         return hasMatch;
     }
+
+    private int doStamp(char[] target, int pos, int len) {
+    }
 }
