@@ -27,5 +27,11 @@ public class StampingTheSequence {
                 return new int[0];
             }
         }
+
+        int[] ans = new int[res.size()];
+        for (int i = 0; i < res.size(); i++) {
+            ans[i] = res.get(res.size() - 1 - i);
+        }
+        return ans;
     }
 }
