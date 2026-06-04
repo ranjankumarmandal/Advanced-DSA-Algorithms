@@ -11,6 +11,8 @@ public class MinAddToMakeParenthesisValid {
             } else {
                 if (balance > 0) {
                     balance--;
+                } else {
+                    additions++;
                 }
             }
         }
