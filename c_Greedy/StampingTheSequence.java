@@ -39,6 +39,13 @@ public class StampingTheSequence {
         boolean hasMatch = false;
 
         for (int i = 0; i < stamp.length; i++) {
+            if (target[pos + i] == '*') {
+                continue;
+            }
+            if (target[pos + i] != stamp[i]) {
+                return false;
+            }
+            hasMatch = true;
         }
 
         return hasMatch;
