@@ -38,6 +38,9 @@ public class StampingTheSequence {
     private boolean canStamp(char[] target, int pos, char[] stamp) {
         boolean hasMatch = false;
 
+        for (int i = 0; i < stamp.length; i++) {
+        }
+
         return hasMatch;
     }
 }
