@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class StampingTheSequence {
     public int[] movesToStamp(String stamp, String target) {
         char[] s = stamp.toCharArray();
@@ -55,6 +57,10 @@ public class StampingTheSequence {
         int changed = 0;
 
         for (int i = 0; i < len; i++) {
+            if (target[pos + i] != '*') {
+                target[pos + i] = '*';
+                changed++;
+            }
         }
 
         return changed;
