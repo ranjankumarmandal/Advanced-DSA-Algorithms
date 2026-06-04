@@ -6,7 +6,9 @@ public class MinAddToMakeParenthesisValid {
         int additions = 0;
 
         for (char c : s.toCharArray()) {
-
+            if (c == '(') {
+                balance++;
+            }
         }
 
         return additions + balance;
