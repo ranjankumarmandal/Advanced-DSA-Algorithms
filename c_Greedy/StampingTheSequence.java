@@ -36,5 +36,8 @@ public class StampingTheSequence {
     }
 
     private boolean canStamp(char[] target, int pos, char[] stamp) {
+        boolean hasMatch = false;
+
+        return hasMatch;
     }
 }
