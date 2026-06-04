@@ -5,6 +5,10 @@ public class MinAddToMakeParenthesisValid {
         int balance = 0;
         int additions = 0;
 
+        for (char c : s.toCharArray()) {
+
+        }
+
         return additions + balance;
     }
 }
