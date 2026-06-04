@@ -8,6 +8,10 @@ public class MinAddToMakeParenthesisValid {
         for (char c : s.toCharArray()) {
             if (c == '(') {
                 balance++;
+            } else {
+                if (balance > 0) {
+                    balance--;
+                }
             }
         }
 
