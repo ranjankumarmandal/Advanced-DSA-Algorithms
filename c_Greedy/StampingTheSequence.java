@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class StampingTheSequence {
     public int[] movesToStamp(String stamp, String target) {
         char[] s = stamp.toCharArray();
@@ -8,5 +6,26 @@ public class StampingTheSequence {
         boolean[] visited = new boolean[n];
         int stars = 0;
         List<Integer> res = new ArrayList<>();
+
+        while (stars < n) {
+            boolean changed = false;
+
+            for (int i = 0; i <= n - m; i++) {
+                if (!visited[i] && canStamp(t, i, s)) {
+                    stars += doStamp(t, i, m);
+                    visited[i] = true;
+                    changed = true;
+                    res.add(i);
+
+                    if (stars == n) {
+                        break;
+                    }
+                }
+            }
+
+            if (!changed) {
+                return new int[0];
+            }
+        }
     }
 }
