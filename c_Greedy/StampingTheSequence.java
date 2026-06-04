@@ -52,5 +52,8 @@ public class StampingTheSequence {
     }
 
     private int doStamp(char[] target, int pos, int len) {
+        int changed = 0;
+
+        return changed;
     }
 }
