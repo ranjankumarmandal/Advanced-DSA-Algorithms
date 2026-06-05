@@ -4,5 +4,7 @@ public class DiStringMatch {
         int low = 0, high = n;
         int[] ans = new int[n + 1];
 
+        for (int i = 0; i < n; i++) {
+        }
     }
 }
