@@ -11,5 +11,7 @@ public class BoatsToSavePeople {
             j--;
             boats++;
         }
+
+        return boats;
     }
 }
