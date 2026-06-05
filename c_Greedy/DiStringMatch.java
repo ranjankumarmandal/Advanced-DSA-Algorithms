@@ -5,6 +5,11 @@ public class DiStringMatch {
         int[] ans = new int[n + 1];
 
         for (int i = 0; i < n; i++) {
+            if (s.charAt(i) == 'I') {
+                ans[i] = low++;
+            } else {
+                ans[i] = high--;
+            }
         }
     }
 }
