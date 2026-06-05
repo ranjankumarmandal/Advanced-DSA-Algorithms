@@ -11,5 +11,8 @@ public class DiStringMatch {
                 ans[i] = high--;
             }
         }
+
+        ans[n] = low;
+        return ans;
     }
 }
