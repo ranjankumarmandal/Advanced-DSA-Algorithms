@@ -20,4 +20,11 @@ public class PancakeSorting {
         }
         return ans;
     }
+
+    private void add(Stack<Integer> stack, int x) {
+        if(x > 1) {
+            if(!stack.isEmpty() && stack.peek() == x) stack.pop();
+            else stack.push(x);
+        }
+    }
 }
