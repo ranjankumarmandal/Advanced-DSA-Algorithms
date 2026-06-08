@@ -21,6 +21,17 @@ public class PancakeSorting {
         return ans;
     }
 
+    private void dew(Stack<Integer> stack, int j, int i) {
+        if(i != j) {
+            add(stack, i+1);
+            add(stack, i-j+1);
+            add(stack, i-j);
+            add(stack, i-j-1);
+            add(stack, i-j);
+            add(stack, i+1);
+        }
+    }
+
     private void add(Stack<Integer> stack, int x) {
         if(x > 1) {
             if(!stack.isEmpty() && stack.peek() == x) stack.pop();
