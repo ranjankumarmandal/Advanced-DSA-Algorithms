@@ -17,6 +17,12 @@ public class StringWithoutAAAorBBB {
                 if (a >= b && a > 0) {
                     sb.append('a');
                     a--;
+                } else if (b > 0) {
+                    sb.append('b');
+                    b--;
+                } else {
+                    sb.append('a');
+                    a--;
                 }
             }
         }
