@@ -3,7 +3,7 @@ public class LargestPerimeterTraingle {
         Arrays.sort(nums);
 
         for (int i = nums.length - 1; i >= 2; i--) {
-            if () {
+            if (nums[i - 2] + nums[i - 1] > nums[i]) {
             }
         }
     }
