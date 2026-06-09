@@ -5,6 +5,8 @@ public class BrokenCalculator {
         while (target > startValue) {
             if ((target & 1) == 1) {
                 target++;
+            } else {
+                target /= 2;
             }
         }
     }
