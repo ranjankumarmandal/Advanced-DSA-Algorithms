@@ -8,6 +8,9 @@ public class BrokenCalculator {
             } else {
                 target /= 2;
             }
+            ops++;
         }
+
+        return ops + (startValue - target);
     }
 }
