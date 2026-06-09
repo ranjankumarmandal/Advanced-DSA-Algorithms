@@ -3,6 +3,9 @@ public class BrokenCalculator {
         int ops = 0;
 
         while (target > startValue) {
+            if ((target & 1) == 1) {
+                target++;
+            }
         }
     }
 }
