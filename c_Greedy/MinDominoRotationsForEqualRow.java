@@ -12,6 +12,11 @@ public class MinDominoRotationsForEqualRow {
             if (face[x] < n) continue;
             int maintainTop = 0, maintainBottom = 0;
             boolean possible = true;
+
+            for (int i = 0; i < n; i++) {
+                if (tops[i] != x) maintainTop++;
+                if (bottoms[i] != x) maintainBottom++;
+            }
         }
     }
 }
