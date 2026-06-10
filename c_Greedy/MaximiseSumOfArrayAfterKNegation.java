@@ -20,6 +20,12 @@ public class MaximiseSumOfArrayAfterKNegation {
             while (numbers[i] == 0) {
                 i++;
             }
+
+            numbers[i]--;
+            numbers[200 - i]++;
+            sum -= 2 * (i - 100);
         }
+
+        return sum;
     }
 }
