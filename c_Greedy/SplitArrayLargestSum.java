@@ -8,6 +8,10 @@ public class SplitArrayLargestSum {
             low = Math.max(low, nums[i]);
             high += nums[i];
         }
+        while(low <= high) {
+            int mid = (low + high) / 2;
+            else low = mid + 1;
+        }
 
         return min;
     }
