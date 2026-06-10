@@ -10,6 +10,10 @@ public class SplitArrayLargestSum {
         }
         while(low <= high) {
             int mid = (low + high) / 2;
+            if(required_no_of_chunks(mid, m)){
+                min = Math.min(min, mid);
+                high = mid - 1;
+            }
             else low = mid + 1;
         }
 
