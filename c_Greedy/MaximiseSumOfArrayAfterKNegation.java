@@ -9,5 +9,9 @@ public class MaximiseSumOfArrayAfterKNegation {
             numbers[100 + n]++;
             sum += n;
         }
+
+        if (maxAbs == 0) {
+            return 0;
+        }
     }
 }
