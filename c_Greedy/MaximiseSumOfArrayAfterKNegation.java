@@ -13,5 +13,13 @@ public class MaximiseSumOfArrayAfterKNegation {
         if (maxAbs == 0) {
             return 0;
         }
+
+        while (k-- != 0) {
+            int i = 100 - maxAbs;
+
+            while (numbers[i] == 0) {
+                i++;
+            }
+        }
     }
 }
