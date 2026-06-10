@@ -17,6 +17,10 @@ public class MinDominoRotationsForEqualRow {
                 if (tops[i] != x) maintainTop++;
                 if (bottoms[i] != x) maintainBottom++;
             }
+
+            if (possible) res = Math.min(res, Math.min(maintainTop, maintainBottom));
         }
+
+        return res == Integer.MAX_VALUE ? -1 : res;
     }
 }
