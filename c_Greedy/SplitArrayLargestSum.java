@@ -19,4 +19,10 @@ public class SplitArrayLargestSum {
 
         return min;
     }
+
+    private boolean required_no_of_chunks(int mid, int m){
+        int chunks = 0, i=0;
+
+        return chunks <= m;
+    }
 }
