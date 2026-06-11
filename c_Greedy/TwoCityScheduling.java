@@ -12,5 +12,7 @@ public class TwoCityScheduling {
         for (int i = n; i < 2 * n; i++) {
             ans += costs[i][1];
         }
+
+        return ans;
     }
 }
