@@ -4,5 +4,10 @@ public class PartitionArrayIntoThreePartsWithEqualSum {
         for (int num : arr) {
             total += num;
         }
+
+        if (total % 3 != 0) {
+            return false;
+        }
+
     }
 }
