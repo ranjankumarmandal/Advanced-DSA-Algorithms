@@ -3,5 +3,8 @@ public class PreviousWithOneSwap {
         int n = arr.length;
 
         int i = n - 2;
+        while (i >= 0 && arr[i] <= arr[i + 1]) {
+            i--;
+        }
     }
 }
