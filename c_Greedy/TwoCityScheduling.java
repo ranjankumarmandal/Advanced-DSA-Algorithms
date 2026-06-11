@@ -4,5 +4,9 @@ public class TwoCityScheduling {
 
         int n = costs.length / 2;
         int ans = 0;
+
+        for (int i = 0; i < n; i++) {
+            ans += costs[i][0];
+        }
     }
 }
