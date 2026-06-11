@@ -8,5 +8,9 @@ public class TwoCityScheduling {
         for (int i = 0; i < n; i++) {
             ans += costs[i][0];
         }
+
+        for (int i = n; i < 2 * n; i++) {
+            ans += costs[i][1];
+        }
     }
 }
