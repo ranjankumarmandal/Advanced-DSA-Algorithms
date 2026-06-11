@@ -13,5 +13,9 @@ public class PreviousWithOneSwap {
         while (arr[j] >= arr[i]) {
             j--;
         }
+
+        while (j > 0 && arr[j] == arr[j - 1]) {
+            j--;
+        }
     }
 }
