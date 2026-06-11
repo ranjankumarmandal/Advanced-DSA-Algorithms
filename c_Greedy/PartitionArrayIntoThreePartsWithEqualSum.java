@@ -9,5 +9,9 @@ public class PartitionArrayIntoThreePartsWithEqualSum {
             return false;
         }
 
+        int target = total / 3;
+        int sum = 0;
+        int parts = 0;
+
     }
 }
