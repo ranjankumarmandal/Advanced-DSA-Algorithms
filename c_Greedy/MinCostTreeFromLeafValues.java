@@ -13,5 +13,9 @@ public class MinCostTreeFromLeafValues {
             }
             st.push(x);
         }
+
+        while (st.size() > 2) {
+            res += st.pop() * st.peek();
+        }
     }
 }
