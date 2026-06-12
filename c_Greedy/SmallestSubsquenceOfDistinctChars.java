@@ -23,5 +23,7 @@ public class SmallestSubsquenceOfDistinctChars {
             st.append(c);
             used[c - 'a'] = true;
         }
+
+        return st.toString();
     }
 }
