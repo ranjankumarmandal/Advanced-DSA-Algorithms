@@ -12,6 +12,16 @@ public class SmallestSubsquenceOfDistinctChars {
             char c = s.charAt(i);
 
             if (used[c - 'a']) continue;
+
+            while (st.length() > 0 &&
+                    st.charAt(st.length() - 1) > c &&
+                    last[st.charAt(st.length() - 1) - 'a'] > i) {
+                used[st.charAt(st.length() - 1) - 'a'] = false;
+                st.deleteCharAt(st.length() - 1);
+            }
+
+            st.append(c);
+            used[c - 'a'] = true;
         }
     }
 }
