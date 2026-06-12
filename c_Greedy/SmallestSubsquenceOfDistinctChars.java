@@ -7,5 +7,11 @@ public class SmallestSubsquenceOfDistinctChars {
 
         boolean[] used = new boolean[26];
         StringBuilder st = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if (used[c - 'a']) continue;
+        }
     }
 }
