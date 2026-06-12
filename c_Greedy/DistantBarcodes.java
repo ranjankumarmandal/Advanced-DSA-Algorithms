@@ -25,5 +25,9 @@ public class DistantBarcodes {
             if (--a[1] > 0) pq.offer(a);
             if (--b[1] > 0) pq.offer(b);
         }
+
+        if (!pq.isEmpty()) {
+            ans[idx] = pq.poll()[0];
+        }
     }
 }
