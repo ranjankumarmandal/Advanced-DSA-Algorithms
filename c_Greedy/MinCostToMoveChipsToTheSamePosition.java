@@ -6,5 +6,7 @@ public class MinCostToMoveChipsToTheSamePosition {
             if ((p & 1) == 0) even++;
             else odd++;
         }
+
+        return Math.min(even, odd);
     }
 }
