@@ -6,5 +6,7 @@ public class SplitAStringInBalancedStrings {
             balance += c == 'R' ? 1 : -1;
             if (balance == 0) count++;
         }
+
+        return count;
     }
 }
