@@ -4,6 +4,7 @@ public class MinCostToMoveChipsToTheSamePosition {
 
         for (int p : position) {
             if ((p & 1) == 0) even++;
+            else odd++;
         }
     }
 }
