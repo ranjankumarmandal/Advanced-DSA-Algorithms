@@ -11,5 +11,7 @@ public class DecreaseElementsToMakeArrayZigzag {
             int need = Math.max(0, nums[i] - limit + 1);
             cost[i & 1] += need;
         }
+
+        return (int) Math.min(cost[0], cost[1]);
     }
 }
