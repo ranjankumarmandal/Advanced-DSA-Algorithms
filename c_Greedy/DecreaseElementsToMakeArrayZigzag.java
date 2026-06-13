@@ -5,6 +5,8 @@ public class DecreaseElementsToMakeArrayZigzag {
 
         for (int i = 0; i < n; i++) {
             int limit = Integer.MAX_VALUE;
+            if (i > 0) limit = Math.min(limit, nums[i - 1]);
+            if (i + 1 < n) limit = Math.min(limit, nums[i + 1]);
         }
     }
 }
