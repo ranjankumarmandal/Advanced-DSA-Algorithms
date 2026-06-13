@@ -3,6 +3,8 @@ public class SplitAStringInBalancedStrings {
         int balance = 0, count = 0;
 
         for (char c : s.toCharArray()) {
+            balance += c == 'R' ? 1 : -1;
+            if (balance == 0) count++;
         }
     }
 }
