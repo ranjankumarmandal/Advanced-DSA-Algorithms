@@ -5,6 +5,8 @@ public class MinSwapsToMakeStringsEqual {
         for (int i = 0; i < s1.length(); i++) {
             if (s1.charAt(i) == 'x' && s2.charAt(i) == 'y') {
                 xy++;
+            } else if (s1.charAt(i) == 'y' && s2.charAt(i) == 'x') {
+                yx++;
             }
         }
     }
