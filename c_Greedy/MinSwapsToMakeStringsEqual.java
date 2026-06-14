@@ -9,5 +9,9 @@ public class MinSwapsToMakeStringsEqual {
                 yx++;
             }
         }
+
+        if (((xy + yx) & 1) == 1) {
+            return -1;
+        }
     }
 }
