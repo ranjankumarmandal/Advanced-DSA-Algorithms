@@ -14,5 +14,7 @@ public class GreatestSumDivisibleBy3 {
 
             dp = next;
         }
+
+        return dp[0];
     }
 }
