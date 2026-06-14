@@ -17,5 +17,16 @@ public class ReconstructA2RowBinaryMatrix {
             return new ArrayList<>();
         }
 
+        for (int i = 0; i < n; i++) {
+            if (colsum[i] == 1) {
+                if (upper > 0) {
+                    top[i] = 1;
+                    upper--;
+                } else {
+                    bottom[i] = 1;
+                    lower--;
+                }
+            }
+        }
     }
 }
