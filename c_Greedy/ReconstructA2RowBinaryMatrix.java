@@ -12,5 +12,10 @@ public class ReconstructA2RowBinaryMatrix {
                 lower--;
             }
         }
+
+        if (upper < 0 || lower < 0) {
+            return new ArrayList<>();
+        }
+
     }
 }
