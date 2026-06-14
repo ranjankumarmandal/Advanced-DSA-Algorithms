@@ -13,5 +13,7 @@ public class MinSwapsToMakeStringsEqual {
         if (((xy + yx) & 1) == 1) {
             return -1;
         }
+
+        return xy / 2 + yx / 2 + (xy % 2) * 2;
     }
 }
