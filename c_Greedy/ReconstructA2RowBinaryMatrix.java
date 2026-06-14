@@ -36,5 +36,14 @@ public class ReconstructA2RowBinaryMatrix {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> row1 = new ArrayList<>();
         List<Integer> row2 = new ArrayList<>();
+
+        for (int x : top) {
+            row1.add(x);
+        }
+
+        for (int x : bottom) {
+            row2.add(x);
+        }
+
     }
 }
