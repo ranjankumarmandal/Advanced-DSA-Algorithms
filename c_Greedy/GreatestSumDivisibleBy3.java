@@ -4,6 +4,12 @@ public class GreatestSumDivisibleBy3 {
 
         for (int num : nums) {
             int[] next = dp.clone();
+
+            for (int r = 0; r < 3; r++) {
+                if (dp[r] != Integer.MIN_VALUE) {
+                    int sum = dp[r] + num;
+                }
+            }
         }
     }
 }
