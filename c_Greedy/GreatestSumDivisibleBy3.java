@@ -8,8 +8,11 @@ public class GreatestSumDivisibleBy3 {
             for (int r = 0; r < 3; r++) {
                 if (dp[r] != Integer.MIN_VALUE) {
                     int sum = dp[r] + num;
+                    next[sum % 3] = Math.max(next[sum % 3], sum);
                 }
             }
+
+            dp = next;
         }
     }
 }
