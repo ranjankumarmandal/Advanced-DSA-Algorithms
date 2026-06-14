@@ -28,5 +28,13 @@ public class ReconstructA2RowBinaryMatrix {
                 }
             }
         }
+
+        if (upper != 0 || lower != 0) {
+            return new ArrayList<>();
+        }
+
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> row1 = new ArrayList<>();
+        List<Integer> row2 = new ArrayList<>();
     }
 }
