@@ -45,5 +45,9 @@ public class ReconstructA2RowBinaryMatrix {
             row2.add(x);
         }
 
+        res.add(row1);
+        res.add(row2);
+
+        return res;
     }
 }
