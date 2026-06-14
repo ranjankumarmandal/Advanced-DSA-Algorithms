@@ -3,5 +3,14 @@ public class ReconstructA2RowBinaryMatrix {
         int n = colsum.length;
         int[] top = new int[n];
         int[] bottom = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            if (colsum[i] == 2) {
+                top[i] = 1;
+                bottom[i] = 1;
+                upper--;
+                lower--;
+            }
+        }
     }
 }
