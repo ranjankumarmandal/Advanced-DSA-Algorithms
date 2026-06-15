@@ -8,5 +8,7 @@ public class Max69Number {
                 break;
             }
         }
+
+        return Integer.parseInt(new String(arr));
     }
 }
