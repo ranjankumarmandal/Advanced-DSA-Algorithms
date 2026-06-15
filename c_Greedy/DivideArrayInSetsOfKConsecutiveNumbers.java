@@ -1,3 +1,4 @@
 public class DivideArrayInSetsOfKConsecutiveNumbers {
-
+    public boolean isPossibleDivide(int[] nums, int k) {
+    }
 }
