@@ -9,6 +9,8 @@ public class GroupThePeople {
             map.get(size).add(i);
 
             if (map.get(size).size() == size) {
+                ans.add(new ArrayList<>(map.get(size)));
+                map.get(size).clear();
             }
         }
     }
