@@ -13,5 +13,7 @@ public class GroupThePeople {
                 map.get(size).clear();
             }
         }
+
+        return ans;
     }
 }
