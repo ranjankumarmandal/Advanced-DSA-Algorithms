@@ -5,6 +5,8 @@ public class GroupThePeople {
 
         for (int i = 0; i < groupSizes.length; i++) {
             int size = groupSizes[i];
+            map.putIfAbsent(size, new ArrayList<>());
+            map.get(size).add(i);
         }
     }
 }
