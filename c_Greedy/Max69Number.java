@@ -3,6 +3,8 @@ public class Max69Number {
         char[] arr = String.valueOf(num).toCharArray();
 
         for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == '6') {
+            }
         }
     }
 }
