@@ -23,5 +23,7 @@ public class DivideArrayInSetsOfKConsecutiveNumbers {
                 }
             }
         }
+
+        return true;
     }
 }
