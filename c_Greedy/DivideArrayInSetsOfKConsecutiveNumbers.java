@@ -11,6 +11,17 @@ public class DivideArrayInSetsOfKConsecutiveNumbers {
         while (!map.isEmpty()) {
             int start = map.firstKey();
 
+            for (int i = 0; i < k; i++) {
+                int curr = start + i;
+
+                if (!map.containsKey(curr)) return false;
+
+                map.put(curr, map.get(curr) - 1);
+
+                if (map.get(curr) == 0) {
+                    map.remove(curr);
+                }
+            }
         }
     }
 }
