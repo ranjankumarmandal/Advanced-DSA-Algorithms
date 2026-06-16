@@ -6,5 +6,11 @@ public class BreakAPalindrome {
 
         char[] arr = palindrome.toCharArray();
 
+        for (int i = 0; i < n / 2; i++) {
+            if (arr[i] != 'a') {
+                arr[i] = 'a';
+                return new String(arr);
+            }
+        }
     }
 }
