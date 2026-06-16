@@ -7,5 +7,9 @@ public class MinNumOfTapsToOpenToWaterAGarden {
             int right = Math.min(n, i + ranges[i]);
             maxReach[left] = Math.max(maxReach[left], right);
         }
+
+        int taps = 0;
+        int currEnd = 0;
+        int farthest = 0;
     }
 }
