@@ -4,5 +4,7 @@ public class BreakAPalindrome {
 
         if (n == 1) return "";
 
+        char[] arr = palindrome.toCharArray();
+
     }
 }
