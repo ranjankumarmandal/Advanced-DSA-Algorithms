@@ -21,5 +21,9 @@ public class ReverseSubArrayToMaximizeArrayValue {
             minHigh = Math.min(minHigh, Math.max(nums[i], nums[i + 1]));
             maxLow = Math.max(maxLow, Math.min(nums[i], nums[i + 1]));
         }
+
+        gain = Math.max(gain, 2 * (maxLow - minHigh));
+
+        return base + gain;
     }
 }
