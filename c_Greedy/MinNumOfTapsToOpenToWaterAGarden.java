@@ -11,5 +11,8 @@ public class MinNumOfTapsToOpenToWaterAGarden {
         int taps = 0;
         int currEnd = 0;
         int farthest = 0;
+
+        for (int i = 0; i <= n; i++) {
+        }
     }
 }
