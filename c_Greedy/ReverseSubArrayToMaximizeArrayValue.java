@@ -7,5 +7,8 @@ public class ReverseSubArrayToMaximizeArrayValue {
             base += Math.abs(nums[i] - nums[i + 1]);
         }
 
+        int gain = 0;
+        int minHigh = Integer.MAX_VALUE;
+        int maxLow = Integer.MIN_VALUE;
     }
 }
