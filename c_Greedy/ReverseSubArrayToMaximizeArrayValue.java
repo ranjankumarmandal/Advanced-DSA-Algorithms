@@ -10,5 +10,8 @@ public class ReverseSubArrayToMaximizeArrayValue {
         int gain = 0;
         int minHigh = Integer.MAX_VALUE;
         int maxLow = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n - 1; i++) {
+        }
     }
 }
