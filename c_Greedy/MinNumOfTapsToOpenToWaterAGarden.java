@@ -23,5 +23,7 @@ public class MinNumOfTapsToOpenToWaterAGarden {
                 currEnd = farthest;
             }
         }
+
+        return taps;
     }
 }
