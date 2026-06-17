@@ -9,6 +9,9 @@ public class MaxNumOfEventsThatCanBeAttended {
         int ans = 0;
 
         while (i < n || !pq.isEmpty()) {
+            if (pq.isEmpty()) {
+                day = events[i][0];
+            }
         }
     }
 }
