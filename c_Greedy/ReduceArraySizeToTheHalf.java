@@ -23,5 +23,6 @@ public class ReduceArraySizeToTheHalf {
             }
         }
 
+        return size;
     }
 }
