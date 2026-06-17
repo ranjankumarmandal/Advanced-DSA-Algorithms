@@ -28,5 +28,7 @@ public class MaxNumOfEventsThatCanBeAttended {
                 day++;
             }
         }
+
+        return ans;
     }
 }
