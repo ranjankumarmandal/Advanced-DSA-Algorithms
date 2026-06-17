@@ -21,6 +21,12 @@ public class MaxNumOfEventsThatCanBeAttended {
             while (!pq.isEmpty() && pq.peek() < day) {
                 pq.poll();
             }
+
+            if (!pq.isEmpty()) {
+                pq.poll();
+                ans++;
+                day++;
+            }
         }
     }
 }
