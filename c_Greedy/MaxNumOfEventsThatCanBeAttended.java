@@ -8,5 +8,7 @@ public class MaxNumOfEventsThatCanBeAttended {
         int day = 0;
         int ans = 0;
 
+        while (i < n || !pq.isEmpty()) {
+        }
     }
 }
