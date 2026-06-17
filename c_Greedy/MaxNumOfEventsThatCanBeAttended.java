@@ -12,6 +12,11 @@ public class MaxNumOfEventsThatCanBeAttended {
             if (pq.isEmpty()) {
                 day = events[i][0];
             }
+
+            while (i < n && events[i][0] <= day) {
+                pq.offer(events[i][1]);
+                i++;
+            }
         }
     }
 }
