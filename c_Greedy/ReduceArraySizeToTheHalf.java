@@ -15,5 +15,13 @@ public class ReduceArraySizeToTheHalf {
         int size = 0;
         int target = arr.length / 2;
 
+        for (int count : counts) {
+            removed += count;
+            size++;
+            if (removed >= target) {
+                return size;
+            }
+        }
+
     }
 }
