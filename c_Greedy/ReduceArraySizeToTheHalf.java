@@ -11,5 +11,9 @@ public class ReduceArraySizeToTheHalf {
         List<Integer> counts = new ArrayList<>(freq.values());
         counts.sort(Collections.reverseOrder());
 
+        int removed = 0;
+        int size = 0;
+        int target = arr.length / 2;
+
     }
 }
