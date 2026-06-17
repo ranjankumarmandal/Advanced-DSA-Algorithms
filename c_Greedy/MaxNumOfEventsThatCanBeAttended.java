@@ -5,5 +5,8 @@ public class MaxNumOfEventsThatCanBeAttended {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         int n = events.length;
         int i = 0;
+        int day = 0;
+        int ans = 0;
+
     }
 }
