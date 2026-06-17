@@ -9,5 +9,6 @@ public class Maximum69NumV2 {
             }
         }
 
+        return Integer.parseInt(new String(digits));
     }
 }
