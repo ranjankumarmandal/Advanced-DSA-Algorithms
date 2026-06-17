@@ -8,5 +8,8 @@ public class ReduceArraySizeToTheHalf {
             freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
 
+        List<Integer> counts = new ArrayList<>(freq.values());
+        counts.sort(Collections.reverseOrder());
+
     }
 }
