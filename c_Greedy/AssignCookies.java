@@ -5,5 +5,7 @@ public class AssignCookies {
 
         int i = 0, j = 0;
 
+        while (i < g.length && j < s.length) {
+        }
     }
 }
