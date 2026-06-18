@@ -25,5 +25,8 @@ public class LargestMultipleOfThree {
                 sb.append(d);
             }
         }
+
+        if (sb.length() == 0) return "";
+        if (sb.charAt(0) == '0') return "0";
     }
 }
