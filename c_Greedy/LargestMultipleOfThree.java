@@ -18,5 +18,12 @@ public class LargestMultipleOfThree {
                 remove(cnt, new int[]{1, 4, 7}, 2);
             }
         }
+
+        StringBuilder sb = new StringBuilder();
+        for (int d = 9; d >= 0; d--) {
+            while (cnt[d]-- > 0) {
+                sb.append(d);
+            }
+        }
     }
 }
