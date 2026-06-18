@@ -16,5 +16,10 @@ public class MaxPerformanceOfATeam {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         long speedSum = 0;
         long ans = 0;
+
+        for (int[] e : eng) {
+            int eff = e[0];
+            int spd = e[1];
+        }
     }
 }
