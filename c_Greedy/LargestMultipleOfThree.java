@@ -35,7 +35,14 @@ public class LargestMultipleOfThree {
     private boolean remove(int[] cnt, int[] digits, int times) {
         for (int t = 0; t < times; t++) {
             boolean found = false;
-            for (int d : digits) {}
+            for (int d : digits) {
+                if (cnt[d] > 0) {
+                    cnt[d]--;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) return false;
         }
     }
 }
