@@ -44,5 +44,7 @@ public class LargestMultipleOfThree {
             }
             if (!found) return false;
         }
+
+        return true;
     }
 }
