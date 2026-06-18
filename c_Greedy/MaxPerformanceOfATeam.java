@@ -10,5 +10,11 @@ public class MaxPerformanceOfATeam {
             eng[i][0] = efficiency[i];
             eng[i][1] = speed[i];
         }
+
+        Arrays.sort(eng, (a, b) -> b[0] - a[0]);
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        long speedSum = 0;
+        long ans = 0;
     }
 }
