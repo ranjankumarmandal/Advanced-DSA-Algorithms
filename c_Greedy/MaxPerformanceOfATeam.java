@@ -20,6 +20,15 @@ public class MaxPerformanceOfATeam {
         for (int[] e : eng) {
             int eff = e[0];
             int spd = e[1];
+
+            if (pq.size() == k) {
+                speedSum -= pq.poll();
+            }
+
+            pq.offer(spd);
+            speedSum += spd;
+
+            ans = Math.max(ans, speedSum * eff);
         }
     }
 }
