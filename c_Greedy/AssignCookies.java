@@ -3,5 +3,7 @@ public class AssignCookies {
         Arrays.sort(g);
         Arrays.sort(s);
 
+        int i = 0, j = 0;
+
     }
 }
