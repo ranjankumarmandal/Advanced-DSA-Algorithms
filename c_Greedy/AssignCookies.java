@@ -6,6 +6,10 @@ public class AssignCookies {
         int i = 0, j = 0;
 
         while (i < g.length && j < s.length) {
+            if (s[j] >= g[i]) {
+                i++;
+            }
+            j++;
         }
     }
 }
