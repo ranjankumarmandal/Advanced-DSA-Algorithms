@@ -30,5 +30,7 @@ public class MaxPerformanceOfATeam {
 
             ans = Math.max(ans, speedSum * eff);
         }
+
+        return (int) (ans % MOD);
     }
 }
