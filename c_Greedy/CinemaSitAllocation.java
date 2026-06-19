@@ -23,6 +23,9 @@ public class CinemaSitAllocation {
             boolean l = (mask & left) == 0;
             boolean m = (mask & middle) == 0;
             boolean r = (mask & right) == 0;
+
+            if (l && r) ans += 2;
+            else if (l || m || r) ans += 1;
         }
     }
 }
