@@ -14,5 +14,7 @@ public class PizzeWith3nSlices {
                 dp[i][j] = Math.max(dp[i + 1][j], slices[l + i] + dp[i + 2][j - 1]);
             }
         }
+
+        return dp[0][m];
     }
 }
