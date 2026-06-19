@@ -18,5 +18,11 @@ public class CinemaSitAllocation {
         for (int c = 2; c <= 5; c++) left |= 1 << c;
         for (int c = 4; c <= 7; c++) middle |= 1 << c;
         for (int c = 6; c <= 9; c++) right |= 1 << c;
+
+        for (int mask : map.values()) {
+            boolean l = (mask & left) == 0;
+            boolean m = (mask & middle) == 0;
+            boolean r = (mask & right) == 0;
+        }
     }
 }
