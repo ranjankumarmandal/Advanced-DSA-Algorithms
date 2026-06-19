@@ -27,5 +27,7 @@ public class CinemaSitAllocation {
             if (l && r) ans += 2;
             else if (l || m || r) ans += 1;
         }
+
+        return ans;
     }
 }
