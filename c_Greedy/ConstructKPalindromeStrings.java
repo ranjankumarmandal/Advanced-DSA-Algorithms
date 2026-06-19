@@ -4,6 +4,7 @@ public class ConstructKPalindromeStrings {
 
         int mask = 0;
         for (char c : s.toCharArray()) {
+            mask ^= 1 << (c - 'a');
         }
     }
 }
