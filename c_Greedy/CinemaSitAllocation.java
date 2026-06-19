@@ -14,5 +14,9 @@ public class CinemaSitAllocation {
 
         int ans = (n - map.size()) * 2;
 
+        int left = 0, middle = 0, right = 0;
+        for (int c = 2; c <= 5; c++) left |= 1 << c;
+        for (int c = 4; c <= 7; c++) middle |= 1 << c;
+        for (int c = 6; c <= 9; c++) right |= 1 << c;
     }
 }
