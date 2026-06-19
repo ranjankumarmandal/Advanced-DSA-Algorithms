@@ -6,5 +6,7 @@ public class ConstructKPalindromeStrings {
         for (char c : s.toCharArray()) {
             mask ^= 1 << (c - 'a');
         }
+
+        return Integer.bitCount(mask) <= k;
     }
 }
