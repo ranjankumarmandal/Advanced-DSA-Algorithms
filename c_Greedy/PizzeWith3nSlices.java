@@ -6,5 +6,7 @@ public class PizzeWith3nSlices {
     }
 
     private int calc(int[] slices, int l, int r, int m) {
+        int len = r - l + 1;
+        int[][] dp = new int[len + 2][m + 1];
     }
 }
