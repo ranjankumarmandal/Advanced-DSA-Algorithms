@@ -11,5 +11,8 @@ public class CinemaSitAllocation {
                 map.put(row, map.getOrDefault(row, 0) | (1 << col));
             }
         }
+
+        int ans = (n - map.size()) * 2;
+
     }
 }
