@@ -11,6 +11,10 @@ public class MinSubsequenceInIncreasingOrder {
         int sum = 0;
 
         for (int i = nums.length - 1; i >= 0; i--) {
+            sum += nums[i];
+            result.add(nums[i]);
+
+            if (sum > total - sum) break;
         }
 
     }
