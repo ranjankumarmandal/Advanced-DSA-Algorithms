@@ -6,5 +6,7 @@ public class ReducingDishes {
         int suffixSum = 0;
         int result = 0;
 
+        for (int i = satisfaction.length - 1; i >= 0; i--) {
+        }
     }
 }
