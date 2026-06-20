@@ -30,5 +30,7 @@ public class LongestHappyString {
                 if (first[0] > 0) pq.offer(first);
             }
         }
+
+        return sb.toString();
     }
 }
