@@ -17,5 +17,6 @@ public class MinSubsequenceInIncreasingOrder {
             if (sum > total - sum) break;
         }
 
+        return result;
     }
 }
