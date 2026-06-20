@@ -7,5 +7,8 @@ public class MinSubsequenceInIncreasingOrder {
         int total = 0;
         for (int num : nums) total += num;
 
+        List<Integer> result = new ArrayList<>();
+        int sum = 0;
+
     }
 }
