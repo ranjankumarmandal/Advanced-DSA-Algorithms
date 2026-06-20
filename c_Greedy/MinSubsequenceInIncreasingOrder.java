@@ -10,5 +10,8 @@ public class MinSubsequenceInIncreasingOrder {
         List<Integer> result = new ArrayList<>();
         int sum = 0;
 
+        for (int i = nums.length - 1; i >= 0; i--) {
+        }
+
     }
 }
