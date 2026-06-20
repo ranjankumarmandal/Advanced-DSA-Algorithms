@@ -23,6 +23,11 @@ public class LongestHappyString {
 
                 if (second[0] > 0) pq.offer(second);
                 pq.offer(first);
+            } else {
+                sb.append((char) first[1]);
+                first[0]--;
+
+                if (first[0] > 0) pq.offer(first);
             }
         }
     }
