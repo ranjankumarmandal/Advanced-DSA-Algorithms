@@ -10,5 +10,7 @@ public class LongestHappyString {
 
         StringBuilder sb = new StringBuilder();
 
+        while (!pq.isEmpty()) {
+        }
     }
 }
