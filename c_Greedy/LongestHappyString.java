@@ -8,5 +8,7 @@ public class LongestHappyString {
         if (b > 0) pq.offer(new int[]{b, 'b'});
         if (c > 0) pq.offer(new int[]{c, 'c'});
 
+        StringBuilder sb = new StringBuilder();
+
     }
 }
