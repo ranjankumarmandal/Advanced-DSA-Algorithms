@@ -11,5 +11,7 @@ public class ReducingDishes {
             if (suffixSum <= 0) break;
             result += suffixSum;
         }
+
+        return result;
     }
 }
