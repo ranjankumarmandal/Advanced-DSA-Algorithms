@@ -14,6 +14,16 @@ public class LongestHappyString {
             int[] first = pq.poll();
             int n = sb.length();
 
+            if (n >= 2 && sb.charAt(n - 1) == first[1] && sb.charAt(n - 2) == first[1]) {
+                if (pq.isEmpty()) break;
+
+                int[] second = pq.poll();
+                sb.append((char) second[1]);
+                second[0]--;
+
+                if (second[0] > 0) pq.offer(second);
+                pq.offer(first);
+            }
         }
     }
 }
