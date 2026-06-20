@@ -11,6 +11,9 @@ public class LongestHappyString {
         StringBuilder sb = new StringBuilder();
 
         while (!pq.isEmpty()) {
+            int[] first = pq.poll();
+            int n = sb.length();
+
         }
     }
 }
