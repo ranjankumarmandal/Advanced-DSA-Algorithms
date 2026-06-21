@@ -17,5 +17,7 @@ public class CheckIfAStringCanBreakAnotherString {
                 bBreaks = false;
             }
         }
+
+        return aBreaks || bBreaks;
     }
 }
