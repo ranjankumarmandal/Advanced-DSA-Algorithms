@@ -20,5 +20,7 @@ public class MinNoOfFibnacciNosWhoseSumIsK {
                 i--;
             }
         }
+
+        return count;
     }
 }
