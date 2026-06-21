@@ -9,5 +9,7 @@ public class CheckIfAStringCanBreakAnotherString {
         boolean aBreaks = true;
         boolean bBreaks = true;
 
+        for (int i = 0; i < a.length; i++) {
+        }
     }
 }
