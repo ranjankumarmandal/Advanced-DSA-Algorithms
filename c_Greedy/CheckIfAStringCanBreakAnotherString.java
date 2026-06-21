@@ -6,5 +6,8 @@ public class CheckIfAStringCanBreakAnotherString {
         java.util.Arrays.sort(a);
         java.util.Arrays.sort(b);
 
+        boolean aBreaks = true;
+        boolean bBreaks = true;
+
     }
 }
