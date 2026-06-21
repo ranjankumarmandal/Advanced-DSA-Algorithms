@@ -10,6 +10,12 @@ public class CheckIfAStringCanBreakAnotherString {
         boolean bBreaks = true;
 
         for (int i = 0; i < a.length; i++) {
+            if (a[i] < b[i]) {
+                aBreaks = false;
+            }
+            if (b[i] < a[i]) {
+                bBreaks = false;
+            }
         }
     }
 }
