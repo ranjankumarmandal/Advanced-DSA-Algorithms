@@ -9,5 +9,8 @@ public class MinNoOfFibnacciNosWhoseSumIsK {
             fib.add(fib.get(n - 1) + fib.get(n - 2));
         }
 
+        int count = 0;
+        int i = fib.size() - 1;
+
     }
 }
