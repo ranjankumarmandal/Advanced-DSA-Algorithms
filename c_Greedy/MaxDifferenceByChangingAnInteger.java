@@ -9,5 +9,10 @@ public class MaxDifferenceByChangingAnInteger {
                 break;
             }
         }
+
+        String maxStr = s;
+        if (replaceMax != 0) {
+            maxStr = s.replace(replaceMax, '9');
+        }
     }
 }
