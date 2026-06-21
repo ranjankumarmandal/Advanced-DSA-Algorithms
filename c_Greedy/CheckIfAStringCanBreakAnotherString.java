@@ -3,5 +3,8 @@ public class CheckIfAStringCanBreakAnotherString {
         char[] a = s1.toCharArray();
         char[] b = s2.toCharArray();
 
+        java.util.Arrays.sort(a);
+        java.util.Arrays.sort(b);
+
     }
 }
