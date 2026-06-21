@@ -34,5 +34,7 @@ public class MaxDifferenceByChangingAnInteger {
         if (replaceMin != 0) {
             minStr = s.replace(replaceMin, targetMin);
         }
+
+        return Integer.parseInt(maxStr) - Integer.parseInt(minStr);
     }
 }
