@@ -21,6 +21,13 @@ public class MaxDifferenceByChangingAnInteger {
         if (s.charAt(0) != '1') {
             replaceMin = s.charAt(0);
             targetMin = '1';
+        } else {
+            for (int i = 1; i < s.length(); i++) {
+                if (s.charAt(i) != '0' && s.charAt(i) != '1') {
+                    replaceMin = s.charAt(i);
+                    break;
+                }
+            }
         }
     }
 }
