@@ -29,5 +29,10 @@ public class MaxDifferenceByChangingAnInteger {
                 }
             }
         }
+
+        String minStr = s;
+        if (replaceMin != 0) {
+            minStr = s.replace(replaceMin, targetMin);
+        }
     }
 }
