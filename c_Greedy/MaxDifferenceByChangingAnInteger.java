@@ -18,5 +18,9 @@ public class MaxDifferenceByChangingAnInteger {
         char replaceMin = 0;
         char targetMin = '0';
 
+        if (s.charAt(0) != '1') {
+            replaceMin = s.charAt(0);
+            targetMin = '1';
+        }
     }
 }
