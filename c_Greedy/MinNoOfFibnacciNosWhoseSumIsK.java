@@ -12,5 +12,7 @@ public class MinNoOfFibnacciNosWhoseSumIsK {
         int count = 0;
         int i = fib.size() - 1;
 
+        while (k > 0) {
+        }
     }
 }
