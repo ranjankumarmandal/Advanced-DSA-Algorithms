@@ -14,5 +14,9 @@ public class MaxDifferenceByChangingAnInteger {
         if (replaceMax != 0) {
             maxStr = s.replace(replaceMax, '9');
         }
+
+        char replaceMin = 0;
+        char targetMin = '0';
+
     }
 }
