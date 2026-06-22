@@ -25,5 +25,7 @@ public class AvoidFloodInTheCity {
                 lastRain.put(lake, i);
             }
         }
+
+        return ans;
     }
 }
