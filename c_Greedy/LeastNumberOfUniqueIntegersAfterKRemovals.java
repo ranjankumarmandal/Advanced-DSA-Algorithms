@@ -8,5 +8,8 @@ public class LeastNumberOfUniqueIntegersAfterKRemovals {
 
         List<Integer> freq = new ArrayList<>(map.values());
         Collections.sort(freq);
+
+        int unique = freq.size();
+
     }
 }
