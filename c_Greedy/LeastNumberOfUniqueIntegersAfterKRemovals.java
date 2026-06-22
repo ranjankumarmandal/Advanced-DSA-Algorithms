@@ -11,5 +11,13 @@ public class LeastNumberOfUniqueIntegersAfterKRemovals {
 
         int unique = freq.size();
 
+        for (int count : freq) {
+            if (k >= count) {
+                k -= count;
+                unique--;
+            } else {
+                break;
+            }
+        }
     }
 }
