@@ -13,5 +13,7 @@ public class MaxAreaAreaAfterHorizontalAndVerticalCut {
         for (int i = 1; i < verticalCuts.length; i++) {
             maxV = Math.max(maxV, verticalCuts[i] - verticalCuts[i - 1]);
         }
+
+        return (int) ((maxH * maxV) % 1000000007);
     }
 }
