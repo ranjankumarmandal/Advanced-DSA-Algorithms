@@ -9,6 +9,20 @@ public class AvoidFloodInTheCity {
             if (rains[i] == 0) {
                 dryDays.add(i);
                 ans[i] = 1;
+            } else {
+                int lake = rains[i];
+                ans[i] = -1;
+
+                if (lastRain.containsKey(lake)) {
+                    Integer dryDay = dryDays.higher(lastRain.get(lake));
+                    if (dryDay == null) {
+                        return new int[0];
+                    }
+                    ans[dryDay] = lake;
+                    dryDays.remove(dryDay);
+                }
+
+                lastRain.put(lake, i);
             }
         }
     }
