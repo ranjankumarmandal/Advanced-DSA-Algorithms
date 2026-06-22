@@ -19,5 +19,7 @@ public class LeastNumberOfUniqueIntegersAfterKRemovals {
                 break;
             }
         }
+
+        return unique;
     }
 }
