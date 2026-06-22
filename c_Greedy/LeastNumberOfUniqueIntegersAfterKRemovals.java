@@ -5,5 +5,8 @@ public class LeastNumberOfUniqueIntegersAfterKRemovals {
         for (int num : arr) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
+
+        List<Integer> freq = new ArrayList<>(map.values());
+        Collections.sort(freq);
     }
 }
