@@ -5,5 +5,7 @@ public class AvoidFloodInTheCity {
         Map<Integer, Integer> lastRain = new HashMap<>();
         TreeSet<Integer> dryDays = new TreeSet<>();
 
+        for (int i = 0; i < n; i++) {
+        }
     }
 }
