@@ -16,6 +16,25 @@ public class MaxNumOfNonOverlappingSubString {
 
         List<int[]> intervals = new ArrayList<>();
 
+        for (int c = 0; c < 26; c++) {
+            if (right[c] == -1) continue;
 
+            int l = left[c];
+            int r = right[c];
+            boolean valid = true;
+
+            for (int i = l; i <= r && valid; i++) {
+                int ch = s.charAt(i) - 'a';
+
+                if (left[ch] < l) {
+                    valid = false;
+                    break;
+                }
+
+                r = Math.max(r, right[ch]);
+            }
+
+            if (valid) intervals.add(new int[]{l, r});
+        }
     }
 }
