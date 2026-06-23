@@ -19,5 +19,8 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
         }
     }
 
-    public String minInteger(String num, int k) {}
+    public String minInteger(String num, int k) {
+        int n = num.length();
+        java.util.ArrayDeque<Integer>[] pos = new java.util.ArrayDeque[10];
+        for (int i = 0; i < 10; i++) pos[i] = new java.util.ArrayDeque<>();
 }
