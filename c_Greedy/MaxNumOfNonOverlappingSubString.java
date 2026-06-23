@@ -8,5 +8,11 @@ public class MaxNumOfNonOverlappingSubString {
         Arrays.fill(left, n);
         Arrays.fill(right, -1);
 
+        for (int i = 0; i < n; i++) {
+            int c = s.charAt(i) - 'a';
+            left[c] = Math.min(left[c], i);
+            right[c] = i;
+        }
+
     }
 }
