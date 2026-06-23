@@ -5,5 +5,7 @@ public class MinDiffBtwnLargestAndSmallestValueInThreeMoves {
 
         java.util.Arrays.sort(nums);
 
+        int ans = Integer.MAX_VALUE;
+
     }
 }
