@@ -47,5 +47,7 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
                 }
             }
         }
+
+        return ans.toString();
     }
 }
