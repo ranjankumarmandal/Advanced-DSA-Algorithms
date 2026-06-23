@@ -14,5 +14,8 @@ public class MaxNumOfNonOverlappingSubString {
             right[c] = i;
         }
 
+        List<int[]> intervals = new ArrayList<>();
+
+
     }
 }
