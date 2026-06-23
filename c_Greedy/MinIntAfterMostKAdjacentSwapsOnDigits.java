@@ -31,5 +31,9 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
         Fenwick bit = new Fenwick(n);
         StringBuilder ans = new StringBuilder();
 
+        for (int i = 1; i <= n; i++) {
+            for (int d = 0; d <= 9; d++) {
+                if (pos[d].isEmpty()) continue;
+        }
     }
 }
