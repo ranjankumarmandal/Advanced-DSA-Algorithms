@@ -27,5 +27,9 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
         for (int i = 0; i < n; i++) {
             pos[num.charAt(i) - '0'].offer(i + 1);
         }
+
+        Fenwick bit = new Fenwick(n);
+        StringBuilder ans = new StringBuilder();
+
     }
 }
