@@ -5,5 +5,8 @@ public class MaxNumOfNonOverlappingSubString {
         int[] left = new int[26];
         int[] right = new int[26];
 
+        Arrays.fill(left, n);
+        Arrays.fill(right, -1);
+
     }
 }
