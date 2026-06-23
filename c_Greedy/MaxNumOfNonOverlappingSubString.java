@@ -36,5 +36,19 @@ public class MaxNumOfNonOverlappingSubString {
 
             if (valid) intervals.add(new int[]{l, r});
         }
+
+        intervals.sort((a, b) -> a[1] == b[1] ? a[0] - b[0] : a[1] - b[1]);
+
+        List<String> ans = new ArrayList<>();
+        int end = -1;
+
+        for (int[] in : intervals) {
+            if (in[0] > end) {
+                ans.add(s.substring(in[0], in[1] + 1));
+                end = in[1];
+            }
+        }
+
+        return ans;
     }
 }
