@@ -38,6 +38,13 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
                 int p = pos[d].peek();
                 int cost = p - 1 - bit.sum(p);
 
+                if (cost <= k) {
+                    k -= cost;
+                    ans.append((char) ('0' + d));
+                    bit.add(p, 1);
+                    pos[d].poll();
+                    break;
+                }
             }
         }
     }
