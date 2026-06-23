@@ -12,6 +12,11 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
             for (; idx <= n; idx += idx & -idx) bit[idx] += val;
         }
 
+        int sum(int idx) {
+            int res = 0;
+            for (; idx > 0; idx -= idx & -idx) res += bit[idx];
+            return res;
+        }
     }
 
     public String minInteger(String num, int k) {}
