@@ -34,6 +34,11 @@ public class MinIntAfterMostKAdjacentSwapsOnDigits {
         for (int i = 1; i <= n; i++) {
             for (int d = 0; d <= 9; d++) {
                 if (pos[d].isEmpty()) continue;
+
+                int p = pos[d].peek();
+                int cost = p - 1 - bit.sum(p);
+
+            }
         }
     }
 }
