@@ -10,5 +10,8 @@ public class MinSwapsToArrangeABinaryGrid {
             }
             zeros[i] = cnt;
         }
+
+        int swaps = 0;
+
     }
 }
