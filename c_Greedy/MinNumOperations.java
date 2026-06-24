@@ -7,5 +7,7 @@ public class MinNumOperations {
                 ans += target[i] - target[i - 1];
             }
         }
+
+        return ans;
     }
 }
