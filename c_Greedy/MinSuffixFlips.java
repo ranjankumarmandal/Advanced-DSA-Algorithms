@@ -5,6 +5,8 @@ public class MinSuffixFlips {
 
         for (char c : target.toCharArray()) {
             if (c != current) {
+                flips++;
+                current = c;
             }
         }
     }
