@@ -33,5 +33,7 @@ public class MinSwapsToArrangeABinaryGrid {
                 j--;
             }
         }
+
+        return swaps;
     }
 }
