@@ -1,5 +1,8 @@
 public class MinNumOperations {
     public int minNumberOperations(int[] target) {
         int ans = target[0];
+
+        for (int i = 1; i < target.length; i++) {
+        }
     }
 }
