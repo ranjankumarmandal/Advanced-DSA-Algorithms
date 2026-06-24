@@ -9,5 +9,7 @@ public class MinSuffixFlips {
                 current = c;
             }
         }
+
+        return flips;
     }
 }
