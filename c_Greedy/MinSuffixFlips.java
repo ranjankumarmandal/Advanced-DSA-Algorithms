@@ -4,6 +4,8 @@ public class MinSuffixFlips {
         char current = '0';
 
         for (char c : target.toCharArray()) {
+            if (c != current) {
+            }
         }
     }
 }
