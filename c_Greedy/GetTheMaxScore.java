@@ -25,5 +25,7 @@ public class GetTheMaxScore {
         while (j < nums2.length) {
             s2 += nums2[j++];
         }
+
+        return (int) (Math.max(s1, s2) % mod);
     }
 }
