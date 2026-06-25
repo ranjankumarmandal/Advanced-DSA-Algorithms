@@ -9,6 +9,12 @@ public class GetTheMaxScore {
                 s1 += nums1[i++];
             } else if (nums1[i] > nums2[j]) {
                 s2 += nums2[j++];
+            } else {
+                long best = Math.max(s1, s2) + nums1[i];
+                s1 = best;
+                s2 = best;
+                i++;
+                j++;
             }
         }
     }
