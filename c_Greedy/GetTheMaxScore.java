@@ -17,5 +17,9 @@ public class GetTheMaxScore {
                 j++;
             }
         }
+
+        while (i < nums1.length) {
+            s1 += nums1[i++];
+        }
     }
 }
