@@ -21,5 +21,9 @@ public class GetTheMaxScore {
         while (i < nums1.length) {
             s1 += nums1[i++];
         }
+
+        while (j < nums2.length) {
+            s2 += nums2[j++];
+        }
     }
 }
