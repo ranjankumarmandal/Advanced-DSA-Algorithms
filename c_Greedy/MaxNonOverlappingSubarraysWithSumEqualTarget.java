@@ -18,5 +18,7 @@ public class MaxNonOverlappingSubarraysWithSumEqualTarget {
                 set.add(sum);
             }
         }
+
+        return ans;
     }
 }
