@@ -22,5 +22,7 @@ public class MinInsertionsToBalanceAParenthesisString {
                 }
             }
         }
+
+        return ans + open * 2;
     }
 }
