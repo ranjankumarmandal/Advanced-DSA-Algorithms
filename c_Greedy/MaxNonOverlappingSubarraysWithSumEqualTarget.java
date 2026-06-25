@@ -9,6 +9,14 @@ public class MaxNonOverlappingSubarraysWithSumEqualTarget {
         for (int num : nums) {
             sum += num;
 
+            if (set.contains(sum - target)) {
+                ans++;
+                set.clear();
+                set.add(0);
+                sum = 0;
+            } else {
+                set.add(sum);
+            }
         }
     }
 }
