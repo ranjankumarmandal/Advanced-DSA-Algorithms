@@ -7,6 +7,8 @@ public class GetTheMaxScore {
         while (i < nums1.length && j < nums2.length) {
             if (nums1[i] < nums2[j]) {
                 s1 += nums1[i++];
+            } else if (nums1[i] > nums2[j]) {
+                s2 += nums2[j++];
             }
         }
     }
