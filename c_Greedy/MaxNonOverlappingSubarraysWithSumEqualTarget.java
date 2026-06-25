@@ -5,5 +5,10 @@ public class MaxNonOverlappingSubarraysWithSumEqualTarget {
 
         int sum = 0;
         int ans = 0;
+
+        for (int num : nums) {
+            sum += num;
+
+        }
     }
 }
