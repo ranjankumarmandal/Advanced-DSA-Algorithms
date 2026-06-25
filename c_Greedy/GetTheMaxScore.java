@@ -4,5 +4,7 @@ public class GetTheMaxScore {
         int i = 0, j = 0;
         long s1 = 0, s2 = 0;
 
+        while (i < nums1.length && j < nums2.length) {
+        }
     }
 }
