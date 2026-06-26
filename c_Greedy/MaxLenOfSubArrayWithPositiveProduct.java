@@ -6,6 +6,9 @@ public class MaxLenOfSubArrayWithPositiveProduct {
             if (x == 0) {
                 pos = 0;
                 neg = 0;
+            } else if (x > 0) {
+                pos++;
+                neg = neg == 0 ? 0 : neg + 1;
             }
         }
     }
