@@ -10,6 +10,8 @@ public class MinNumOfFuncCallsToMakeTargetArray {
                 x >>= 1;
                 shifts++;
             }
+
+            dbl = Math.max(dbl, shifts);
         }
     }
 }
