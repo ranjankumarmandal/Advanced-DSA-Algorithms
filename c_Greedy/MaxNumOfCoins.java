@@ -7,5 +7,10 @@ public class MaxNumOfCoins {
         int ans = 0;
         int l = 0, r = n - 2;
 
+        while (l < r) {
+            ans += piles[r];
+            r -= 2;
+            l++;
+        }
     }
 }
