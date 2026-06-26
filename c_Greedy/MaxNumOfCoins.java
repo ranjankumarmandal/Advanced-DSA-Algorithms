@@ -12,5 +12,7 @@ public class MaxNumOfCoins {
             r -= 2;
             l++;
         }
+
+        return ans;
     }
 }
