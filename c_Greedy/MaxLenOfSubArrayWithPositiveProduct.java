@@ -9,7 +9,13 @@ public class MaxLenOfSubArrayWithPositiveProduct {
             } else if (x > 0) {
                 pos++;
                 neg = neg == 0 ? 0 : neg + 1;
+            } else {
+                int p = pos, n = neg;
+                pos = n == 0 ? 0 : n + 1;
+                neg = p + 1;
             }
+
+            ans = Math.max(ans, pos);
         }
     }
 }
