@@ -14,8 +14,9 @@ public class MaxLenOfSubArrayWithPositiveProduct {
                 pos = n == 0 ? 0 : n + 1;
                 neg = p + 1;
             }
-
             ans = Math.max(ans, pos);
         }
+
+        return ans;
     }
 }
