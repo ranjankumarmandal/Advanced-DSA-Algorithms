@@ -31,4 +31,20 @@ public class EvaluateDecision {
 
         return ans;
     }
+
+    private double dfs(String curr, String target, double product, Set<String> vis,
+                       Map<String, List<Pair>> graph) {
+        if (curr.equals(target)) return product;
+
+        vis.add(curr);
+
+        for (Pair next : graph.get(curr)) {
+            if (!vis.contains(next.node)) {
+                double res = dfs(next.node, target, product * next.weight, vis, graph);
+                if (res != -1.0) return res;
+            }
+        }
+
+        return -1.0;
+    }
 }
