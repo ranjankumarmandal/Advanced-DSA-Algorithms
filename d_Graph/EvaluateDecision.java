@@ -28,5 +28,7 @@ public class EvaluateDecision {
                 ans[i] = dfs(src, dst, 1.0, new HashSet<>(), graph);
             }
         }
+
+        return ans;
     }
 }
