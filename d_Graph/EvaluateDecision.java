@@ -47,4 +47,9 @@ public class EvaluateDecision {
 
         return -1.0;
     }
+
+    class Pair {
+        String node;
+        double weight;
+    }
 }
