@@ -51,5 +51,10 @@ public class EvaluateDecision {
     class Pair {
         String node;
         double weight;
+
+        Pair(String node, double weight) {
+            this.node = node;
+            this.weight = weight;
+        }
     }
 }
