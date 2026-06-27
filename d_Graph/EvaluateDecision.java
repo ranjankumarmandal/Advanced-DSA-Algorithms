@@ -14,5 +14,19 @@ public class EvaluateDecision {
             graph.get(b).add(new Pair(a, 1.0 / val));
         }
 
+        double[] ans = new double[queries.size()];
+
+        for (int i = 0; i < queries.size(); i++) {
+            String src = queries.get(i).get(0);
+            String dst = queries.get(i).get(1);
+
+            if (!graph.containsKey(src) || !graph.containsKey(dst)) {
+                ans[i] = -1.0;
+            } else if (src.equals(dst)) {
+                ans[i] = 1.0;
+            } else {
+                ans[i] = dfs(src, dst, 1.0, new HashSet<>(), graph);
+            }
+        }
     }
 }
