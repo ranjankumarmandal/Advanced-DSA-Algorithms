@@ -16,5 +16,7 @@ public class CloneGraph {
                 map.get(curr).neighbors.add(map.get(nei));
             }
         }
+
+        return map.get(node);
     }
 }
