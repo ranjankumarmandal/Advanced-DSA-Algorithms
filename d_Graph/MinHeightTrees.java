@@ -19,5 +19,21 @@ public class MinHeightTrees {
             if (degree[i] == 1) queue.offer(i);
         }
 
+        int remaining = n;
+
+        while (remaining > 2) {
+            int size = queue.size();
+            remaining -= size;
+
+            while (size-- > 0) {
+                int node = queue.poll();
+                for (int neighbor : graph.get(node)) {
+                    degree[neighbor]--;
+                    if (degree[neighbor] == 1) {
+                        queue.offer(neighbor);
+                    }
+                }
+            }
+        }
     }
 }
