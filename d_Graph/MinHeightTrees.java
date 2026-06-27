@@ -5,5 +5,7 @@ public class MinHeightTrees {
         List<List<Integer>> graph = new ArrayList<>();
         for (int i = 0; i < n; i++) graph.add(new ArrayList<>());
 
+        int[] degree = new int[n];
+
     }
 }
