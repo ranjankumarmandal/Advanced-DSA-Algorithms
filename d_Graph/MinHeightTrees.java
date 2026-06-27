@@ -14,5 +14,10 @@ public class MinHeightTrees {
             degree[edge[1]]++;
         }
 
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (degree[i] == 1) queue.offer(i);
+        }
+
     }
 }
