@@ -9,6 +9,12 @@ public class CloneGraph {
         while (!queue.isEmpty()) {
             Node curr = queue.poll();
             for (Node nei : curr.neighbors) {
+                if (!map.containsKey(nei)) {
+                    map.put(nei, new Node(nei.val));
+                    queue.offer(nei);
+                }
+                map.get(curr).neighbors.add(map.get(nei));
+            }
         }
     }
 }
