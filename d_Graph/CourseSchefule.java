@@ -12,5 +12,6 @@ public class CourseSchefule {
         for (int i = 0; i < numCourses; i++)
             if (!vis[i] && dfs(i, adj, vis, path)) return false;
 
+        return true;
     }
 }
