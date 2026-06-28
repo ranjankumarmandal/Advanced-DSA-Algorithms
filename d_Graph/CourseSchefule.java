@@ -6,5 +6,11 @@ public class CourseSchefule {
         for (int[] pre : prerequisites)
             adj.get(pre[1]).add(pre[0]);
 
+        boolean[] vis = new boolean[numCourses];
+        boolean[] path = new boolean[numCourses];
+
+        for (int i = 0; i < numCourses; i++)
+            if (!vis[i] && dfs(i, adj, vis, path)) return false;
+
     }
 }
