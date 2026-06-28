@@ -14,4 +14,8 @@ public class CourseSchefule {
 
         return true;
     }
+
+    private boolean dfs(int node, List<List<Integer>> adj, boolean[] vis, boolean[] path) {
+        vis[node] = path[node] = true;
+    }
 }
