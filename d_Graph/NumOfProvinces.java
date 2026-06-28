@@ -12,4 +12,8 @@ public class NumOfProvinces {
         }
         return provinces;
     }
+
+    private void dfs(int[][] graph, boolean[] visited, int node) {
+        visited[node] = true;
+    }
 }
