@@ -10,5 +10,6 @@ public class NumOfProvinces {
                 provinces++;
             }
         }
+        return provinces;
     }
 }
