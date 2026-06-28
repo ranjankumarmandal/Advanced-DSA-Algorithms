@@ -5,6 +5,10 @@ public class NumOfProvinces {
         int provinces = 0;
 
         for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                dfs(isConnected, visited, i);
+                provinces++;
+            }
         }
     }
 }
