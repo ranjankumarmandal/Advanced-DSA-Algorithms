@@ -3,5 +3,8 @@ public class NumOfProvinces {
         int n = isConnected.length;
         boolean[] visited = new boolean[n];
         int provinces = 0;
+
+        for (int i = 0; i < n; i++) {
+        }
     }
 }
