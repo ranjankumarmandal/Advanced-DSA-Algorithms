@@ -16,5 +16,7 @@ public class RedundantConnection {
                 return edge;
             }
         }
+
+        return new int[0];
     }
 }
