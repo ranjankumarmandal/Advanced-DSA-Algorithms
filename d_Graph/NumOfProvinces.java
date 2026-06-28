@@ -15,5 +15,10 @@ public class NumOfProvinces {
 
     private void dfs(int[][] graph, boolean[] visited, int node) {
         visited[node] = true;
+        for (int i = 0; i < graph.length; i++) {
+            if (graph[node][i] == 1 && !visited[i]) {
+                dfs(graph, visited, i);
+            }
+        }
     }
 }
