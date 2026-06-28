@@ -17,5 +17,10 @@ public class CourseSchefule {
 
     private boolean dfs(int node, List<List<Integer>> adj, boolean[] vis, boolean[] path) {
         vis[node] = path[node] = true;
+
+        for (int next : adj.get(node))
+            if (!vis[next] && dfs(next, adj, vis, path)) return true;
+            else if (path[next]) return true;
+
     }
 }
