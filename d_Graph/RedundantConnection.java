@@ -34,5 +34,16 @@ public class RedundantConnection {
         if (px == py) {
             return false;
         }
+
+        if (rank[px] < rank[py]) {
+            parent[px] = py;
+        } else if (rank[px] > rank[py]) {
+            parent[py] = px;
+        } else {
+            parent[py] = px;
+            rank[px]++;
+        }
+
+        return true;
     }
 }
