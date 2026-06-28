@@ -6,5 +6,9 @@ public class RedundantConnection {
         int n = edges.length;
         parent = new int[n + 1];
         rank = new int[n + 1];
+
+        for (int i = 1; i <= n; i++) {
+            parent[i] = i;
+        }
     }
 }
