@@ -19,4 +19,11 @@ public class RedundantConnection {
 
         return new int[0];
     }
+
+    private int find(int x) {
+        if (parent[x] != x) {
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
 }
