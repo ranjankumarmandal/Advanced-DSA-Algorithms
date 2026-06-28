@@ -22,5 +22,7 @@ public class CourseSchefule {
             if (!vis[next] && dfs(next, adj, vis, path)) return true;
             else if (path[next]) return true;
 
+        path[node] = false;
+        return false;
     }
 }
