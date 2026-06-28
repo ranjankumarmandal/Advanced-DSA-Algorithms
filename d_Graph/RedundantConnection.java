@@ -26,4 +26,13 @@ public class RedundantConnection {
         }
         return parent[x];
     }
+
+    private boolean union(int x, int y) {
+        int px = find(x);
+        int py = find(y);
+
+        if (px == py) {
+            return false;
+        }
+    }
 }
