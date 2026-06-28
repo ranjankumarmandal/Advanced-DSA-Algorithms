@@ -10,5 +10,11 @@ public class RedundantConnection {
         for (int i = 1; i <= n; i++) {
             parent[i] = i;
         }
+
+        for (int[] edge : edges) {
+            if (!union(edge[0], edge[1])) {
+                return edge;
+            }
+        }
     }
 }
