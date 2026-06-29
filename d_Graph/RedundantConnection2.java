@@ -27,5 +27,7 @@ public class RedundantConnection2 {
             }
             parent[v] = pu;
         }
+
+        return cand2;
     }
 }
