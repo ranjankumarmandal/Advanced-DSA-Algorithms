@@ -6,5 +6,10 @@ public class CourseSchedule2 {
         for (int i = 0; i < numCourses; i++) {
             graph[i] = new ArrayList<>();
         }
+
+        for (int[] pair : prerequisites) {
+            inDegree[pair[0]]++;
+            graph[pair[1]].add(pair[0]);
+        }
     }
 }
