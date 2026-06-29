@@ -16,5 +16,16 @@ public class RedundantConnection2 {
         }
 
         for (int i = 0; i <= n; i++) parent[i] = i;
+
+        for (int[] edge : edges) {
+            if (edge[1] == 0) continue;
+            int u = edge[0], v = edge[1];
+            int pu = find(parent, u);
+            if (pu == v) {
+                if (cand1 == null) return edge;
+                return cand1;
+            }
+            parent[v] = pu;
+        }
     }
 }
