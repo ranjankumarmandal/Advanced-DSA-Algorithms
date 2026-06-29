@@ -10,4 +10,8 @@ public class CrackingTheSafe {
 
         return ans.toString();
     }
+
+    private void dfs(String node, int k, HashSet<String> seen, StringBuilder ans) {
+
+    }
 }
