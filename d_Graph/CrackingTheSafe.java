@@ -12,6 +12,13 @@ public class CrackingTheSafe {
     }
 
     private void dfs(String node, int k, HashSet<String> seen, StringBuilder ans) {
-
+        for (int i = 0; i < k; i++) {
+            String edge = node + i;
+            if (!seen.contains(edge)) {
+                seen.add(edge);
+                dfs(edge.substring(1), k, seen, ans);
+                ans.append(i);
+            }
+        }
     }
 }
