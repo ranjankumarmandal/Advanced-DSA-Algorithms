@@ -30,4 +30,7 @@ public class RedundantConnection2 {
 
         return cand2;
     }
+
+    private int find(int[] parent, int x) {
+    }
 }
