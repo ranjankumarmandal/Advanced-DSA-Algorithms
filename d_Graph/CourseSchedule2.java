@@ -33,5 +33,7 @@ public class CourseSchedule2 {
                 }
             }
         }
+
+        return visited == numCourses ? order : new int[0];
     }
 }
