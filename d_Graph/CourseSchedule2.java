@@ -18,5 +18,20 @@ public class CourseSchedule2 {
                 toVisit.offer(i);
             }
         }
+
+        int[] order = new int[numCourses];
+        int visited = 0;
+        while (!toVisit.isEmpty()) {
+            int from = toVisit.poll();
+            order[visited++] = from;
+            for (int to : graph[from]) {
+                inDegree[to]--;
+                if (inDegree[to] == 0) {
+                    toVisit.offer(to);
+                } else if (inDegree[to] < 0) {
+                    return new int[0];
+                }
+            }
+        }
     }
 }
