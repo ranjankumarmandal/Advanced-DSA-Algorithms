@@ -6,5 +6,8 @@ public class CrackingTheSafe {
         StringBuilder start = new StringBuilder();
         for (int i = 0; i < n - 1; i++) start.append('0');
         dfs(start.toString(), k, seen, ans);
+        ans.append(start);
+
+        return ans.toString();
     }
 }
