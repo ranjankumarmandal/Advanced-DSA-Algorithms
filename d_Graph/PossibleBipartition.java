@@ -19,6 +19,17 @@ public class PossibleBipartition {
             q.offer(i);
             color[i] = 1;
 
+            while (!q.isEmpty()) {
+                int u = q.poll();
+                for (int v : graph[u]) {
+                    if (color[v] == 0) {
+                        color[v] = -color[u];
+                        q.offer(v);
+                    } else if (color[v] == color[u]) {
+                        return false;
+                    }
+                }
+            }
         }
     }
 }
