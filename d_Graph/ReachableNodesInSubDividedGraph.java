@@ -29,5 +29,10 @@ public class ReachableNodesInSubDividedGraph {
                 }
             }
         }
+
+        int ans = 0;
+        for (int d : dist) {
+            if (d <= maxMoves) ans++;
+        }
     }
 }
