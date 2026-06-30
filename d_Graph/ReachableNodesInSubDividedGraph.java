@@ -34,5 +34,13 @@ public class ReachableNodesInSubDividedGraph {
         for (int d : dist) {
             if (d <= maxMoves) ans++;
         }
+
+        for (int[] e : edges) {
+            int a = dist[e[0]] > maxMoves ? 0 : maxMoves - dist[e[0]];
+            int b = dist[e[1]] > maxMoves ? 0 : maxMoves - dist[e[1]];
+            ans += Math.min(e[2], a + b);
+        }
+
+        return ans;
     }
 }
