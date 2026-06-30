@@ -7,6 +7,7 @@ public class KeysAndRooms {
         int count = 1;
 
         while (!stack.isEmpty()) {
+            int room = stack.pop();
         }
 
     }
