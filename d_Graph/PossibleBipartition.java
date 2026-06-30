@@ -13,6 +13,12 @@ public class PossibleBipartition {
         int[] color = new int[n + 1];
 
         for (int i = 1; i <= n; i++) {
+            if (color[i] != 0) continue;
+
+            Queue<Integer> q = new LinkedList<>();
+            q.offer(i);
+            color[i] = 1;
+
         }
     }
 }
