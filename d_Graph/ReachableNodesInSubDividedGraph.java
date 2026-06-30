@@ -15,5 +15,19 @@ public class ReachableNodesInSubDividedGraph {
 
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
         pq.offer(new int[]{0, 0});
+
+        while (!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int u = cur[0], d = cur[1];
+            if (d > dist[u]) continue;
+            for (int[] next : graph[u]) {
+                int v = next[0];
+                int nd = d + next[1] + 1;
+                if (nd < dist[v]) {
+                    dist[v] = nd;
+                    pq.offer(new int[]{v, nd});
+                }
+            }
+        }
     }
 }
