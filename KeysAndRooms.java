@@ -17,5 +17,6 @@ public class KeysAndRooms {
             }
         }
 
+        return count == rooms.size();
     }
 }
