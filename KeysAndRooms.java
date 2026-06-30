@@ -5,5 +5,9 @@ public class KeysAndRooms {
         stack.push(0);
         visited[0] = true;
         int count = 1;
+
+        while (!stack.isEmpty()) {
+        }
+
     }
 }
