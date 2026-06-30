@@ -8,5 +8,9 @@ public class ReachableNodesInSubDividedGraph {
             graph[e[0]].add(new int[]{e[1], e[2]});
             graph[e[1]].add(new int[]{e[0], e[2]});
         }
+
+        int[] dist = new int[n];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[0] = 0;
     }
 }
