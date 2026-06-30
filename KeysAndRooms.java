@@ -8,6 +8,13 @@ public class KeysAndRooms {
 
         while (!stack.isEmpty()) {
             int room = stack.pop();
+            for (int key : rooms.get(room)) {
+                if (!visited[key]) {
+                    visited[key] = true;
+                    count++;
+                    stack.push(key);
+                }
+            }
         }
 
     }
