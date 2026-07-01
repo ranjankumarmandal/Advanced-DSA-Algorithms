@@ -7,5 +7,12 @@ public class MinHeightTree {
 
         int[] degree = new int[n];
 
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
+            degree[edge[0]]++;
+            degree[edge[1]]++;
+        }
+
     }
 }
