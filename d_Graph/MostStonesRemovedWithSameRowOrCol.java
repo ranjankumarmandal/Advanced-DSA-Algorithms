@@ -15,5 +15,7 @@ public class MostStonesRemovedWithSameRowOrCol {
                 }
             }
         }
+
+        return n - components;
     }
 }
