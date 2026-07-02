@@ -25,4 +25,8 @@ public class SatisfiabilityOfEqualEquations {
         if (parent[x] != x) parent[x] = find(parent[x]);
         return parent[x];
     }
+
+    void union(int a, int b) {
+        parent[find(a)] = find(b);
+    }
 }
