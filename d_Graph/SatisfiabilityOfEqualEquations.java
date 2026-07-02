@@ -9,5 +9,15 @@ public class SatisfiabilityOfEqualEquations {
                 union(e.charAt(0) - 'a', e.charAt(3) - 'a');
             }
         }
+
+        for (String e : equations) {
+            if (e.charAt(1) == '!') {
+                if (find(e.charAt(0) - 'a') == find(e.charAt(3) - 'a')) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
