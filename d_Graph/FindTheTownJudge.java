@@ -5,5 +5,8 @@ public class FindTheTownJudge {
             score[t[0]]--;
             score[t[1]]++;
         }
+        for (int i = 1; i <= n; i++) {
+
+        }
     }
 }
