@@ -18,6 +18,12 @@ public class FlowerPlantingWithNoAdjacent {
             for (int nei : graph[i]) {
                 used[ans[nei]] = true;
             }
+            for (int color = 1; color <= 4; color++) {
+                if (!used[color]) {
+                    ans[i] = color;
+                    break;
+                }
+            }
         }
     }
 }
