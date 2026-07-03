@@ -54,5 +54,7 @@ public class SortedPathWithAlternativeColors {
 
             dist++;
         }
+
+        return ans;
     }
 }
