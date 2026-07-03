@@ -7,5 +7,9 @@ public class AllPathsFromSourceToTarget {
     }
 
     private void dfs(int node, int[][] graph, List<Integer> path, List<List<Integer>> ans) {
+        path.add(node);
+        if (node == graph.length - 1) {
+            ans.add(new ArrayList<>(path));
+        } 
     }
 }
