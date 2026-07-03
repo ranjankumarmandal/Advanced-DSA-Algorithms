@@ -23,5 +23,36 @@ public class SortedPathWithAlternativeColors {
         vis[0][0] = true;
         vis[0][1] = true;
 
+        int dist = 0;
+
+        while (!q.isEmpty()) {
+            int size = q.size();
+
+            while (size-- > 0) {
+                int[] cur = q.poll();
+                int node = cur[0];
+                int color = cur[1];
+
+                if (ans[node] == -1) ans[node] = dist;
+
+                if (color == 0) {
+                    for (int next : blue[node]) {
+                        if (!vis[next][1]) {
+                            vis[next][1] = true;
+                            q.offer(new int[]{next, 1});
+                        }
+                    }
+                } else {
+                    for (int next : red[node]) {
+                        if (!vis[next][0]) {
+                            vis[next][0] = true;
+                            q.offer(new int[]{next, 0});
+                        }
+                    }
+                }
+            }
+
+            dist++;
+        }
     }
 }
