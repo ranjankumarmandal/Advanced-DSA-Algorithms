@@ -10,5 +10,8 @@ public class SortedPathWithAlternativeColors {
             blue[i] = new ArrayList<>();
         }
 
+        for (int[] e : redEdges) red[e[0]].add(e[1]);
+        for (int[] e : blueEdges) blue[e[0]].add(e[1]);
+
     }
 }
