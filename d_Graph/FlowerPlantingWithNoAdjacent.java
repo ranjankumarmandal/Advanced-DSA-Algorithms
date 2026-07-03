@@ -13,5 +13,11 @@ public class FlowerPlantingWithNoAdjacent {
 
         int[] ans = new int[n];
 
+        for (int i = 0; i < n; i++) {
+            boolean[] used = new boolean[5];
+            for (int nei : graph[i]) {
+                used[ans[nei]] = true;
+            }
+        }
     }
 }
