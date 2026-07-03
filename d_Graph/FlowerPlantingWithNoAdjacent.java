@@ -25,5 +25,7 @@ public class FlowerPlantingWithNoAdjacent {
                 }
             }
         }
+
+        return ans;
     }
 }
