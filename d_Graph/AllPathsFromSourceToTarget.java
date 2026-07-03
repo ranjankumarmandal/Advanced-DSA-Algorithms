@@ -10,6 +10,11 @@ public class AllPathsFromSourceToTarget {
         path.add(node);
         if (node == graph.length - 1) {
             ans.add(new ArrayList<>(path));
-        } 
+        } else {
+            for (int next : graph[node]) {
+                dfs(next, graph, path, ans);
+            }
+        }
+        path.remove(path.size() - 1);
     }
 }
