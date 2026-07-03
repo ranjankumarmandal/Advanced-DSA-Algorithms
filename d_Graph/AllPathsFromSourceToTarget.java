@@ -5,4 +5,7 @@ public class AllPathsFromSourceToTarget {
         dfs(0, graph, path, ans);
         return ans;
     }
+
+    private void dfs(int node, int[][] graph, List<Integer> path, List<List<Integer>> ans) {
+    }
 }
