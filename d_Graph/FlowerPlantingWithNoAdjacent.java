@@ -10,5 +10,8 @@ public class FlowerPlantingWithNoAdjacent {
             graph[u].add(v);
             graph[v].add(u);
         }
+
+        int[] ans = new int[n];
+
     }
 }
