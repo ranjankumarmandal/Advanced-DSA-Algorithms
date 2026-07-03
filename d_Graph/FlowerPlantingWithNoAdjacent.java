@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class FlowerPlantingWithNoAdjacent {
     public int[] gardenNoAdj(int n, int[][] paths) {
         List<Integer>[] graph = new ArrayList[n];
