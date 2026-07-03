@@ -13,5 +13,15 @@ public class SortedPathWithAlternativeColors {
         for (int[] e : redEdges) red[e[0]].add(e[1]);
         for (int[] e : blueEdges) blue[e[0]].add(e[1]);
 
+        int[] ans = new int[n];
+        Arrays.fill(ans, -1);
+
+        boolean[][] vis = new boolean[n][2];
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(new int[]{0, 0});
+        q.offer(new int[]{0, 1});
+        vis[0][0] = true;
+        vis[0][1] = true;
+
     }
 }
