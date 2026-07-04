@@ -36,5 +36,16 @@ public class SortItemsByGroupsRespectingDependencies {
         List<Integer> itemOrder = topoSort(itemGraph, itemIndeg);
         if (itemOrder.size() != n) return new int[0];
 
+        Map<Integer, List<Integer>> orderedGroupItems = new HashMap<>();
+        for (int i = 0; i < groupId; i++) orderedGroupItems.put(i, new ArrayList<>());
+        for (int item : itemOrder) {
+            orderedGroupItems.get(group[item]).add(item);
+        }
+
+        List<Integer> result = new ArrayList<>();
+        for (int g : groupOrder) {
+            result.addAll(orderedGroupItems.get(g));
+        }
+
     }
 }
