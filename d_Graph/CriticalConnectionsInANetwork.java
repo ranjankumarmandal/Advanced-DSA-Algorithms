@@ -12,5 +12,9 @@ public class CriticalConnectionsInANetwork {
             graph.get(e.get(1)).add(e.get(0));
         }
 
+        int[] disc = new int[n];
+        int[] low = new int[n];
+        Arrays.fill(disc, -1);
+
     }
 }
