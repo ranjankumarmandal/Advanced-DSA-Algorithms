@@ -16,5 +16,8 @@ public class CriticalConnectionsInANetwork {
         int[] low = new int[n];
         Arrays.fill(disc, -1);
 
+        List<List<Integer>> res = new ArrayList<>();
+        dfs(0, -1, graph, disc, low, res);
+        return res;
     }
 }
