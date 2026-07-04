@@ -7,5 +7,7 @@ public class ReconstructItenary {
             graph.get(ticket.get(0)).add(ticket.get(1));
         }
 
+        LinkedList<String> itinerary = new LinkedList<>();
+
     }
 }
