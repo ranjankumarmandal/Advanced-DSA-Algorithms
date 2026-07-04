@@ -51,4 +51,13 @@ public class SortItemsByGroupsRespectingDependencies {
         for (int i = 0; i < n; i++) ans[i] = result.get(i);
         return ans;
     }
+
+    List<Integer> topoSort(List<List<Integer>> graph, int[] indeg) {
+        int n = graph.size();
+        Queue<Integer> q = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (indeg[i] == 0) q.add(i);
+        }
+
+    }
 }
