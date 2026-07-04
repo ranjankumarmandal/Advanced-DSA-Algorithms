@@ -25,6 +25,15 @@ public class CriticalConnectionsInANetwork {
         disc[u] = low[u] = time++;
         for (int v : graph.get(u)) {
             if (v == parent) continue;
+            if (disc[v] == -1) {
+                dfs(v, u, graph, disc, low, res);
+                low[u] = Math.min(low[u], low[v]);
+                if (low[v] > disc[u]) {
+                    res.add(Arrays.asList(u, v));
+                }
+            } else {
+                low[u] = Math.min(low[u], disc[v]);
+            }
         }
     }
 }
