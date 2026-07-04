@@ -20,4 +20,8 @@ public class CriticalConnectionsInANetwork {
         dfs(0, -1, graph, disc, low, res);
         return res;
     }
+
+    void dfs(int u, int parent, List<List<Integer>> graph, int[] disc, int[] low, List<List<Integer>> res) {
+        disc[u] = low[u] = time++;
+    }
 }
