@@ -59,5 +59,15 @@ public class SortItemsByGroupsRespectingDependencies {
             if (indeg[i] == 0) q.add(i);
         }
 
+        List<Integer> res = new ArrayList<>();
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            res.add(u);
+            for (int v : graph.get(u)) {
+                if (--indeg[v] == 0) q.add(v);
+            }
+        }
+
+        return res;
     }
 }
