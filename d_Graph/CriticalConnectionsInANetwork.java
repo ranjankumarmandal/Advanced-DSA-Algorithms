@@ -23,5 +23,8 @@ public class CriticalConnectionsInANetwork {
 
     void dfs(int u, int parent, List<List<Integer>> graph, int[] disc, int[] low, List<List<Integer>> res) {
         disc[u] = low[u] = time++;
+        for (int v : graph.get(u)) {
+            if (v == parent) continue;
+        }
     }
 }
