@@ -47,5 +47,8 @@ public class SortItemsByGroupsRespectingDependencies {
             result.addAll(orderedGroupItems.get(g));
         }
 
+        int[] ans = new int[n];
+        for (int i = 0; i < n; i++) ans[i] = result.get(i);
+        return ans;
     }
 }
