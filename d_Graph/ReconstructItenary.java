@@ -9,5 +9,8 @@ public class ReconstructItenary {
 
         LinkedList<String> itinerary = new LinkedList<>();
 
+        dfs("JFK", graph, itinerary);
+
+        return itinerary;
     }
 }
