@@ -15,5 +15,16 @@ public class SortItemsByGroupsRespectingDependencies {
         int[] itemIndeg = new int[n];
         int[] groupIndeg = new int[groupId];
 
+        for (int i = 0; i < n; i++) {
+            for (int pre : beforeItems.get(i)) {
+                itemGraph.get(pre).add(i);
+                itemIndeg[i]++;
+                if (group[pre] != group[i]) {
+                    groupGraph.get(group[pre]).add(group[i]);
+                    groupIndeg[group[i]]++;
+                }
+            }
+        }
+
     }
 }
