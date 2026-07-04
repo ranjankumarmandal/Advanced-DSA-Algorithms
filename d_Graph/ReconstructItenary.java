@@ -15,6 +15,6 @@ public class ReconstructItenary {
     }
 
     private void dfs(String airport, Map<String, PriorityQueue<String>> graph, LinkedList<String> itinerary) {
-
+        PriorityQueue<String> nextAirports = graph.get(airport);
     }
 }
