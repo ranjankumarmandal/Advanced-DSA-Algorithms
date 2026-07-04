@@ -26,5 +26,15 @@ public class SortItemsByGroupsRespectingDependencies {
             }
         }
 
+        List<Integer> groupOrder = topoSort(groupGraph, groupIndeg);
+        if (groupOrder.size() != groupId) return new int[0];
+
+        List<List<Integer>> itemsInGroup = new ArrayList<>();
+        for (int i = 0; i < groupId; i++) itemsInGroup.add(new ArrayList<>());
+        for (int i = 0; i < n; i++) itemsInGroup.get(group[i]).add(i);
+
+        List<Integer> itemOrder = topoSort(itemGraph, itemIndeg);
+        if (itemOrder.size() != n) return new int[0];
+
     }
 }
