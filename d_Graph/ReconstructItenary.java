@@ -19,5 +19,6 @@ public class ReconstructItenary {
         while (nextAirports != null && !nextAirports.isEmpty()) {
             dfs(nextAirports.poll(), graph, itinerary);
         }
+        itinerary.addFirst(airport);
     }
 }
