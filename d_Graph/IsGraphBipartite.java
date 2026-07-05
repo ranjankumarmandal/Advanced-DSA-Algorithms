@@ -11,6 +11,17 @@ public class IsGraphBipartite {
             queue[rear++] = i;
             color[i] = 1;
 
+            while (front < rear) {
+                int node = queue[front++];
+                for (int nei : graph[node]) {
+                    if (color[nei] == 0) {
+                        color[nei] = -color[node];
+                        queue[rear++] = nei;
+                    } else if (color[nei] == color[node]) {
+                        return false;
+                    }
+                }
+            }
         }
     }
 }
