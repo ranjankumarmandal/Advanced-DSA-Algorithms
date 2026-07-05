@@ -18,5 +18,13 @@ public class GetWatchedVideosByYourFriends {
                 }
             }
         }
+
+        Map<String, Integer> freq = new HashMap<>();
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (String video : watchedVideos.get(u)) {
+                freq.put(video, freq.getOrDefault(video, 0) + 1);
+            }
+        }
     }
 }
