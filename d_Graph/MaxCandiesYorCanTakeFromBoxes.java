@@ -27,5 +27,14 @@ public class MaxCandiesYorCanTakeFromBoxes {
                     }
                 }
             }
+
+            for (int b : containedBoxes[box]) {
+                haveBox[b] = true;
+                if (status[b] == 1 && !opened[b]) {
+                    opened[b] = true;
+                    q.offer(b);
+                }
+            }
+        }
     }
 }
