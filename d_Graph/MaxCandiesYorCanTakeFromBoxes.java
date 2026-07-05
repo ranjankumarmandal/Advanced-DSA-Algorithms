@@ -14,5 +14,18 @@ public class MaxCandiesYorCanTakeFromBoxes {
 
         int ans = 0;
 
+        while (!q.isEmpty()) {
+            int box = q.poll();
+            ans += candies[box];
+
+            for (int key : keys[box]) {
+                if (status[key] == 0) {
+                    status[key] = 1;
+                    if (haveBox[key] && !opened[key]) {
+                        opened[key] = true;
+                        q.offer(key);
+                    }
+                }
+            }
     }
 }
