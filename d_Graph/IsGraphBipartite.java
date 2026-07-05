@@ -4,6 +4,8 @@ public class IsGraphBipartite {
         int[] color = new int[n];
 
         for (int i = 0; i < n; i++) {
+            if (color[i] != 0) continue;
+
         }
     }
 }
