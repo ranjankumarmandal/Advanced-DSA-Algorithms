@@ -34,5 +34,7 @@ public class GetWatchedVideosByYourFriends {
             }
             return a.compareTo(b);
         });
+
+        return ans;
     }
 }
