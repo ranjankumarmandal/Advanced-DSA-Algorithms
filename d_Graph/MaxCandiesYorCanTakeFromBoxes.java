@@ -12,5 +12,7 @@ public class MaxCandiesYorCanTakeFromBoxes {
             }
         }
 
+        int ans = 0;
+
     }
 }
