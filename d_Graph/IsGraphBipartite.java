@@ -6,6 +6,11 @@ public class IsGraphBipartite {
         for (int i = 0; i < n; i++) {
             if (color[i] != 0) continue;
 
+            int[] queue = new int[n];
+            int front = 0, rear = 0;
+            queue[rear++] = i;
+            color[i] = 1;
+
         }
     }
 }
