@@ -5,5 +5,12 @@ public class MaxCandiesYorCanTakeFromBoxes {
         boolean[] opened = new boolean[n];
         Queue<Integer> q = new LinkedList<>();
 
+        for (int box : initialBoxes) {
+            haveBox[box] = true;
+            if (status[box] == 1) {
+                q.offer(box);
+            }
+        }
+
     }
 }
