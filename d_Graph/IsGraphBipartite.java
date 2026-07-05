@@ -23,5 +23,7 @@ public class IsGraphBipartite {
                 }
             }
         }
+
+        return true;
     }
 }
