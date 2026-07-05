@@ -26,5 +26,13 @@ public class GetWatchedVideosByYourFriends {
                 freq.put(video, freq.getOrDefault(video, 0) + 1);
             }
         }
+
+        List<String> ans = new ArrayList<>(freq.keySet());
+        ans.sort((a, b) -> {
+            if (!freq.get(a).equals(freq.get(b))) {
+                return freq.get(a) - freq.get(b);
+            }
+            return a.compareTo(b);
+        });
     }
 }
