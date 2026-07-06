@@ -20,4 +20,11 @@ public class NumOfOperationsToMakeNetworkConnected {
             parent[pb] = pa;
         }
     }
+
+    public int makeConnected(int n, int[][] connections) {
+        if (connections.length < n - 1) return -1;
+
+        parent = new int[n];
+        rank = new int[n];
+    }
 }
