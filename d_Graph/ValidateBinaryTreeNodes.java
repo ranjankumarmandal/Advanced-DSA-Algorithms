@@ -31,5 +31,23 @@ public class ValidateBinaryTreeNodes {
         vis[root] = true;
         int count = 1;
 
+        while (!q.isEmpty()) {
+            int node = q.poll();
+
+            int l = leftChild[node];
+            int r = rightChild[node];
+
+            if (l != -1 && !vis[l]) {
+                vis[l] = true;
+                q.offer(l);
+                count++;
+            }
+
+            if (r != -1 && !vis[r]) {
+                vis[r] = true;
+                q.offer(r);
+                count++;
+            }
+        }
     }
 }
