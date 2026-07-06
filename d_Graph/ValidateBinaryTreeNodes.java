@@ -14,5 +14,14 @@ public class ValidateBinaryTreeNodes {
                 if (indeg[rightChild[i]] > 1) return false;
             }
         }
+
+        int root = -1;
+        for (int i = 0; i < n; i++) {
+            if (indeg[i] == 0) {
+                if (root != -1) return false;
+                root = i;
+            }
+        }
+
     }
 }
