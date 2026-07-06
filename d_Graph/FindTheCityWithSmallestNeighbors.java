@@ -40,5 +40,7 @@ public class FindTheCityWithSmallestNeighbors {
                 city = i;
             }
         }
+
+        return city;
     }
 }
