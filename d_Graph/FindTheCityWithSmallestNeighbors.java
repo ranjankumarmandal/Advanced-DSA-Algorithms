@@ -9,5 +9,11 @@ public class FindTheCityWithSmallestNeighbors {
             Arrays.fill(dist[i], INF);
             dist[i][i] = 0;
         }
+
+        for (int[] e : edges) {
+            int u = e[0], v = e[1], w = e[2];
+            dist[u][v] = w;
+            dist[v][u] = w;
+        }
     }
 }
