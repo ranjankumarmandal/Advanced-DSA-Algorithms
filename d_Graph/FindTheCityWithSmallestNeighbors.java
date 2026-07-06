@@ -25,5 +25,20 @@ public class FindTheCityWithSmallestNeighbors {
                 }
             }
         }
+
+        int city = -1;
+        int minCount = Integer.MAX_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            int cnt = 0;
+            for (int j = 0; j < n; j++) {
+                if (i != j && dist[i][j] <= distanceThreshold) cnt++;
+            }
+
+            if (cnt <= minCount) {
+                minCount = cnt;
+                city = i;
+            }
+        }
     }
 }
