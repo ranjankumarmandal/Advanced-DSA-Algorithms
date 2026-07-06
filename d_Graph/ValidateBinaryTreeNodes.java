@@ -23,5 +23,13 @@ public class ValidateBinaryTreeNodes {
             }
         }
 
+        if (root == -1) return false;
+
+        boolean[] vis = new boolean[n];
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(root);
+        vis[root] = true;
+        int count = 1;
+
     }
 }
