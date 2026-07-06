@@ -26,5 +26,18 @@ public class NumOfOperationsToMakeNetworkConnected {
 
         parent = new int[n];
         rank = new int[n];
+
+        for (int i = 0; i < n; i++) parent[i] = i;
+
+        for (int[] c : connections) {
+            union(c[0], c[1]);
+        }
+
+        int components = 0;
+        for (int i = 0; i < n; i++) {
+            if (find(i) == i) components++;
+        }
+
+        return components - 1;
     }
 }
