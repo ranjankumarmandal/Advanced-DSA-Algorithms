@@ -49,5 +49,7 @@ public class ValidateBinaryTreeNodes {
                 count++;
             }
         }
+
+        return count == n;
     }
 }
