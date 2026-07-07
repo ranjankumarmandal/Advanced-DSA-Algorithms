@@ -3,5 +3,9 @@ public class CourseSchedule4 {
         List<List<Integer>> adj = new ArrayList<>();
         int[] indegree = new int[numCourses];
 
+        for(int i = 0; i < numCourses; i++) {
+            adj.add(new ArrayList<>());
+        }
+
     }
 }
