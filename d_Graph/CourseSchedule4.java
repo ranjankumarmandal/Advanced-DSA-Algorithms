@@ -12,5 +12,12 @@ public class CourseSchedule4 {
             indegree[p[1]]++;
         }
 
+        Queue<Integer> q = new LinkedList<>();
+        for(int i = 0; i < numCourses; i++) {
+            if(indegree[i] == 0) {
+                q.offer(i);
+            }
+        }
+
     }
 }
