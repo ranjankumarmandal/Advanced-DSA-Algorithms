@@ -19,5 +19,21 @@ public class CourseSchedule4 {
             }
         }
 
+        Map<Integer, Set<Integer>> mp = new HashMap<>();
+        for(int i = 0; i < numCourses; i++) {
+            mp.put(i, new HashSet<>());
+        }
+
+        while(!q.isEmpty()) {
+            int curr = q.poll();
+            for(int next : adj.get(curr)) {
+                mp.get(next).add(curr);
+                mp.get(next).addAll(mp.get(curr));
+                indegree[next]--;
+                if(indegree[next] == 0) {
+                    q.offer(next);
+                }
+            }
+        }
     }
 }
