@@ -18,4 +18,9 @@ public class FrogPositionAfteTSeconds {
         dfs(1, 0, 1.0);
         return ans;
     }
+
+    void dfs(int node, int time, double prob) {
+        vis[node] = true;
+        int children = 0;
+    }
 }
