@@ -35,5 +35,12 @@ public class CourseSchedule4 {
                 }
             }
         }
+
+        List<Boolean> res = new ArrayList<>();
+        for(int[] query : queries) {
+            res.add(mp.get(query[1]).contains(query[0]));
+        }
+
+        return res;
     }
 }
