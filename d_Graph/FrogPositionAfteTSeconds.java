@@ -22,5 +22,9 @@ public class FrogPositionAfteTSeconds {
     void dfs(int node, int time, double prob) {
         vis[node] = true;
         int children = 0;
+        for (int nei : graph[node]) {
+            if (!vis[nei]) children++;
+        }
+
     }
 }
