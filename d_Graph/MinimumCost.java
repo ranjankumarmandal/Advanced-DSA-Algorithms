@@ -11,5 +11,9 @@ public class MinimumCost {
         dq.offerFirst(new int[]{0, 0});
         dist[0][0] = 0;
 
+        while (!dq.isEmpty()) {
+            int[] cur = dq.pollFirst();
+            int r = cur[0], c = cur[1];
+        }
     }
 }
