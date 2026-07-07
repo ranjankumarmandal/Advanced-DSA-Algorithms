@@ -14,6 +14,23 @@ public class MinimumCost {
         while (!dq.isEmpty()) {
             int[] cur = dq.pollFirst();
             int r = cur[0], c = cur[1];
+
+            for (int k = 0; k < 4; k++) {
+                int nr = r + dr[k];
+                int nc = c + dc[k];
+
+                if (nr < 0 || nr >= m || nc < 0 || nc >= n) continue;
+
+                int cost = dist[r][c] + (grid[r][c] == k + 1 ? 0 : 1);
+
+                if (cost < dist[nr][nc]) {
+                    dist[nr][nc] = cost;
+                    if (grid[r][c] == k + 1)
+                        dq.offerFirst(new int[]{nr, nc});
+                    else
+                        dq.offerLast(new int[]{nr, nc});
+                }
+            }
         }
     }
 }
