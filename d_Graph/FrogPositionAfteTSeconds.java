@@ -26,5 +26,15 @@ public class FrogPositionAfteTSeconds {
             if (!vis[nei]) children++;
         }
 
+        if (node == target) {
+            if (time == limit || children == 0) ans = prob;
+            vis[node] = false;
+            return;
+        }
+
+        if (time == limit) {
+            return;
+        }
+
     }
 }
