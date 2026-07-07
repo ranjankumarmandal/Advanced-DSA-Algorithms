@@ -7,5 +7,10 @@ public class CourseSchedule4 {
             adj.add(new ArrayList<>());
         }
 
+        for(int[] p : prerequisites) {
+            adj.get(p[0]).add(p[1]);
+            indegree[p[1]]++;
+        }
+
     }
 }
