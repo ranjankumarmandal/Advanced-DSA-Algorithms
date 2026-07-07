@@ -32,5 +32,7 @@ public class MinimumCost {
                 }
             }
         }
+
+        return dist[m - 1][n - 1];
     }
 }
