@@ -36,5 +36,11 @@ public class FrogPositionAfteTSeconds {
             return;
         }
 
+        for (int nei : graph[node]) {
+            if (!vis[nei]) {
+                dfs(nei, time + 1, prob / children);
+            }
+        }
+        vis[node] = false;
     }
 }
