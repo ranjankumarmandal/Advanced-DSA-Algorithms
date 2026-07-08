@@ -11,5 +11,15 @@ public class MinimumReorder {
         q.offer(0);
         vis[0] = true;
         int ans = 0;
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int[] v : graph[u]) {
+                if (!vis[v[0]]) {
+                    vis[v[0]] = true;
+                    ans += v[1];
+                    q.offer(v[0]);
+                }
+            }
+        }
     }
 }
