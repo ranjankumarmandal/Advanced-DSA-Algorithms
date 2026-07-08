@@ -34,5 +34,14 @@ public class FindCriticalAndPseudoCriticalEdges {
             cost += edges[pick][2];
             cnt++;
         }
+        for (int i = 0; i < edges.length; i++) {
+            if (i == ban) continue;
+            if (dsu.union(edges[i][0], edges[i][1])) {
+                cost += edges[i][2];
+                cnt++;
+            }
+        }
+
+        return cnt == n - 1 ? cost : Integer.MAX_VALUE;
     }
 }
