@@ -54,5 +54,16 @@ public class FindCriticalAndPseudoCriticalEdges {
             e[i][2] = edges[i][2];
             e[i][3] = i;
         }
+
+        Arrays.sort(e, Comparator.comparingInt(a -> a[2]));
+        int base = kruskal(n, e, -1, -1);
+        List<Integer> critical = new ArrayList<>();
+        List<Integer> pseudo = new ArrayList<>();
+        for (int i = 0; i < m; i++) {
+            if (kruskal(n, e, -1, i) > base) critical.add(e[i][3]);
+            else if (kruskal(n, e, i, -1) == base) pseudo.add(e[i][3]);
+        }
+
+        return Arrays.asList(critical, pseudo);
     }
 }
