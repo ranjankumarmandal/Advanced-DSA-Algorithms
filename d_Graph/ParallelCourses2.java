@@ -10,6 +10,11 @@ public class ParallelCourses2 {
         dp[0] = 0;
         for (int mask = 0; mask < m; mask++) {
             int avail = 0;
+            for (int i = 0; i < n; i++) {
+                if ((mask & (1 << i)) == 0 && (pre[i] & mask) == pre[i]) {
+                    avail |= 1 << i;
+                }
+            }
         }
     }
 }
