@@ -44,4 +44,10 @@ public class FindCriticalAndPseudoCriticalEdges {
 
         return cnt == n - 1 ? cost : Integer.MAX_VALUE;
     }
+
+    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {
+        int m = edges.length;
+        int[][] e = new int[m][4];
+
+    }
 }
