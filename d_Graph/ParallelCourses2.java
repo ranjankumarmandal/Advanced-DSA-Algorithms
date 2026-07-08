@@ -15,6 +15,15 @@ public class ParallelCourses2 {
                     avail |= 1 << i;
                 }
             }
+            if (Integer.bitCount(avail) <= k) {
+                dp[mask | avail] = Math.min(dp[mask | avail], dp[mask] + 1);
+            } else {
+                for (int sub = avail; sub > 0; sub = (sub - 1) & avail) {
+                    if (Integer.bitCount(sub) == k) {
+                        dp[mask | sub] = Math.min(dp[mask | sub], dp[mask] + 1);
+                    }
+                }
+            }
         }
     }
 }
