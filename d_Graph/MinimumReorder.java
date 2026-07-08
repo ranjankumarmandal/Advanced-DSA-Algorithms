@@ -6,5 +6,10 @@ public class MinimumReorder {
             graph[e[0]].add(new int[]{e[1], 1});
             graph[e[1]].add(new int[]{e[0], 0});
         }
+        boolean[] vis = new boolean[n];
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(0);
+        vis[0] = true;
+        int ans = 0;
     }
 }
