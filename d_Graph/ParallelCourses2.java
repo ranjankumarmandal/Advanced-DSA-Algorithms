@@ -8,5 +8,8 @@ public class ParallelCourses2 {
         int[] dp = new int[m];
         Arrays.fill(dp, n);
         dp[0] = 0;
+        for (int mask = 0; mask < m; mask++) {
+            int avail = 0;
+        }
     }
 }
