@@ -12,5 +12,17 @@ public class FindCriticalAndPseudoCriticalEdges {
             if (p[x] != x) p[x] = find(p[x]);
             return p[x];
         }
+
+        boolean union(int a, int b) {
+            int pa = find(a), pb = find(b);
+            if (pa == pb) return false;
+            if (r[pa] < r[pb]) p[pa] = pb;
+            else if (r[pa] > r[pb]) p[pb] = pa;
+            else {
+                p[pb] = pa;
+                r[pa]++;
+            }
+            return true;
+        }
     }
 }
