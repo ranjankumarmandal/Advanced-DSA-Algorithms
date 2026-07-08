@@ -25,4 +25,14 @@ public class FindCriticalAndPseudoCriticalEdges {
             return true;
         }
     }
+
+    int kruskal(int n, int[][] edges, int pick, int ban) {
+        DSU dsu = new DSU(n);
+        int cost = 0, cnt = 0;
+        if (pick != -1) {
+            dsu.union(edges[pick][0], edges[pick][1]);
+            cost += edges[pick][2];
+            cnt++;
+        }
+    }
 }
