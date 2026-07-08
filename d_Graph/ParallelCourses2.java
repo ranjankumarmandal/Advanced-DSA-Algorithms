@@ -25,5 +25,7 @@ public class ParallelCourses2 {
                 }
             }
         }
+
+        return dp[m - 1];
     }
 }
