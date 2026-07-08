@@ -21,5 +21,7 @@ public class MinimumReorder {
                 }
             }
         }
+
+        return ans;
     }
 }
