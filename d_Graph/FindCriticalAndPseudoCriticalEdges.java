@@ -48,6 +48,11 @@ public class FindCriticalAndPseudoCriticalEdges {
     public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {
         int m = edges.length;
         int[][] e = new int[m][4];
-
+        for (int i = 0; i < m; i++) {
+            e[i][0] = edges[i][0];
+            e[i][1] = edges[i][1];
+            e[i][2] = edges[i][2];
+            e[i][3] = i;
+        }
     }
 }
