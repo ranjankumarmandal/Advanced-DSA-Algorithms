@@ -4,5 +4,7 @@ public class FindingSmallestSetOfVertices {
         for (List<Integer> e : edges) {
             in[e.get(1)] = true;
         }
+
+        List<Integer> ans = new ArrayList<>();
     }
 }
