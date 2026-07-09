@@ -15,5 +15,10 @@ public class PathWithMaxProbability {
         PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> Double.compare(b[1], a[1]));
         pq.offer(new double[]{start, 1.0});
 
+        while (!pq.isEmpty()) {
+            double[] cur = pq.poll();
+            int u = (int) cur[0];
+            double p = cur[1];
+        }
     }
 }
