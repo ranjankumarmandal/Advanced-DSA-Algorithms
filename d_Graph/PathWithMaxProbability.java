@@ -9,5 +9,8 @@ public class PathWithMaxProbability {
             graph[v].add(new int[]{u, i});
         }
 
+        double[] prob = new double[n];
+        prob[start] = 1.0;
+
     }
 }
