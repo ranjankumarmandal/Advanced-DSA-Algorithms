@@ -9,5 +9,7 @@ public class FindingSmallestSetOfVertices {
         for (int i = 0; i < n; i++) {
             if (!in[i]) ans.add(i);
         }
+
+        return ans;
     }
 }
