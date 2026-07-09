@@ -12,4 +12,11 @@ public class MaximumNumEdgesToRemove {
         parent[pa] = pb;
         return true;
     }
+
+    public int maxNumEdgesToRemove(int n, int[][] edges) {
+        parent = new int[n + 1];
+        for (int i = 1; i <= n; i++) parent[i] = i;
+
+        int alice = 0, bob = 0, used = 0;
+    }
 }
