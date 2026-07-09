@@ -19,6 +19,18 @@ public class PathWithMaxProbability {
             double[] cur = pq.poll();
             int u = (int) cur[0];
             double p = cur[1];
+
+            if (u == end) return p;
+            if (p < prob[u]) continue;
+
+            for (int[] next : graph[u]) {
+                int v = next[0];
+                double np = p * succProb[next[1]];
+                if (np > prob[v]) {
+                    prob[v] = np;
+                    pq.offer(new double[]{v, np});
+                }
+            }
         }
     }
 }
