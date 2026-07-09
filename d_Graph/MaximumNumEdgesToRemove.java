@@ -41,5 +41,12 @@ public class MaximumNumEdgesToRemove {
         if (alice != n - 1) return -1;
 
         parent = save;
+
+        for (int[] e : edges) {
+            if (e[0] == 2 && union(e[1], e[2])) {
+                used++;
+                bob++;
+            }
+        }
     }
 }
