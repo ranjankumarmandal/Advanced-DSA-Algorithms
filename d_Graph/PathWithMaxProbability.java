@@ -12,5 +12,8 @@ public class PathWithMaxProbability {
         double[] prob = new double[n];
         prob[start] = 1.0;
 
+        PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> Double.compare(b[1], a[1]));
+        pq.offer(new double[]{start, 1.0});
+
     }
 }
