@@ -48,5 +48,9 @@ public class MaximumNumEdgesToRemove {
                 bob++;
             }
         }
+
+        if (bob != n - 1) return -1;
+
+        return edges.length - used;
     }
 }
