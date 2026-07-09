@@ -28,5 +28,18 @@ public class MaximumNumEdgesToRemove {
                 }
             }
         }
+
+        int[] save = parent.clone();
+
+        for (int[] e : edges) {
+            if (e[0] == 1 && union(e[1], e[2])) {
+                used++;
+                alice++;
+            }
+        }
+
+        if (alice != n - 1) return -1;
+
+        parent = save;
     }
 }
