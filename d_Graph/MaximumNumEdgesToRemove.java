@@ -18,5 +18,15 @@ public class MaximumNumEdgesToRemove {
         for (int i = 1; i <= n; i++) parent[i] = i;
 
         int alice = 0, bob = 0, used = 0;
+
+        for (int[] e : edges) {
+            if (e[0] == 3) {
+                if (union(e[1], e[2])) {
+                    used++;
+                    alice++;
+                    bob++;
+                }
+            }
+        }
     }
 }
