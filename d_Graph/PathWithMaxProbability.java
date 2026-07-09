@@ -32,5 +32,7 @@ public class PathWithMaxProbability {
                 }
             }
         }
+
+        return 0.0;
     }
 }
