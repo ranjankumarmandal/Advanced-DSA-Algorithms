@@ -7,6 +7,7 @@ public class FindingSmallestSetOfVertices {
 
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < n; i++) {
+            if (!in[i]) ans.add(i);
         }
     }
 }
