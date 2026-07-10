@@ -18,6 +18,14 @@ public class MinCostToConnectAllPoints {
             vis[u] = true;
             ans += minDist[u];
 
+            for (int v = 0; v < n; v++) {
+                if (!vis[v]) {
+                    int d = Math.abs(points[u][0] - points[v][0]) + Math.abs(points[u][1] - points[v][1]);
+                    if (d < minDist[v]) {
+                        minDist[v] = d;
+                    }
+                }
+            }
         }
     }
 }
