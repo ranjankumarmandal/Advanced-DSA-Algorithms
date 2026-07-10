@@ -27,5 +27,7 @@ public class MinCostToConnectAllPoints {
                 }
             }
         }
+
+        return ans;
     }
 }
