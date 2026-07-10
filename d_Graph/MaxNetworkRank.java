@@ -13,6 +13,9 @@ public class MaxNetworkRank {
 
         int ans = 0;
         for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                ans = Math.max(ans, degree[i] + degree[j] - (connected[i][j] ? 1 : 0));
+            }
         }
     }
 }
