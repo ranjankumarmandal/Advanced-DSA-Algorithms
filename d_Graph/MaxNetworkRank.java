@@ -11,5 +11,6 @@ public class MaxNetworkRank {
             connected[v][u] = true;
         }
 
+        int ans = 0;
     }
 }
