@@ -41,5 +41,14 @@ public class StrangePrinter2 {
             }
         }
 
+        java.util.Queue<Integer> q = new java.util.ArrayDeque<>();
+        int total = 0;
+        for (int i = 1; i <= max; i++) {
+            if (exists[i]) {
+                total++;
+                if (indegree[i] == 0) q.offer(i);
+            }
+        }
+
     }
 }
