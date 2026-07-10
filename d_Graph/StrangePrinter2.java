@@ -25,5 +25,8 @@ public class StrangePrinter2 {
             }
         }
 
+        boolean[][] graph = new boolean[max + 1][max + 1];
+        int[] indegree = new int[max + 1];
+
     }
 }
