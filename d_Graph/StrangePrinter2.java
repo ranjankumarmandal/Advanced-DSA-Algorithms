@@ -14,5 +14,16 @@ public class StrangePrinter2 {
             maxR[i] = maxC[i] = -1;
         }
 
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int c = targetGrid[i][j];
+                exists[c] = true;
+                minR[c] = Math.min(minR[c], i);
+                maxR[c] = Math.max(maxR[c], i);
+                minC[c] = Math.min(minC[c], j);
+                maxC[c] = Math.max(maxC[c], j);
+            }
+        }
+
     }
 }
