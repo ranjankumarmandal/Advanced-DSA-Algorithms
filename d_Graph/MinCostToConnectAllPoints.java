@@ -7,5 +7,13 @@ public class MinCostToConnectAllPoints {
         minDist[0] = 0;
         int ans = 0;
 
+        for (int i = 0; i < n; i++) {
+            int u = -1;
+            for (int j = 0; j < n; j++) {
+                if (!vis[j] && (u == -1 || minDist[j] < minDist[u])) {
+                    u = j;
+                }
+            }
+        }
     }
 }
