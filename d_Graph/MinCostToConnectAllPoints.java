@@ -14,6 +14,10 @@ public class MinCostToConnectAllPoints {
                     u = j;
                 }
             }
+
+            vis[u] = true;
+            ans += minDist[u];
+
         }
     }
 }
