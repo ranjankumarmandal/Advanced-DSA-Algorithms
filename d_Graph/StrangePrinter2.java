@@ -9,5 +9,10 @@ public class StrangePrinter2 {
         int[] maxC = new int[max + 1];
         boolean[] exists = new boolean[max + 1];
 
+        for (int i = 1; i <= max; i++) {
+            minR[i] = minC[i] = Integer.MAX_VALUE;
+            maxR[i] = maxC[i] = -1;
+        }
+
     }
 }
