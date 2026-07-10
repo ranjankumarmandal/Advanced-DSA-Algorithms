@@ -50,5 +50,18 @@ public class StrangePrinter2 {
             }
         }
 
+        int seen = 0;
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            seen++;
+            for (int v = 1; v <= max; v++) {
+                if (graph[u][v]) {
+                    indegree[v]--;
+                    if (indegree[v] == 0) q.offer(v);
+                }
+            }
+        }
+
+        return seen == total;
     }
 }
