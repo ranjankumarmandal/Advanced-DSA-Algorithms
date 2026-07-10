@@ -17,5 +17,7 @@ public class MaxNetworkRank {
                 ans = Math.max(ans, degree[i] + degree[j] - (connected[i][j] ? 1 : 0));
             }
         }
+
+        return ans;
     }
 }
