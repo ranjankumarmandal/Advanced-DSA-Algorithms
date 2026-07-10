@@ -28,5 +28,18 @@ public class StrangePrinter2 {
         boolean[][] graph = new boolean[max + 1][max + 1];
         int[] indegree = new int[max + 1];
 
+        for (int c = 1; c <= max; c++) {
+            if (!exists[c]) continue;
+            for (int i = minR[c]; i <= maxR[c]; i++) {
+                for (int j = minC[c]; j <= maxC[c]; j++) {
+                    int d = targetGrid[i][j];
+                    if (d != c && !graph[c][d]) {
+                        graph[c][d] = true;
+                        indegree[d]++;
+                    }
+                }
+            }
+        }
+
     }
 }
