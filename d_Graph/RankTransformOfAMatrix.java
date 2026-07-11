@@ -29,5 +29,16 @@ public class RankTransformOfAMatrix {
             }
         }
 
+        int[] rowRank = new int[m];
+        int[] colRank = new int[n];
+
+        for (Map.Entry<Integer, List<int[]>> entry : map.entrySet()) {
+            List<int[]> cells = entry.getValue();
+
+            parent = new int[m + n];
+            for (int i = 0; i < m + n; i++) {
+                parent[i] = i;
+            }
+
     }
 }
