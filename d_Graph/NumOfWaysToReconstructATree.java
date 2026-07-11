@@ -25,5 +25,25 @@ public class NumOfWaysToReconstructATree {
 
         int result = 1;
 
+        for (int node : graph.keySet()) {
+            if (node == root) {
+                continue;
+            }
+
+            int parent = -1;
+            int minDegree = Integer.MAX_VALUE;
+
+            for (int nei : graph.get(node)) {
+                int degree = graph.get(nei).size();
+                if (degree >= graph.get(node).size() && degree < minDegree) {
+                    parent = nei;
+                    minDegree = degree;
+                }
+            }
+
+            if (parent == -1) {
+                return 0;
+            }
+
     }
 }
