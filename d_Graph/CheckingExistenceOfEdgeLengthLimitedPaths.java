@@ -39,5 +39,15 @@ public class CheckingExistenceOfEdgeLengthLimitedPaths {
         boolean[] ans = new boolean[m];
         int idx = 0;
 
+        for (int[] query : q) {
+            while (idx < edgeList.length && edgeList[idx][2] < query[2]) {
+                union(edgeList[idx][0], edgeList[idx][1]);
+                idx++;
+            }
+
+            ans[query[3]] = find(query[0]) == find(query[1]);
+        }
+
+        return ans;
     }
 }
