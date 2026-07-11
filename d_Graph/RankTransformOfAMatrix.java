@@ -20,5 +20,14 @@ public class RankTransformOfAMatrix {
         int m = matrix.length;
         int n = matrix[0].length;
         int[][] ans = new int[m][n];
+
+        TreeMap<Integer, List<int[]>> map = new TreeMap<>();
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                map.computeIfAbsent(matrix[i][j], k -> new ArrayList<>()).add(new int[]{i, j});
+            }
+        }
+
     }
 }
