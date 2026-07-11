@@ -29,5 +29,15 @@ public class CheckingExistenceOfEdgeLengthLimitedPaths {
             q[i][3] = i;
         }
 
+        Arrays.sort(q, (a, b) -> a[2] - b[2]);
+
+        parent = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+
+        boolean[] ans = new boolean[m];
+        int idx = 0;
+
     }
 }
