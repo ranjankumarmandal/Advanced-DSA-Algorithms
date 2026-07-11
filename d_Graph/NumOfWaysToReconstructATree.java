@@ -12,5 +12,12 @@ public class NumOfWaysToReconstructATree {
         int n = graph.size();
         int root = -1;
 
+        for (int node : graph.keySet()) {
+            if (graph.get(node).size() == n - 1) {
+                root = node;
+                break;
+            }
+        }
+
     }
 }
