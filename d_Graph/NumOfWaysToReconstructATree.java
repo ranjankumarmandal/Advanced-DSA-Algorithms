@@ -45,5 +45,20 @@ public class NumOfWaysToReconstructATree {
                 return 0;
             }
 
+            for (int nei : graph.get(node)) {
+                if (nei == parent) {
+                    continue;
+                }
+                if (!graph.get(parent).contains(nei)) {
+                    return 0;
+                }
+            }
+
+            if (graph.get(parent).size() == graph.get(node).size()) {
+                result = 2;
+            }
+        }
+
+        return result;
     }
 }
