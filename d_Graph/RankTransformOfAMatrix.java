@@ -16,4 +16,9 @@ public class RankTransformOfAMatrix {
         }
     }
 
+    public int[][] matrixRankTransform(int[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[][] ans = new int[m][n];
+    }
 }
