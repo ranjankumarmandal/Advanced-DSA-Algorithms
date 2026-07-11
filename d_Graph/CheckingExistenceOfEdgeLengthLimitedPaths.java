@@ -19,5 +19,15 @@ public class CheckingExistenceOfEdgeLengthLimitedPaths {
     public boolean[] distanceLimitedPathsExist(int n, int[][] edgeList, int[][] queries) {
         Arrays.sort(edgeList, (a, b) -> a[2] - b[2]);
 
+        int m = queries.length;
+        int[][] q = new int[m][4];
+
+        for (int i = 0; i < m; i++) {
+            q[i][0] = queries[i][0];
+            q[i][1] = queries[i][1];
+            q[i][2] = queries[i][2];
+            q[i][3] = i;
+        }
+
     }
 }
