@@ -16,4 +16,8 @@ public class CheckingExistenceOfEdgeLengthLimitedPaths {
         }
     }
 
+    public boolean[] distanceLimitedPathsExist(int n, int[][] edgeList, int[][] queries) {
+        Arrays.sort(edgeList, (a, b) -> a[2] - b[2]);
+
+    }
 }
