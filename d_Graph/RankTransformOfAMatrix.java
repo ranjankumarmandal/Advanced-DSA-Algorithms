@@ -58,5 +58,12 @@ public class RankTransformOfAMatrix {
                 ans[cell[0]][cell[1]] = r;
             }
 
+            for (int[] cell : cells) {
+                rowRank[cell[0]] = Math.max(rowRank[cell[0]], ans[cell[0]][cell[1]]);
+                colRank[cell[1]] = Math.max(colRank[cell[1]], ans[cell[0]][cell[1]]);
+            }
+        }
+
+        return ans;
     }
 }
