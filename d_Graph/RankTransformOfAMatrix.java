@@ -40,5 +40,23 @@ public class RankTransformOfAMatrix {
                 parent[i] = i;
             }
 
+            for (int[] cell : cells) {
+                union(cell[0], cell[1] + m);
+            }
+
+            Map<Integer, Integer> rank = new HashMap<>();
+
+            for (int[] cell : cells) {
+                int root = find(cell[0]);
+                int value = Math.max(rowRank[cell[0]], colRank[cell[1]]);
+                rank.put(root, Math.max(rank.getOrDefault(root, 0), value));
+            }
+
+            for (int[] cell : cells) {
+                int root = find(cell[0]);
+                int r = rank.get(root) + 1;
+                ans[cell[0]][cell[1]] = r;
+            }
+
     }
 }
