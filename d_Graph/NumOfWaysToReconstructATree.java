@@ -9,5 +9,8 @@ public class NumOfWaysToReconstructATree {
             graph.get(p[1]).add(p[0]);
         }
 
+        int n = graph.size();
+        int root = -1;
+
     }
 }
