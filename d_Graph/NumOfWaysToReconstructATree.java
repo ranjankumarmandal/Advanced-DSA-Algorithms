@@ -19,5 +19,11 @@ public class NumOfWaysToReconstructATree {
             }
         }
 
+        if (root == -1) {
+            return 0;
+        }
+
+        int result = 1;
+
     }
 }
