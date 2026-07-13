@@ -5,4 +5,10 @@ public class LongestIncreasingPathInAMatrix {
             {1, 0},
             {-1, 0}
     };
+
+    public int longestIncreasingPath(int[][] matrix) {
+
+
+        return longestPath;
+    }
 }
