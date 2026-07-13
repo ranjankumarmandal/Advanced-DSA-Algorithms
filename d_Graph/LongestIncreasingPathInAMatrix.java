@@ -7,7 +7,17 @@ public class LongestIncreasingPathInAMatrix {
     };
 
     public int longestIncreasingPath(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] memo = new int[rows][cols];
 
+        int longestPath = 0;
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                longestPath = Math.max(longestPath, dfs(matrix, memo, row, col));
+            }
+        }
 
         return longestPath;
     }
