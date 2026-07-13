@@ -21,4 +21,24 @@ public class LongestIncreasingPathInAMatrix {
 
         return longestPath;
     }
+
+    private int dfs(int[][] matrix, int[][] memo, int row, int col) {
+        if (memo[row][col] != 0) {
+            return memo[row][col];
+        }
+
+        int longest = 1;
+
+        for (int[] direction : DIRECTIONS) {
+            int nextRow = row + direction[0];
+            int nextCol = col + direction[1];
+
+            if (isValid(nextRow, nextCol, matrix)
+                    && matrix[nextRow][nextCol] > matrix[row][col]) {
+                longest = Math.max(longest, 1 + dfs(matrix, memo, nextRow, nextCol));
+            }
+        }
+
+        return memo[row][col] = longest;
+    }
 }
