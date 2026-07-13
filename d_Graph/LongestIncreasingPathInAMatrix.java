@@ -41,4 +41,11 @@ public class LongestIncreasingPathInAMatrix {
 
         return memo[row][col] = longest;
     }
+
+    private boolean isValid(int row, int col, int[][] matrix) {
+        return row >= 0
+                && row < matrix.length
+                && col >= 0
+                && col < matrix[0].length;
+    }
 }
