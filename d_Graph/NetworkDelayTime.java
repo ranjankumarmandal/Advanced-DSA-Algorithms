@@ -15,5 +15,10 @@ public class NetowrkDelayTime {
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         pq.offer(new int[]{0, k});
 
+        while (!pq.isEmpty()) {
+            int[] curr = pq.poll();
+            int time = curr[0];
+            int node = curr[1];
+        }
     }
 }
