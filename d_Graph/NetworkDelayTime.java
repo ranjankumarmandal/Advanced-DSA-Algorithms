@@ -8,5 +8,9 @@ public class NetowrkDelayTime {
             graph.putIfAbsent(u, new ArrayList<>());
             graph.get(u).add(new int[]{v, w});
         }
+
+        int[] dist = new int[n + 1];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[k] = 0;
     }
 }
