@@ -19,6 +19,9 @@ public class NetowrkDelayTime {
             int[] curr = pq.poll();
             int time = curr[0];
             int node = curr[1];
+
+            if (time > dist[node]) continue;
+
         }
     }
 }
