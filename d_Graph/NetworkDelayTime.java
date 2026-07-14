@@ -35,5 +35,11 @@ public class NetowrkDelayTime {
                 }
             }
         }
+
+        int maxTime = 0;
+        for (int i = 1; i <= n; i++) {
+            if (dist[i] == Integer.MAX_VALUE) return -1;
+            maxTime = Math.max(maxTime, dist[i]);
+        }
     }
 }
