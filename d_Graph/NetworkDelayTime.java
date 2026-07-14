@@ -4,6 +4,9 @@ public class NetowrkDelayTime {
         for (int[] time : times) {
             int u = time[0];
             int v = time[1];
+            int w = time[2];
+            graph.putIfAbsent(u, new ArrayList<>());
+            graph.get(u).add(new int[]{v, w});
         }
     }
 }
