@@ -27,6 +27,11 @@ public class NetowrkDelayTime {
                     int neighborNode = neighbor[0];
                     int travelTime = neighbor[1];
                     int newTime = time + travelTime;
+
+                    if (newTime < dist[neighborNode]) {
+                        dist[neighborNode] = newTime;
+                        pq.offer(new int[]{newTime, neighborNode});
+                    }
                 }
             }
         }
