@@ -41,5 +41,7 @@ public class NetowrkDelayTime {
             if (dist[i] == Integer.MAX_VALUE) return -1;
             maxTime = Math.max(maxTime, dist[i]);
         }
+
+        return maxTime;
     }
 }
