@@ -22,6 +22,13 @@ public class NetowrkDelayTime {
 
             if (time > dist[node]) continue;
 
+            if (graph.containsKey(node)) {
+                for (int[] neighbor : graph.get(node)) {
+                    int neighborNode = neighbor[0];
+                    int travelTime = neighbor[1];
+                    int newTime = time + travelTime;
+                }
+            }
         }
     }
 }
