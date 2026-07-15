@@ -11,5 +11,10 @@ public class LargestPathValue {
         int[][] count = new int[n][26];
         int[] vis = new int[n];
         int ans = 0;
+
+        for (int i = 0; i < n && ans != INF; i++) {
+            ans = Math.max(ans, dfs(i, colors, adj, count, vis));
+        }
+        return ans == INF ? -1 : ans;
     }
 }
