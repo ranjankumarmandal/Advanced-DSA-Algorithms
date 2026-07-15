@@ -24,5 +24,15 @@ public class LargestPathValue {
         if (vis[node] == 2) {
             return count[node][colors.charAt(node) - 'a'];
         }
+
+        vis[node] = 1;
+        for (int nxt : adj.get(node)) {
+            int res = dfs(nxt, colors, adj, count, vis);
+            if (res == INF)
+                return INF;
+            for (int c = 0; c < 26; c++) {
+                count[node][c] = Math.max(count[node][c], count[nxt][c]);
+            }
+        }
     }
 }
