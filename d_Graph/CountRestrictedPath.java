@@ -48,5 +48,7 @@ public class CountRestrictedPath {
                 totalWays=(totalWays+dfs(v,n,adj,dist,dp)) % 1000000007;
             }
         }
+
+        return dp[u]=(int)totalWays;
     }
 }
