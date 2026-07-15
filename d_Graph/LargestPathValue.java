@@ -17,4 +17,8 @@ public class LargestPathValue {
         }
         return ans == INF ? -1 : ans;
     }
+
+    private int dfs(int node, String colors,List<List<Integer>> adj,int[][] count,int[] vis) {
+
+    }
 }
