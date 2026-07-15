@@ -37,4 +37,8 @@ public class CountRestrictedPath {
 
         return dfs(1,n,adj,dist,dp);
     }
+
+    private int dfs(int u,int n,List<List<int[]>>adj,int[]dist,int[]dp){
+
+    }
 }
