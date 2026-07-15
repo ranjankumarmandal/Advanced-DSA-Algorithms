@@ -13,5 +13,10 @@ public class CountRestrictedPath {
             adj.get(u).add(new int[]{v,w});
             adj.get(v).add(new int[]{u,w});
         }
+        int[]dist=new int[n+1];
+        Arrays.fill(dist,Integer.MAX_VALUE);
+        dist[n]=0;
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->Integer.compare(a[1],b[1]));
+        pq.add(new int[]{n,0});
     }
 }
