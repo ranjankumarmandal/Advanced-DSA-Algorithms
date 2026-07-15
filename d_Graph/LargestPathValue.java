@@ -37,5 +37,7 @@ public class LargestPathValue {
         int col = colors.charAt(node) - 'a';
         count[node][col]++;
         vis[node] = 2;
+
+        return count[node][col];
     }
 }
