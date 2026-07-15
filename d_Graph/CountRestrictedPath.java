@@ -32,5 +32,9 @@ public class CountRestrictedPath {
                 }
             }
         }
+        int[]dp=new int[n+1];
+        Arrays.fill(dp,-1);
+
+        return dfs(1,n,adj,dist,dp);
     }
 }
