@@ -3,5 +3,9 @@ public class LargestPathValue {
     public int largestPathValue(String colors, int[][] edges) {
         int n = colors.length();
         List<List<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++)
+            adj.add(new ArrayList<>());
+        for (int[] e : edges)
+            adj.get(e[0]).add(e[1]);
     }
 }
