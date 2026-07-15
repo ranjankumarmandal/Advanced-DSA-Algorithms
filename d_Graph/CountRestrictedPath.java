@@ -18,5 +18,19 @@ public class CountRestrictedPath {
         dist[n]=0;
         PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->Integer.compare(a[1],b[1]));
         pq.add(new int[]{n,0});
+        while(!pq.isEmpty()){
+            int[]curr=pq.poll();
+            int d=curr[1];
+            int u=curr[0];
+            if(d>dist[u]) continue;
+            for(int []neigh:adj.get(u)){
+                int v=neigh[0];
+                int weight=neigh[1];
+                if(dist[u]+weight<dist[v]){
+                    dist[v]=dist[u]+weight;
+                    pq.add(new int[]{v,dist[v]});
+                }
+            }
+        }
     }
 }
