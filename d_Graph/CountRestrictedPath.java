@@ -42,5 +42,11 @@ public class CountRestrictedPath {
         if(u==n) return 1;
         if(dp[u]!=-1) return dp[u];
         long totalWays=0;
+        for(int []neigh:adj.get(u)){
+            int v=neigh[0];
+            if(dist[u]>dist[v]) {
+                totalWays=(totalWays+dfs(v,n,adj,dist,dp)) % 1000000007;
+            }
+        }
     }
 }
