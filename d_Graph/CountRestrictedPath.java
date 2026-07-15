@@ -39,6 +39,8 @@ public class CountRestrictedPath {
     }
 
     private int dfs(int u,int n,List<List<int[]>>adj,int[]dist,int[]dp){
-
+        if(u==n) return 1;
+        if(dp[u]!=-1) return dp[u];
+        long totalWays=0;
     }
 }
