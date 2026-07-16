@@ -36,5 +36,7 @@ public class MinCostToReachDestinationInTime {
                 }
             }
         }
+
+        return -1;
     }
 }
