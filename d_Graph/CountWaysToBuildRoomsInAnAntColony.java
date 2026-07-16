@@ -9,5 +9,8 @@ public class CountWaysToBuildRoomsInAnAntColony {
         for (int i = 0; i < n; i++) g[i] = new ArrayList<>();
         for (int i = 1; i < n; i++) g[prevRoom[i]].add(i);
 
+        long[] fact = new long[n + 1];
+        long[] invFact = new long[n + 1];
+        fact[0] = 1;
     }
 }
