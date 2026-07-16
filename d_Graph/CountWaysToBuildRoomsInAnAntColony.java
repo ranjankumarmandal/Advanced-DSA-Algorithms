@@ -39,5 +39,12 @@ public class CountWaysToBuildRoomsInAnAntColony {
     }
 
     private long modPow(long a, long e) {
+        long res = 1;
+        while (e > 0) {
+            if ((e & 1) == 1) res = res * a % MOD;
+            a = a * a % MOD;
+            e >>= 1;
+        }
+        return res;
     }
 }
