@@ -9,5 +9,11 @@ public class FindIfPathExistsInGraph {
             graph[e[0]].add(e[1]);
             graph[e[1]].add(e[0]);
         }
+
+        boolean[] visited = new boolean[n];
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.offer(source);
+        visited[source] = true;
+
     }
 }
