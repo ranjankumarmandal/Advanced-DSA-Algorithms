@@ -27,6 +27,12 @@ public class CountWaysToBuildRoomsInAnAntColony {
         size[u] = 1;
         long res = 1;
         int total = 0;
-
+        for (int v : g[u]) {
+            dfs(v, g, size, ways, fact, invFact);
+            res = res * ways[v] % MOD;
+            res = res * invFact[size[v]] % MOD;
+            total += size[v];
+            size[u] += size[v];
+        }
     }
 }
