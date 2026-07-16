@@ -34,5 +34,7 @@ public class CountWaysToBuildRoomsInAnAntColony {
             total += size[v];
             size[u] += size[v];
         }
+        res = res * fact[total] % MOD;
+        ways[u] = res;
     }
 }
