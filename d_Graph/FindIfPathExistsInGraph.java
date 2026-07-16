@@ -25,5 +25,7 @@ public class FindIfPathExistsInGraph {
                 }
             }
         }
+
+        return false;
     }
 }
