@@ -15,5 +15,15 @@ public class FindIfPathExistsInGraph {
         queue.offer(source);
         visited[source] = true;
 
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+            if (u == destination) return true;
+            for (int v : graph[u]) {
+                if (!visited[v]) {
+                    visited[v] = true;
+                    queue.offer(v);
+                }
+            }
+        }
     }
 }
