@@ -22,4 +22,8 @@ public class CountWaysToBuildRoomsInAnAntColony {
 
         return (int) ways[0];
     }
+
+    private void dfs(int u, List<Integer>[] g, int[] size, long[] ways, long[] fact, long[] invFact) {
+
+    }
 }
