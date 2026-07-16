@@ -37,4 +37,7 @@ public class CountWaysToBuildRoomsInAnAntColony {
         res = res * fact[total] % MOD;
         ways[u] = res;
     }
+
+    private long modPow(long a, long e) {
+    }
 }
