@@ -12,5 +12,9 @@ public class CountWaysToBuildRoomsInAnAntColony {
         long[] fact = new long[n + 1];
         long[] invFact = new long[n + 1];
         fact[0] = 1;
+        for (int i = 1; i <= n; i++) fact[i] = fact[i - 1] * i % MOD;
+        invFact[n] = modPow(fact[n], MOD - 2);
+        for (int i = n; i > 0; i--) invFact[i - 1] = invFact[i] * i % MOD;
+
     }
 }
