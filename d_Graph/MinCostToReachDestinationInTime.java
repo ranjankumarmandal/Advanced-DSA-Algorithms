@@ -18,5 +18,23 @@ public class MinCostToReachDestinationInTime {
         dist[0][0] = passingFees[0];
         pq.offer(new int[]{passingFees[0], 0, 0});
 
+        while (!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int cost = cur[0], u = cur[1], time = cur[2];
+
+            if (u == n - 1) return cost;
+            if (cost != dist[u][time]) continue;
+
+            for (int[] next : graph[u]) {
+                int v = next[0];
+                int t = time + next[1];
+                if (t > maxTime) continue;
+                int nc = cost + passingFees[v];
+                if (nc < dist[v][t]) {
+                    dist[v][t] = nc;
+                    pq.offer(new int[]{nc, v, t});
+                }
+            }
+        }
     }
 }
