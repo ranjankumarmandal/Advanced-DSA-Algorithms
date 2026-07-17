@@ -21,5 +21,13 @@ public class NumOfWaysToArriveAtDestination {
         ways[0] = 1;
         pq.offer(new long[]{0, 0});
 
+        while (!pq.isEmpty()) {
+            long[] cur = pq.poll();
+            int u = (int) cur[0];
+            long d = cur[1];
+
+            if (d > dist[u]) continue;
+
+        }
     }
 }
