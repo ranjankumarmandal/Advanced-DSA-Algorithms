@@ -41,5 +41,7 @@ public class NumOfWaysToArriveAtDestination {
                 }
             }
         }
+
+        return (int) ways[n - 1];
     }
 }
