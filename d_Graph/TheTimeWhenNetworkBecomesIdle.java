@@ -38,5 +38,7 @@ public class TheTimeWhenNetworkBecomesIdle {
             }
             ans = Math.max(ans, lastSend + roundTrip);
         }
+
+        return ans + 1;
     }
 }
