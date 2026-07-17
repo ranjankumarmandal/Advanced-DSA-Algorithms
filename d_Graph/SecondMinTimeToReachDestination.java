@@ -40,5 +40,7 @@ public class SecondMinTimeToReachDestination {
                 }
             }
         }
+
+        return second[n];
     }
 }
