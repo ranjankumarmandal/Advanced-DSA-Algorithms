@@ -11,5 +11,11 @@ public class TheTimeWhenNetworkBecomesIdle {
             graph[e[1]].add(e[0]);
         }
 
+        int[] dist = new int[n];
+        Arrays.fill(dist, -1);
+        Queue<Integer> q = new ArrayDeque<>();
+        q.offer(0);
+        dist[0] = 0;
+
     }
 }
