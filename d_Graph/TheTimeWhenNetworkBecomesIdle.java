@@ -17,5 +17,15 @@ public class TheTimeWhenNetworkBecomesIdle {
         q.offer(0);
         dist[0] = 0;
 
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int v : graph[u]) {
+                if (dist[v] == -1) {
+                    dist[v] = dist[u] + 1;
+                    q.offer(v);
+                }
+            }
+        }
+
     }
 }
