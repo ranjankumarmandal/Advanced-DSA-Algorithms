@@ -29,5 +29,16 @@ public class SecondMinTimeToReachDestination {
             }
             int arrive = depart + time;
 
+            for (int v : graph[u]) {
+                if (arrive < first[v]) {
+                    second[v] = first[v];
+                    first[v] = arrive;
+                    q.offer(new int[]{v, arrive});
+                } else if (arrive > first[v] && arrive < second[v]) {
+                    second[v] = arrive;
+                    q.offer(new int[]{v, arrive});
+                }
+            }
+        }
     }
 }
