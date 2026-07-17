@@ -10,5 +10,24 @@ public class SecondMinTimeToReachDestination {
             graph[e[1]].add(e[0]);
         }
 
+        int[] first = new int[n + 1];
+        int[] second = new int[n + 1];
+        Arrays.fill(first, Integer.MAX_VALUE);
+        Arrays.fill(second, Integer.MAX_VALUE);
+
+        Queue<int[]> q = new ArrayDeque<>();
+        q.offer(new int[]{1, 0});
+        first[1] = 0;
+
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            int u = cur[0], t = cur[1];
+
+            int depart = t;
+            if ((depart / change) % 2 == 1) {
+                depart = (depart / change + 1) * change;
+            }
+            int arrive = depart + time;
+
     }
 }
