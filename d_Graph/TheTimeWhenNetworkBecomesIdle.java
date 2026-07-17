@@ -27,5 +27,16 @@ public class TheTimeWhenNetworkBecomesIdle {
             }
         }
 
+        int ans = 0;
+        for (int i = 1; i < n; i++) {
+            int roundTrip = dist[i] * 2;
+            int lastSend;
+            if (patience[i] >= roundTrip) {
+                lastSend = 0;
+            } else {
+                lastSend = ((roundTrip - 1) / patience[i]) * patience[i];
+            }
+            ans = Math.max(ans, lastSend + roundTrip);
+        }
     }
 }
