@@ -28,6 +28,18 @@ public class NumOfWaysToArriveAtDestination {
 
             if (d > dist[u]) continue;
 
+            for (long[] next : graph[u]) {
+                int v = (int) next[0];
+                long nd = d + next[1];
+
+                if (nd < dist[v]) {
+                    dist[v] = nd;
+                    ways[v] = ways[u];
+                    pq.offer(new long[]{v, nd});
+                } else if (nd == dist[v]) {
+                    ways[v] = (ways[v] + ways[u]) % MOD;
+                }
+            }
         }
     }
 }
