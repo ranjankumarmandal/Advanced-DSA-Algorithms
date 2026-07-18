@@ -27,5 +27,16 @@ public class ProcessRequestedFriendRequest {
             return true;
         }
     }
+
+    public boolean[] friendRequests(int n, int[][] restrictions, int[][] requests) {
+        DSU dsu = new DSU(n);
+        boolean[] ans = new boolean[requests.length];
+
+        for (int i = 0; i < requests.length; i++) {
+            int u = requests[i][0];
+            int v = requests[i][1];
+            int pu = dsu.find(u);
+            int pv = dsu.find(v);
+            boolean ok = true;
     }
 }
