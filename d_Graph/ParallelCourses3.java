@@ -26,5 +26,7 @@ public class ParallelCourses3 {
                 if (--indegree[v] == 0) q.offer(v);
             }
         }
+
+        return ans;
     }
 }
