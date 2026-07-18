@@ -4,5 +4,10 @@ public class ParallelCourses3 {
         for (int i = 0; i < n; i++) graph[i] = new ArrayList<>();
         int[] indegree = new int[n];
 
+        for (int[] r : relations) {
+            graph[r[0] - 1].add(r[1] - 1);
+            indegree[r[1] - 1]++;
+        }
+
     }
 }
