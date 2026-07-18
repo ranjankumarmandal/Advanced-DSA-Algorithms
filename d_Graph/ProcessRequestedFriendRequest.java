@@ -49,5 +49,13 @@ public class ProcessRequestedFriendRequest {
                     }
                 }
             }
+
+            if (ok) {
+                dsu.union(u, v);
+                ans[i] = true;
+            }
+        }
+
+        return ans;
     }
 }
