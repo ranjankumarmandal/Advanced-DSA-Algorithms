@@ -28,4 +28,6 @@ public class MaxPathQualityOfAGraph {
         for (int[] next : graph[node]) {
             dfs(next[0], time + next[1], score);
         }
+        seen[node]--;
+    }
 }
