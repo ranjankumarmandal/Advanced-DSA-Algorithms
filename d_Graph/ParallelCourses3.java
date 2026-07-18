@@ -17,5 +17,14 @@ public class ParallelCourses3 {
             if (indegree[i] == 0) q.offer(i);
         }
 
+        int ans = 0;
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            ans = Math.max(ans, dp[u]);
+            for (int v : graph[u]) {
+                dp[v] = Math.max(dp[v], dp[u] + time[v]);
+                if (--indegree[v] == 0) q.offer(v);
+            }
+        }
     }
 }
