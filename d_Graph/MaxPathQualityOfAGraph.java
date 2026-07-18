@@ -5,4 +5,9 @@ public class MaxPathQualityOfAGraph {
     private int maxTime;
     private int ans;
 
+    public int maximalPathQuality(int[] values, int[][] edges, int maxTime) {
+        int n = values.length;
+        this.values = values;
+        this.maxTime = maxTime;
+    }
 }
