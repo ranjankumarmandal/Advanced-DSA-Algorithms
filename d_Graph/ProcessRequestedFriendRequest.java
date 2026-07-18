@@ -38,5 +38,16 @@ public class ProcessRequestedFriendRequest {
             int pu = dsu.find(u);
             int pv = dsu.find(v);
             boolean ok = true;
+
+            if (pu != pv) {
+                for (int[] r : restrictions) {
+                    int a = dsu.find(r[0]);
+                    int b = dsu.find(r[1]);
+                    if ((a == pu && b == pv) || (a == pv && b == pu)) {
+                        ok = false;
+                        break;
+                    }
+                }
+            }
     }
 }
