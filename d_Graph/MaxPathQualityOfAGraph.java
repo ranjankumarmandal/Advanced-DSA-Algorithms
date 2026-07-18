@@ -19,4 +19,13 @@ public class MaxPathQualityOfAGraph {
         dfs(0, 0, 0);
         return ans;
     }
+
+    private void dfs(int node, int time, int score) {
+        if (time > maxTime) return;
+        if (seen[node] == 0) score += values[node];
+        seen[node]++;
+        if (node == 0) ans = Math.max(ans, score);
+        for (int[] next : graph[node]) {
+            dfs(next[0], time + next[1], score);
+        }
 }
