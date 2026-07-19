@@ -28,4 +28,13 @@ public class ValidArrangementOfPairs {
         }
         return ans;
     }
+
+    private void dfs(int u, Map<Integer, Deque<Integer>> graph, List<int[]> path) {
+        Deque<Integer> next = graph.get(u);
+        while (next != null && !next.isEmpty()) {
+            int v = next.pollFirst();
+            dfs(v, graph, path);
+            path.add(new int[]{u, v});
+        }
+    }
 }
