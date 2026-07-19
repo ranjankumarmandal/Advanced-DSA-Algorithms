@@ -18,5 +18,14 @@ public class ValidArrangementOfPairs {
             }
         }
 
+        List<int[]> path = new ArrayList<>();
+        dfs(start, graph, path);
+
+        Collections.reverse(path);
+        int[][] ans = new int[pairs.length][2];
+        for (int i = 0; i < pairs.length; i++) {
+            ans[i] = path.get(i);
+        }
+        return ans;
     }
 }
