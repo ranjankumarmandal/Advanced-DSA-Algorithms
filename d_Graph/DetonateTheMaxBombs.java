@@ -28,5 +28,11 @@ public class DetonateTheMaxBombs {
     private int dfs(int u, List<Integer>[] graph, boolean[] vis) {
         vis[u] = true;
         int count = 1;
+        for (int v : graph[u]) {
+            if (!vis[v]) {
+                count += dfs(v, graph, vis);
+            }
+        }
+        return count;
     }
 }
