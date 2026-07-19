@@ -24,4 +24,9 @@ public class DetonateTheMaxBombs {
         }
         return ans;
     }
+
+    private int dfs(int u, List<Integer>[] graph, boolean[] vis) {
+        vis[u] = true;
+        int count = 1;
+    }
 }
