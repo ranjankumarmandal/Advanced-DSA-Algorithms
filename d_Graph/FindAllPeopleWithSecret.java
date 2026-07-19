@@ -12,5 +12,19 @@ public class FindAllPeopleWithSecret {
             int time = meetings[i][2];
             List<int[]> curr = new ArrayList<>();
             Set<Integer> persons = new HashSet<>();
+
+            while (i < meetings.length && meetings[i][2] == time) {
+                curr.add(meetings[i]);
+                persons.add(meetings[i][0]);
+                persons.add(meetings[i][1]);
+                union(parent, meetings[i][0], meetings[i][1]);
+                i++;
+            }
+
+            for (int p : persons) {
+                if (find(parent, p) != find(parent, 0)) {
+                    parent[p] = p;
+                }
+            }
         }
 }
