@@ -27,4 +27,12 @@ public class FindAllPeopleWithSecret {
                 }
             }
         }
+
+        List<Integer> ans = new ArrayList<>();
+        int root = find(parent, 0);
+        for (int j = 0; j < n; j++) {
+            if (find(parent, j) == root) ans.add(j);
+        }
+        return ans;
+    }
 }
