@@ -17,5 +17,11 @@ public class DetonateTheMaxBombs {
             }
         }
 
+        int ans = 1;
+        for (int i = 0; i < n; i++) {
+            boolean[] vis = new boolean[n];
+            ans = Math.max(ans, dfs(i, graph, vis));
+        }
+        return ans;
     }
 }
