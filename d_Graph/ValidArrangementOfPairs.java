@@ -10,5 +10,13 @@ public class ValidArrangementOfPairs {
             in.put(p[1], in.getOrDefault(p[1], 0) + 1);
         }
 
+        int start = pairs[0][0];
+        for (int node : out.keySet()) {
+            if (out.getOrDefault(node, 0) - in.getOrDefault(node, 0) == 1) {
+                start = node;
+                break;
+            }
+        }
+
     }
 }
