@@ -7,5 +7,10 @@ public class FindAllPeopleWithSecret {
 
         union(parent, 0, firstPerson);
 
+        int i = 0;
+        while (i < meetings.length) {
+            int time = meetings[i][2];
+            List<int[]> curr = new ArrayList<>();
+            Set<Integer> persons = new HashSet<>();
         }
 }
