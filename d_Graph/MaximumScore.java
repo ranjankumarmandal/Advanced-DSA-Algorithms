@@ -17,5 +17,17 @@ public class MaximumScore {
             }
         }
 
+        int ans = -1;
+
+        for (int[] e : edges) {
+            int b = e[0], c = e[1];
+            for (int a : graph[b]) {
+                if (a == c) continue;
+                for (int d : graph[c]) {
+                    if (d == b || d == a) continue;
+                    ans = Math.max(ans, scores[a] + scores[b] + scores[c] + scores[d]);
+                }
+            }
+        }
     }
 }
