@@ -4,5 +4,11 @@ public class MaximumScore {
         List<Integer>[] graph = new ArrayList[n];
         for (int i = 0; i < n; i++) graph[i] = new ArrayList<>();
 
+        for (int[] e : edges) {
+            int u = e[0], v = e[1];
+            graph[u].add(v);
+            graph[v].add(u);
+        }
+
     }
 }
