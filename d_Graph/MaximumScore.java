@@ -29,5 +29,7 @@ public class MaximumScore {
                 }
             }
         }
+
+        return ans;
     }
 }
