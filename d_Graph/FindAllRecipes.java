@@ -24,6 +24,14 @@ public class FindAllRecipes {
         while (!queue.isEmpty()) {
             String cur = queue.poll();
             if (!graph.containsKey(cur)) continue;
+
+            for (String next : graph.get(cur)) {
+                indegree.put(next, indegree.get(next) - 1);
+                if (indegree.get(next) == 0) {
+                    ans.add(next);
+                    queue.offer(next);
+                }
+            }
         }
     }
 }
