@@ -14,5 +14,10 @@ public class FindAllRecipes {
             }
         }
 
+        Queue<String> queue = new LinkedList<>();
+        for (String supply : supplies) {
+            queue.offer(supply);
+        }
+
     }
 }
