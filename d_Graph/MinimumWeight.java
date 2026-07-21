@@ -29,4 +29,14 @@ public class MinimumWeight {
         }
         return dist;
     }
+
+    public long minimumWeight(int n, int[][] edges, int src1, int src2, int dest) {
+        List<List<Pair>> graph = new ArrayList<>();
+        List<List<Pair>> rev = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
+            rev.add(new ArrayList<>());
+        }
+
 }
