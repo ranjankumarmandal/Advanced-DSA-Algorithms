@@ -55,4 +55,7 @@ public class MinimumWeight {
                 continue;
             ans = Math.min(ans, d1[i] + d2[i] + d3[i]);
         }
+
+        return ans == Long.MAX_VALUE ? -1 : ans;
+    }
 }
