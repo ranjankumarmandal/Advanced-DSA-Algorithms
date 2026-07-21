@@ -19,5 +19,11 @@ public class FindAllRecipes {
             queue.offer(supply);
         }
 
+        List<String> ans = new ArrayList<>();
+
+        while (!queue.isEmpty()) {
+            String cur = queue.poll();
+            if (!graph.containsKey(cur)) continue;
+        }
     }
 }
