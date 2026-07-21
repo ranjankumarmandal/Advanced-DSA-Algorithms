@@ -10,5 +10,12 @@ public class MaximumScore {
             graph[v].add(u);
         }
 
+        for (int i = 0; i < n; i++) {
+            graph[i].sort((a, b) -> scores[b] - scores[a]);
+            if (graph[i].size() > 3) {
+                graph[i] = new ArrayList<>(graph[i].subList(0, 3));
+            }
+        }
+
     }
 }
