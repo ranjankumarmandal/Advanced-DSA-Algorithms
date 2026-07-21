@@ -48,4 +48,11 @@ public class MinimumWeight {
         long[] d2 = dijkstra(graph, src2);
         long[] d3 = dijkstra(rev, dest);
 
+        long ans = Long.MAX_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            if (d1[i] == Long.MAX_VALUE || d2[i] == Long.MAX_VALUE || d3[i] == Long.MAX_VALUE)
+                continue;
+            ans = Math.min(ans, d1[i] + d2[i] + d3[i]);
+        }
 }
