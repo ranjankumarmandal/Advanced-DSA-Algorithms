@@ -39,4 +39,13 @@ public class MinimumWeight {
             rev.add(new ArrayList<>());
         }
 
+        for (int[] e : edges) {
+            graph.get(e[0]).add(new Pair(e[1], e[2]));
+            rev.get(e[1]).add(new Pair(e[0], e[2]));
+        }
+
+        long[] d1 = dijkstra(graph, src1);
+        long[] d2 = dijkstra(graph, src2);
+        long[] d3 = dijkstra(rev, dest);
+
 }
