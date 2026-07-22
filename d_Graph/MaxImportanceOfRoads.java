@@ -9,5 +9,9 @@ public class MaxImportanceOfRoads {
 
         Arrays.sort(degree);
 
+        long ans = 0;
+        for (int i = 0; i < n; i++) {
+            ans += degree[i] * (i + 1L);
+        }
     }
 }
