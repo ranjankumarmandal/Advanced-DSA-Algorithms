@@ -13,5 +13,7 @@ public class MaxImportanceOfRoads {
         for (int i = 0; i < n; i++) {
             ans += degree[i] * (i + 1L);
         }
+
+        return ans;
     }
 }
