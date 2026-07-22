@@ -17,4 +17,13 @@ public class LongestPathWithDiffAdjChars {
                 secondLongest = len;
             }
         }
+
+        ans = Math.max(ans, longest + secondLongest + 1);
+        return longest + 1;
+    }
+
+    public int longestPath(int[] parent, String s) {
+        int n = parent.length;
+        List<List<Integer>> tree = new ArrayList<>();
+    }
 }
