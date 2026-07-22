@@ -17,5 +17,25 @@ public class MinimumObstacles {
             int[] cur = dq.pollFirst();
             int r = cur[0], c = cur[1];
 
+            for (int k = 0; k < 4; k++) {
+                int nr = r + dr[k];
+                int nc = c + dc[k];
+
+                if (nr < 0 || nr >= m || nc < 0 || nc >= n) continue;
+
+                int cost = dist[r][c] + grid[nr][nc];
+
+                if (cost < dist[nr][nc]) {
+                    dist[nr][nc] = cost;
+                    if (grid[nr][nc] == 0) {
+                        dq.offerFirst(new int[]{nr, nc});
+                    } else {
+                        dq.offerLast(new int[]{nr, nc});
+                    }
+                }
+            }
+        }
+
+        return dist[m - 1][n - 1];
     }
 }
