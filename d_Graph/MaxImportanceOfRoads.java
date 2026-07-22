@@ -7,5 +7,7 @@ public class MaxImportanceOfRoads {
             degree[road[1]]++;
         }
 
+        Arrays.sort(degree);
+
     }
 }
