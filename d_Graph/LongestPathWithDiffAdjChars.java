@@ -5,4 +5,10 @@ public class LongestPathWithDiffAdjChars {
         int longest = 0;
         int secondLongest = 0;
 
+        for (int child : tree.get(node)) {
+            int len = dfs(child, tree, s);
+
+            if (s.charAt(child) == s.charAt(node)) continue;
+
+        }
 }
