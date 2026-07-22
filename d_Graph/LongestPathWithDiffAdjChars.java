@@ -10,5 +10,11 @@ public class LongestPathWithDiffAdjChars {
 
             if (s.charAt(child) == s.charAt(node)) continue;
 
+            if (len > longest) {
+                secondLongest = longest;
+                longest = len;
+            } else if (len > secondLongest) {
+                secondLongest = len;
+            }
         }
 }
