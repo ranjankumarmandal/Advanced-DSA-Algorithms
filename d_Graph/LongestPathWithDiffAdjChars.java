@@ -25,5 +25,17 @@ public class LongestPathWithDiffAdjChars {
     public int longestPath(int[] parent, String s) {
         int n = parent.length;
         List<List<Integer>> tree = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            tree.add(new ArrayList<>());
+        }
+
+        for (int i = 1; i < n; i++) {
+            tree.get(parent[i]).add(i);
+        }
+
+        dfs(0, tree, s);
+
+        return ans;
     }
 }
