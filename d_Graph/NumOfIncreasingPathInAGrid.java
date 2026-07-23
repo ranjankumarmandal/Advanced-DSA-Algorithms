@@ -32,5 +32,13 @@ public class NumOfIncreasingPathInAGrid {
         dp = new int[m][n];
         for (int[] row : dp) Arrays.fill(row, -1);
 
+        long ans = 0;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                ans += dfs(i, j);
+                ans %= MOD;
+            }
+        }
     }
 }
