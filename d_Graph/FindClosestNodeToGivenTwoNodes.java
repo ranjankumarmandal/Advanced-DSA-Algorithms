@@ -20,5 +20,16 @@ public class FindClosestNodeToGivenTwoNodes {
             cur = edges[cur];
         }
 
+        int ans = -1;
+        int best = Integer.MAX_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            if (d1[i] == -1 || d2[i] == -1) continue;
+            int mx = Math.max(d1[i], d2[i]);
+            if (mx < best) {
+                best = mx;
+                ans = i;
+            }
+        }
     }
 }
