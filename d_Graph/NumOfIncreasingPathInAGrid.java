@@ -40,5 +40,7 @@ public class NumOfIncreasingPathInAGrid {
                 ans %= MOD;
             }
         }
+
+        return (int) ans;
     }
 }
