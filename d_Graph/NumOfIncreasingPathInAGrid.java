@@ -6,4 +6,18 @@ public class NumOfIncreasingPathInAGrid {
     private final int[] dr = {-1, 1, 0, 0};
     private final int[] dc = {0, 0, -1, 1};
 
+    private int dfs(int r, int c) {
+        if (dp[r][c] != -1) return dp[r][c];
+
+        long ans = 1;
+
+        for (int k = 0; k < 4; k++) {
+            int nr = r + dr[k];
+            int nc = c + dc[k];
+
+            if (nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] > grid[r][c]) {
+                ans += dfs(nr, nc);
+                ans %= MOD;
+            }
+        }
 }
