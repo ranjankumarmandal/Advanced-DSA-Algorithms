@@ -5,5 +5,10 @@ public class CountPairs {
             graph.add(new ArrayList<>());
         }
 
+        for (int[] e : edges) {
+            graph.get(e[0]).add(e[1]);
+            graph.get(e[1]).add(e[0]);
+        }
+
     }
 }
