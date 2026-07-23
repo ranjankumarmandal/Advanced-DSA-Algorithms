@@ -24,4 +24,9 @@ public class NumOfIncreasingPathInAGrid {
         return dp[r][c] = (int) ans;
     }
 
+    public int countPaths(int[][] grid) {
+        this.grid = grid;
+        m = grid.length;
+        n = grid[0].length;
+    }
 }
