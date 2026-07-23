@@ -26,6 +26,8 @@ public class CountPairs {
     }
 
     private long dfs(int node, List<List<Integer>> graph, boolean[] vis) {
+        vis[node] = true;
+        long cnt = 1;
 
     }
 }
