@@ -29,5 +29,12 @@ public class CountPairs {
         vis[node] = true;
         long cnt = 1;
 
+        for (int nei : graph.get(node)) {
+            if (!vis[nei]) {
+                cnt += dfs(nei, graph, vis);
+            }
+        }
+
+        return cnt;
     }
 }
