@@ -3,5 +3,8 @@ public class FindClosestNodeToGivenTwoNodes {
         int n = edges.length;
         int[] d1 = new int[n];
         int[] d2 = new int[n];
+        Arrays.fill(d1, -1);
+        Arrays.fill(d2, -1);
+
     }
 }
