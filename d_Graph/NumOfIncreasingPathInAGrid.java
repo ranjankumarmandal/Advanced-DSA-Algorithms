@@ -28,5 +28,9 @@ public class NumOfIncreasingPathInAGrid {
         this.grid = grid;
         m = grid.length;
         n = grid[0].length;
+
+        dp = new int[m][n];
+        for (int[] row : dp) Arrays.fill(row, -1);
+
     }
 }
