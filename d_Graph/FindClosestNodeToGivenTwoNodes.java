@@ -31,5 +31,7 @@ public class FindClosestNodeToGivenTwoNodes {
                 ans = i;
             }
         }
+
+        return ans;
     }
 }
