@@ -13,5 +13,12 @@ public class FindClosestNodeToGivenTwoNodes {
             cur = edges[cur];
         }
 
+        cur = node2;
+        dist = 0;
+        while (cur != -1 && d2[cur] == -1) {
+            d2[cur] = dist++;
+            cur = edges[cur];
+        }
+
     }
 }
