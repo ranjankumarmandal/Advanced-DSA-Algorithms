@@ -15,6 +15,16 @@ public class LongestCycleInAGraph {
                 time[curr] = t++;
                 curr = edges[curr];
             }
+
+            if (curr != -1 && state[curr] == 1) {
+                ans = Math.max(ans, t - time[curr]);
+            }
+
+            curr = i;
+            while (curr != -1 && state[curr] == 1) {
+                state[curr] = 2;
+                curr = edges[curr];
+            }
         }
     }
 }
