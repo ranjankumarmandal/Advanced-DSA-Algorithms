@@ -13,5 +13,7 @@ public class NodeWithHighestEdgeScore {
                 ans = i;
             }
         }
+
+        return ans;
     }
 }
