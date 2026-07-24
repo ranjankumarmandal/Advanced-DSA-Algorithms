@@ -8,5 +8,10 @@ public class NodeWithHighestEdgeScore {
 
         int ans = 0;
 
+        for (int i = 1; i < edges.length; i++) {
+            if (score[i] > score[ans]) {
+                ans = i;
+            }
+        }
     }
 }
