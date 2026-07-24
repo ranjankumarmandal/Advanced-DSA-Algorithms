@@ -6,5 +6,7 @@ public class NodeWithHighestEdgeScore {
             score[edges[i]] += i;
         }
 
+        int ans = 0;
+
     }
 }
