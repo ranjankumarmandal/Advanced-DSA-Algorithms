@@ -26,5 +26,7 @@ public class LongestCycleInAGraph {
                 curr = edges[curr];
             }
         }
+
+        return ans;
     }
 }
