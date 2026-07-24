@@ -24,5 +24,18 @@ public class ReachableNodesWithRestrictions {
 
         int count = 0;
 
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            count++;
+
+            for (int next : graph[node]) {
+                if (!visited[next] && !blocked.contains(next)) {
+                    visited[next] = true;
+                    queue.offer(next);
+                }
+            }
+        }
+
+        return count;
     }
 }
