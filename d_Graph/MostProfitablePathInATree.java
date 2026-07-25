@@ -34,5 +34,39 @@ public class MostProfitablePathInATree {
             cur = parent[cur];
         }
 
+        dfsAlice(0, -1, 0, 0);
+
+        return ans;
+    }
+
+    void dfsParent(int node, int par, int d) {
+        parent[node] = par;
+        depth[node] = d;
+        for (int nei : graph[node]) {
+            if (nei != par) {
+                dfsParent(nei, node, d + 1);
+            }
+        }
+    }
+
+    void dfsAlice(int node, int par, int time, int profit) {
+        if (time < bobTime[node]) {
+            profit += amount[node];
+        } else if (time == bobTime[node]) {
+            profit += amount[node] / 2;
+        }
+
+        boolean leaf = true;
+
+        for (int nei : graph[node]) {
+            if (nei != par) {
+                leaf = false;
+                dfsAlice(nei, node, time + 1, profit);
+            }
+        }
+
+        if (leaf) {
+            ans = Math.max(ans, profit);
+        }
     }
 }
