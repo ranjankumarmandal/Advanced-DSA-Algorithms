@@ -18,5 +18,11 @@ public class MostProfitablePathInATree {
             graph[e[1]].add(e[0]);
         }
 
+        parent = new int[n];
+        depth = new int[n];
+        Arrays.fill(parent, -1);
+
+        dfsParent(0, -1, 0);
+
     }
 }
