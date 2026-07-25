@@ -14,5 +14,11 @@ public class BuildAMatrixWithConditions {
             colPos[colOrder[i]] = i;
         }
 
+        int[][] ans = new int[k][k];
+        for (int i = 1; i <= k; i++) {
+            ans[rowPos[i]][colPos[i]] = i;
+        }
+
+        return ans;
     }
 }
