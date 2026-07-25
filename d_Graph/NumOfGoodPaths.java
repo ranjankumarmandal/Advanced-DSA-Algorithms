@@ -35,5 +35,36 @@ public class NumOfGoodPaths {
                 }
             }
 
+            HashMap<Integer, Integer> cnt = new HashMap<>();
+            for (int node : map.get(val)) {
+                int root = find(node);
+                cnt.put(root, cnt.getOrDefault(root, 0) + 1);
+            }
+
+            for (int c : cnt.values()) {
+                ans += c * (c + 1) / 2;
+            }
+        }
+
+        return ans;
+    }
+
+    int find(int x) {
+        if (parent[x] != x) parent[x] = find(parent[x]);
+        return parent[x];
+    }
+
+    void union(int a, int b) {
+        int pa = find(a);
+        int pb = find(b);
+        if (pa == pb) return;
+
+        if (size[pa] < size[pb]) {
+            parent[pa] = pb;
+            size[pb] += size[pa];
+        } else {
+            parent[pb] = pa;
+            size[pa] += size[pb];
+        }
     }
 }
