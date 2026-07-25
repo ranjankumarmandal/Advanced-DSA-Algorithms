@@ -40,5 +40,16 @@ public class BuildAMatrixWithConditions {
         int[] order = new int[k];
         int idx = 0;
 
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            order[idx++] = u;
+            for (int v : graph[u]) {
+                if (--indegree[v] == 0) {
+                    q.offer(v);
+                }
+            }
+        }
+
+        return idx == k ? order : null;
     }
 }
