@@ -5,4 +5,10 @@ public class MostProfitablePathInATree {
     int[] bobTime;
     int[] amount;
     int ans = Integer.MIN_VALUE;
+
+    public int mostProfitablePath(int[][] edges, int bob, int[] amount) {
+        int n = amount.length;
+        this.amount = amount;
+
+    }
 }
