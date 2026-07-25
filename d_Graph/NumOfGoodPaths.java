@@ -17,5 +17,11 @@ public class NumOfGoodPaths {
             map.computeIfAbsent(vals[i], k -> new ArrayList<>()).add(i);
         }
 
+        parent = new int[n];
+        size = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            size[i] = 1;
+        }
     }
 }
