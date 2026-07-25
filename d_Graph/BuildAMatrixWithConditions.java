@@ -37,5 +37,8 @@ public class BuildAMatrixWithConditions {
             if (indegree[i] == 0) q.offer(i);
         }
 
+        int[] order = new int[k];
+        int idx = 0;
+
     }
 }
