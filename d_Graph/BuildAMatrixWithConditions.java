@@ -25,5 +25,17 @@ public class BuildAMatrixWithConditions {
     private int[] topoSort(int k, int[][] edges) {
         List<Integer>[] graph = new ArrayList[k + 1];
         for (int i = 1; i <= k; i++) graph[i] = new ArrayList<>();
+
+        int[] indegree = new int[k + 1];
+        for (int[] e : edges) {
+            graph[e[0]].add(e[1]);
+            indegree[e[1]]++;
+        }
+
+        Queue<Integer> q = new ArrayDeque<>();
+        for (int i = 1; i <= k; i++) {
+            if (indegree[i] == 0) q.offer(i);
+        }
+
     }
 }
