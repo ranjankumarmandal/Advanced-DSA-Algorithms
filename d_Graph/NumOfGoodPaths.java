@@ -23,5 +23,17 @@ public class NumOfGoodPaths {
             parent[i] = i;
             size[i] = 1;
         }
+
+        int ans = 0;
+
+        for (int val : map.keySet()) {
+            for (int node : map.get(val)) {
+                for (int[] nei : graph[node]) {
+                    if (nei[1] <= val) {
+                        union(node, nei[0]);
+                    }
+                }
+            }
+
     }
 }
