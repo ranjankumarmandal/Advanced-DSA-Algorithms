@@ -24,5 +24,15 @@ public class MostProfitablePathInATree {
 
         dfsParent(0, -1, 0);
 
+        bobTime = new int[n];
+        Arrays.fill(bobTime, Integer.MAX_VALUE);
+
+        int t = 0;
+        int cur = bob;
+        while (cur != -1) {
+            bobTime[cur] = t++;
+            cur = parent[cur];
+        }
+
     }
 }
