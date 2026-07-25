@@ -6,5 +6,13 @@ public class BuildAMatrixWithConditions {
         int[] colOrder = topoSort(k, colConditions);
         if (colOrder == null) return new int[0][0];
 
+        int[] rowPos = new int[k + 1];
+        int[] colPos = new int[k + 1];
+
+        for (int i = 0; i < k; i++) {
+            rowPos[rowOrder[i]] = i;
+            colPos[colOrder[i]] = i;
+        }
+
     }
 }
