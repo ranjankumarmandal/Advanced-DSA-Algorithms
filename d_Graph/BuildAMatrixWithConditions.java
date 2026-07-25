@@ -21,4 +21,9 @@ public class BuildAMatrixWithConditions {
 
         return ans;
     }
+
+    private int[] topoSort(int k, int[][] edges) {
+        List<Integer>[] graph = new ArrayList[k + 1];
+        for (int i = 1; i <= k; i++) graph[i] = new ArrayList<>();
+    }
 }
