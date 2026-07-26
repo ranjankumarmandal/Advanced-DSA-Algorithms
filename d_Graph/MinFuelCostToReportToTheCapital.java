@@ -13,4 +13,8 @@ public class MinFuelCostToReportToTheCapital {
 
         return ans;
     }
+
+    private int dfs(int node, int parent, List<Integer>[] graph, int seats) {
+
+    }
 }
