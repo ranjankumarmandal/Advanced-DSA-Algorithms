@@ -12,5 +12,17 @@ public class MinScoreOfAPathBetweenTwoCities {
         q.offer(1);
         vis[1] = true;
 
+        int ans = Integer.MAX_VALUE;
+
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int[] e : graph[u]) {
+                ans = Math.min(ans, e[1]);
+                if (!vis[e[0]]) {
+                    vis[e[0]] = true;
+                    q.offer(e[0]);
+                }
+            }
+        }
     }
 }
