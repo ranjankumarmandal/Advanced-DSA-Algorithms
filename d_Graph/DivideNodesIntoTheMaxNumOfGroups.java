@@ -7,5 +7,9 @@ public class DivideNodesIntoTheMaxNumOfGroups {
             graph[e[1]].add(e[0]);
         }
 
+        int[] color = new int[n + 1];
+        int[] dist = new int[n + 1];
+        int ans = 0;
+
     }
 }
