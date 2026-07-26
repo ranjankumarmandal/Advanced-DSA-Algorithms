@@ -54,5 +54,7 @@ public class DivideNodesIntoTheMaxNumOfGroups {
             }
             ans += best;
         }
+
+        return ans;
     }
 }
