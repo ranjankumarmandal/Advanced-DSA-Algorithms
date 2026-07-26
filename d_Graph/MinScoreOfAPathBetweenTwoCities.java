@@ -7,5 +7,10 @@ public class MinScoreOfAPathBetweenTwoCities {
             graph[road[1]].add(new int[]{road[0], road[2]});
         }
 
+        boolean[] vis = new boolean[n + 1];
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(1);
+        vis[1] = true;
+
     }
 }
