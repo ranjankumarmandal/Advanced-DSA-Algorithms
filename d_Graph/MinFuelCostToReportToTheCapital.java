@@ -15,6 +15,11 @@ public class MinFuelCostToReportToTheCapital {
     }
 
     private int dfs(int node, int parent, List<Integer>[] graph, int seats) {
-
+        int people = 1;
+        for (int next : graph[node]) {
+            if (next != parent) {
+                people += dfs(next, node, graph, seats);
+            }
+        }
     }
 }
