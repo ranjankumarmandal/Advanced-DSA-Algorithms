@@ -21,5 +21,10 @@ public class MinFuelCostToReportToTheCapital {
                 people += dfs(next, node, graph, seats);
             }
         }
+        if (node != 0) {
+            ans += (people + seats - 1) / seats;
+        }
+
+        return people;
     }
 }
