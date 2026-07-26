@@ -24,5 +24,7 @@ public class MinScoreOfAPathBetweenTwoCities {
                 }
             }
         }
+
+        return ans;
     }
 }
