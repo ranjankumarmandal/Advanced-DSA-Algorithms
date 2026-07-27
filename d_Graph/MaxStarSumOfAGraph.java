@@ -35,5 +35,7 @@ public class MaxStarSumOfAGraph {
 
             ans = Math.max(ans, sum);
         }
+
+        return ans;
     }
 }
