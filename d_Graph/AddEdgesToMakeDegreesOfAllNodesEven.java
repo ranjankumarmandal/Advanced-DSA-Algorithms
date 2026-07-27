@@ -6,5 +6,16 @@ public class AddEdgesToMakeDegreesOfAllNodesEven {
             graph[i] = new ArrayList<>();
         }
 
+        Set<String> set = new HashSet<>();
+
+        for (List<Integer> e : edges) {
+            int u = e.get(0);
+            int v = e.get(1);
+            graph[u].add(v);
+            graph[v].add(u);
+            set.add(u + "#" + v);
+            set.add(v + "#" + u);
+        }
+
     }
 }
