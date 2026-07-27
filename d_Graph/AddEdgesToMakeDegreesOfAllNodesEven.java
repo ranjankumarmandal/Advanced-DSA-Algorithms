@@ -65,4 +65,8 @@ public class AddEdgesToMakeDegreesOfAllNodesEven {
 
         return false;
     }
+
+    private boolean check(int a, int b, int c, int d, Set<String> set) {
+        return !set.contains(a + "#" + b) && !set.contains(c + "#" + d);
+    }
 }
