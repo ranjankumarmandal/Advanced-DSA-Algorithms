@@ -17,5 +17,17 @@ public class AddEdgesToMakeDegreesOfAllNodesEven {
             set.add(v + "#" + u);
         }
 
+        List<Integer> odd = new ArrayList<>();
+
+        for (int i = 1; i <= n; i++) {
+            if (graph[i].size() % 2 == 1) {
+                odd.add(i);
+            }
+        }
+
+        if (odd.size() == 0) {
+            return true;
+        }
+
     }
 }
