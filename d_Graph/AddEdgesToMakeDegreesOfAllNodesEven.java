@@ -29,5 +29,27 @@ public class AddEdgesToMakeDegreesOfAllNodesEven {
             return true;
         }
 
+        if (odd.size() != 2 && odd.size() != 4) {
+            return false;
+        }
+
+        if (odd.size() == 2) {
+            int a = odd.get(0);
+            int b = odd.get(1);
+
+            if (!set.contains(a + "#" + b)) {
+                return true;
+            }
+
+            for (int i = 1; i <= n; i++) {
+                if (i != a && i != b &&
+                        !set.contains(a + "#" + i) &&
+                        !set.contains(b + "#" + i)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
