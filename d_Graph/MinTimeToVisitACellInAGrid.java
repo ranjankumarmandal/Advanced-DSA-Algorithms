@@ -18,5 +18,11 @@ public class MinTimeToVisitACellInAGrid {
             Arrays.fill(row, Integer.MAX_VALUE);
         }
 
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2] - b[2]);
+        pq.offer(new int[]{0, 0, 0});
+        dist[0][0] = 0;
+
+        int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
     }
 }
