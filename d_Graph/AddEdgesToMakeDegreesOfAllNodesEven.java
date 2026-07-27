@@ -1,3 +1,5 @@
 public class AddEdgesToMakeDegreesOfAllNodesEven {
+    public boolean isPossible(int n, List<List<Integer>> edges) {
 
+    }
 }
