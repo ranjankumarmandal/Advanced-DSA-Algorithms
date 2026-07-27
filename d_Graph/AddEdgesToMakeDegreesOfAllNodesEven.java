@@ -51,5 +51,18 @@ public class AddEdgesToMakeDegreesOfAllNodesEven {
 
             return false;
         }
+
+        int a = odd.get(0);
+        int b = odd.get(1);
+        int c = odd.get(2);
+        int d = odd.get(3);
+
+        if (check(a, b, c, d, set) ||
+                check(a, c, b, d, set) ||
+                check(a, d, b, c, set)) {
+            return true;
+        }
+
+        return false;
     }
 }
