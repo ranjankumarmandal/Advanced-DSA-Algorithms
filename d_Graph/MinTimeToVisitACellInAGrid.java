@@ -9,5 +9,14 @@ public class MinTimeToVisitACellInAGrid {
             return 0;
         }
 
+        if ((m > 1 && grid[1][0] > 1) && (n > 1 && grid[0][1] > 1)) {
+            return -1;
+        }
+
+        int[][] dist = new int[m][n];
+        for (int[] row : dist) {
+            Arrays.fill(row, Integer.MAX_VALUE);
+        }
+
     }
 }
