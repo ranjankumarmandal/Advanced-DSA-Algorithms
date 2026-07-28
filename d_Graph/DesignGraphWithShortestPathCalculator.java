@@ -11,4 +11,8 @@ public class DesignGraphWithShortestPathCalculator {
         for (int i = 0; i < n; i++) graph[i] = new ArrayList<>();
         for (int[] e : edges) graph[e[0]].add(new int[]{e[1], e[2]});
     }
+
+    public void addEdge(int[] edge) {
+        graph[edge[0]].add(new int[]{edge[1], edge[2]});
+    }
 }
