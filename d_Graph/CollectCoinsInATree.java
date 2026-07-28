@@ -17,5 +17,26 @@ public class CollectCoinsInATree {
             deg[v]++;
         }
 
+        Queue<Integer> q = new ArrayDeque<>();
+
+        for (int i = 0; i < n; i++) {
+            if (deg[i] == 1 && coins[i] == 0) q.offer(i);
+        }
+
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            deg[u]--;
+            for (int v : g[u]) {
+                if (deg[v] > 0) {
+                    deg[v]--;
+                    if (deg[v] == 1 && coins[v] == 0) q.offer(v);
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (deg[i] == 1) q.offer(i);
+        }
+
     }
 }
