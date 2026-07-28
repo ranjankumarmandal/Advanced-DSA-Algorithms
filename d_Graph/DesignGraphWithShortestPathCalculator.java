@@ -22,5 +22,21 @@ public class DesignGraphWithShortestPathCalculator {
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
         dist[node1] = 0;
         pq.offer(new int[]{node1, 0});
+
+        while (!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int u = cur[0], d = cur[1];
+            if (d != dist[u]) continue;
+            if (u == node2) return d;
+            for (int[] e : graph[u]) {
+                int v = e[0], w = e[1];
+                if (dist[v] > d + w) {
+                    dist[v] = d + w;
+                    pq.offer(new int[]{v, dist[v]});
+                }
+            }
+        }
+
+        return -1;
     }
 }
