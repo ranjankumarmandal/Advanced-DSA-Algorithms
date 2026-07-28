@@ -32,5 +32,7 @@ public class ShortestCycleInAGraph {
                 }
             }
         }
+
+        return ans == Integer.MAX_VALUE ? -1 : ans;
     }
 }
