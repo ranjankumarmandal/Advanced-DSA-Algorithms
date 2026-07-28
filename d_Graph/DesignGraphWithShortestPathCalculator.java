@@ -15,4 +15,12 @@ public class DesignGraphWithShortestPathCalculator {
     public void addEdge(int[] edge) {
         graph[edge[0]].add(new int[]{edge[1], edge[2]});
     }
+
+    public int shortestPath(int node1, int node2) {
+        int[] dist = new int[n];
+        Arrays.fill(dist, INF);
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        dist[node1] = 0;
+        pq.offer(new int[]{node1, 0});
+    }
 }
