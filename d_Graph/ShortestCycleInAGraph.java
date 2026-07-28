@@ -7,5 +7,18 @@ public class ShortestCycleInAGraph {
             graph[e[1]].add(e[0]);
         }
 
+        int ans = Integer.MAX_VALUE;
+
+        for (int s = 0; s < n; s++) {
+            int[] dist = new int[n];
+            int[] parent = new int[n];
+            Arrays.fill(dist, -1);
+            Arrays.fill(parent, -1);
+
+            Queue<Integer> q = new ArrayDeque<>();
+            q.offer(s);
+            dist[s] = 0;
+
+        }
     }
 }
