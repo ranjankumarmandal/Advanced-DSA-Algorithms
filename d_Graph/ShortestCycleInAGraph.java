@@ -19,6 +19,18 @@ public class ShortestCycleInAGraph {
             q.offer(s);
             dist[s] = 0;
 
+            while (!q.isEmpty()) {
+                int u = q.poll();
+                for (int v : graph[u]) {
+                    if (dist[v] == -1) {
+                        dist[v] = dist[u] + 1;
+                        parent[v] = u;
+                        q.offer(v);
+                    } else if (parent[u] != v) {
+                        ans = Math.min(ans, dist[u] + dist[v] + 1);
+                    }
+                }
+            }
         }
     }
 }
