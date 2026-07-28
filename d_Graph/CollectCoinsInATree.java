@@ -52,5 +52,11 @@ public class CollectCoinsInATree {
             }
         }
 
+        int ans = 0;
+        for (int[] e : edges) {
+            if (time[e[0]] >= 2 && time[e[1]] >= 2) ans += 2;
+        }
+
+        return ans;
     }
 }
