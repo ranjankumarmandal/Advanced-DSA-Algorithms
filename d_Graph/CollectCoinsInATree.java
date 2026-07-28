@@ -38,5 +38,19 @@ public class CollectCoinsInATree {
             if (deg[i] == 1) q.offer(i);
         }
 
+        int[] time = new int[n];
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            for (int v : g[u]) {
+                if (deg[v] > 1) {
+                    deg[v]--;
+                    if (deg[v] == 1) {
+                        time[v] = time[u] + 1;
+                        q.offer(v);
+                    }
+                }
+            }
+        }
+
     }
 }
