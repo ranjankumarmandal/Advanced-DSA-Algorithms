@@ -13,5 +13,13 @@ public class CountCompleteComponents {
         vis = new boolean[n];
         int ans = 0;
 
+        for (int i = 0; i < n; i++) {
+            if (!vis[i]) {
+                int[] res = dfs(i);
+                int nodes = res[0];
+                int degreeSum = res[1];
+                if (degreeSum == nodes * (nodes - 1)) ans++;
+            }
+        }
     }
 }
