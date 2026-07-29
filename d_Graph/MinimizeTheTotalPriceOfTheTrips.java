@@ -3,4 +3,8 @@ public class MinimizeTheTotalPriceOfTheTrips {
     int[] cnt;
     int[] price;
     long[][] dp;
+
+    public int minimumTotalPrice(int n, int[][] edges, int[] price, int[][] trips) {
+
+    }
 }
