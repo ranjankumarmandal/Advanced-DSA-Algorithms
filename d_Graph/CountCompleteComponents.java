@@ -21,5 +21,23 @@ public class CountCompleteComponents {
                 if (degreeSum == nodes * (nodes - 1)) ans++;
             }
         }
+
+        return ans;
+    }
+
+    int[] dfs(int u) {
+        vis[u] = true;
+        int nodes = 1;
+        int degreeSum = g[u].size();
+
+        for (int v : g[u]) {
+            if (!vis[v]) {
+                int[] t = dfs(v);
+                nodes += t[0];
+                degreeSum += t[1];
+            }
+        }
+
+        return new int[]{nodes, degreeSum};
     }
 }
