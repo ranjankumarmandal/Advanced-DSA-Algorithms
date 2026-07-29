@@ -33,5 +33,7 @@ public class MinCostOfAPathWithSpecialRoads {
                 }
             }
         }
+
+        return (int) ans;
     }
 }
