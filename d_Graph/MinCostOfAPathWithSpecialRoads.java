@@ -1,3 +1,5 @@
 public class MinCostOfAPathWithSpecialRoads {
+    public int minimumCost(int[] start, int[] target, int[][] specialRoads) {
 
+    }
 }
