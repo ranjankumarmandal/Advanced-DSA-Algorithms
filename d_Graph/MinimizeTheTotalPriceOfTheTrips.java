@@ -12,5 +12,14 @@ public class MinimizeTheTotalPriceOfTheTrips {
             g[e[0]].add(e[1]);
             g[e[1]].add(e[0]);
         }
+        cnt = new int[n];
+        for (int[] t : trips) {
+            dfsCount(t[0], -1, t[1]);
+        }
+        dp = new long[n][2];
+        dfsDP(0, -1);
+        return (int) Math.min(dp[0][0], dp[0][1]);
+    }
+
     }
 }
