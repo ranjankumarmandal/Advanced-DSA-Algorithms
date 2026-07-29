@@ -21,5 +21,31 @@ public class MinimizeTheTotalPriceOfTheTrips {
         return (int) Math.min(dp[0][0], dp[0][1]);
     }
 
+    boolean dfsCount(int u, int p, int target) {
+        if (u == target) {
+            cnt[u]++;
+            return true;
+        }
+        for (int v : g[u]) {
+            if (v == p) continue;
+            if (dfsCount(v, u, target)) {
+                cnt[u]++;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void dfsDP(int u, int p) {
+        long notHalf = (long) cnt[u] * price[u];
+        long half = (long) cnt[u] * (price[u] / 2);
+        for (int v : g[u]) {
+            if (v == p) continue;
+            dfsDP(v, u);
+            notHalf += Math.min(dp[v][0], dp[v][1]);
+            half += dp[v][0];
+        }
+        dp[u][0] = notHalf;
+        dp[u][1] = half;
     }
 }
