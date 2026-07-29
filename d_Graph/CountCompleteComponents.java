@@ -10,5 +10,8 @@ public class CountCompleteComponents {
             g[e[1]].add(e[0]);
         }
 
+        vis = new boolean[n];
+        int ans = 0;
+
     }
 }
