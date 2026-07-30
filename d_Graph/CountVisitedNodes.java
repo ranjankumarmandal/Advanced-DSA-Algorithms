@@ -7,5 +7,19 @@ public class CountVisitedNodes {
 
         for (int v : edges) indeg[v]++;
 
+        Queue<Integer> q = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            if (indeg[i] == 0) q.offer(i);
+        }
+
+        boolean[] removed = new boolean[n];
+
+        while (!q.isEmpty()) {
+            int u = q.poll();
+            removed[u] = true;
+            int v = edges.get(u);
+            if (--indeg[v] == 0) q.offer(v);
+        }
+
     }
 }
