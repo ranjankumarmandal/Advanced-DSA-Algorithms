@@ -21,5 +21,31 @@ public class CountVisitedNodes {
             if (--indeg[v] == 0) q.offer(v);
         }
 
+        int[] ans = new int[n];
+        boolean[] vis = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            if (!removed[i] && !vis[i]) {
+                int cur = i;
+                int len = 0;
+                do {
+                    vis[cur] = true;
+                    len++;
+                    cur = edges.get(cur);
+                } while (cur != i);
+
+                cur = i;
+                do {
+                    ans[cur] = len;
+                    cur = edges.get(cur);
+                } while (cur != i);
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (removed[i] && ans[i] == 0) dfs(i, edges, ans);
+        }
+
+        return ans;
     }
 }
