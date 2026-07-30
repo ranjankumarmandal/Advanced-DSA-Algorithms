@@ -29,6 +29,12 @@ public class MinEdgeReversals {
     }
 
     void dfs1(int u, int p) {
+        for (int[] e : g[u]) {
+            int v = e[0];
+            if (v == p) continue;
+            if (e[1] == 0) ans[v] = ans[u] + 1;
+            else ans[v] = ans[u] - 1;
+            dfs1(v, u);
         }
     }
 }
