@@ -48,4 +48,10 @@ public class CountVisitedNodes {
 
         return ans;
     }
+
+    int dfs(int u, List<Integer> edges, int[] ans) {
+        if (ans[u] != 0) return ans[u];
+        ans[u] = 1 + dfs(edges.get(u), edges, ans);
+        return ans[u];
+    }
 }
