@@ -31,5 +31,17 @@ public class ModifyGraphEdgeWeights {
                 ok = true;
             }
         }
+
+        if (!ok) return new int[0][];
+
+        for (int[] e : edges) {
+            if (e[2] == -1) e[2] = 2000000000;
+        }
+
+        return edges;
+    }
+
+    private long dijkstra(int n, int[][] edges, int s, int t) {
+
     }
 }
