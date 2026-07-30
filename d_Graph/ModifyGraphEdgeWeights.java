@@ -62,5 +62,20 @@ public class ModifyGraphEdgeWeights {
             long[] cur = pq.poll();
             long d = cur[0];
             int u = (int) cur[1];
+
+            if (d != dist[u]) continue;
+            if (u == t) return d;
+
+            for (int[] nxt : g[u]) {
+                int v = nxt[0];
+                long nd = d + nxt[1];
+                if (nd < dist[v]) {
+                    dist[v] = nd;
+                    pq.offer(new long[]{nd, v});
+                }
+            }
+        }
+
+        return Long.MAX_VALUE;
     }
 }
