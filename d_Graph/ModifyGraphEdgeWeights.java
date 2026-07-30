@@ -42,6 +42,25 @@ public class ModifyGraphEdgeWeights {
     }
 
     private long dijkstra(int n, int[][] edges, int s, int t) {
+        List<int[]>[] g = new ArrayList[n];
+        for (int i = 0; i < n; i++) g[i] = new ArrayList<>();
 
+        for (int[] e : edges) {
+            if (e[2] == -1) continue;
+            g[e[0]].add(new int[]{e[1], e[2]});
+            g[e[1]].add(new int[]{e[0], e[2]});
+        }
+
+        long[] dist = new long[n];
+        Arrays.fill(dist, Long.MAX_VALUE);
+        dist[s] = 0;
+
+        PriorityQueue<long[]> pq = new PriorityQueue<>(Comparator.comparingLong(a -> a[0]));
+        pq.offer(new long[]{0, s});
+
+        while (!pq.isEmpty()) {
+            long[] cur = pq.poll();
+            long d = cur[0];
+            int u = (int) cur[1];
     }
 }
