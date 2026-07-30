@@ -13,5 +13,23 @@ public class ModifyGraphEdgeWeights {
             return edges;
         }
 
+        boolean ok = false;
+
+        for (int[] e : edges) {
+            if (e[2] != -1) continue;
+
+            if (ok) {
+                e[2] = 2000000000;
+                continue;
+            }
+
+            e[2] = 1;
+            d = dijkstra(n, edges, source, destination);
+
+            if (d <= target) {
+                e[2] += target - d;
+                ok = true;
+            }
+        }
     }
 }
