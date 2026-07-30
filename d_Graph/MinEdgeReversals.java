@@ -28,5 +28,7 @@ public class MinEdgeReversals {
         return res;
     }
 
+    void dfs1(int u, int p) {
+        }
     }
 }
