@@ -20,5 +20,18 @@ public class NumberOfSets {
                     dist[v][u] = Math.min(dist[v][u], w);
                 }
             }
+
+            for (int k = 0; k < n; k++) {
+                if (((mask >> k) & 1) == 1) continue;
+                for (int i = 0; i < n; i++) {
+                    if (((mask >> i) & 1) == 1) continue;
+                    for (int j = 0; j < n; j++) {
+                        if (((mask >> j) & 1) == 1) continue;
+                        if (dist[i][k] + dist[k][j] < dist[i][j]) {
+                            dist[i][j] = dist[i][k] + dist[k][j];
+                        }
+                    }
+                }
+            }
     }
 }
