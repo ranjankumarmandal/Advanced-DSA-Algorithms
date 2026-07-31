@@ -10,5 +10,20 @@ public class MinimumCost {
             dist[i][i] = 0;
         }
 
+        for (int i = 0; i < original.length; i++) {
+            int u = original[i] - 'a';
+            int v = changed[i] - 'a';
+            dist[u][v] = Math.min(dist[u][v], cost[i]);
+        }
+
+        for (int k = 0; k < 26; k++) {
+            for (int i = 0; i < 26; i++) {
+                for (int j = 0; j < 26; j++) {
+                    if (dist[i][k] + dist[k][j] < dist[i][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                    }
+                }
+            }
+        }
     }
 }
