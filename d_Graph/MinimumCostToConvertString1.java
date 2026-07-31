@@ -25,5 +25,16 @@ public class MinimumCost {
                 }
             }
         }
+
+        long ans = 0;
+
+        for (int i = 0; i < source.length(); i++) {
+            int u = source.charAt(i) - 'a';
+            int v = target.charAt(i) - 'a';
+            if (dist[u][v] == inf) return -1;
+            ans += dist[u][v];
+        }
+
+        return ans;
     }
 }
