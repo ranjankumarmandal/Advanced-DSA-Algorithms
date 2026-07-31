@@ -45,5 +45,10 @@ public class NumberOfSets {
                     }
                 }
             }
+
+            if (ok) ans++;
+        }
+
+        return ans;
     }
 }
