@@ -6,5 +6,7 @@ public class FindChampion2 {
             indegree[e[1]]++;
         }
 
+        int ans = -1;
+
     }
 }
