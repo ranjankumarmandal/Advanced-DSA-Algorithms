@@ -33,5 +33,17 @@ public class NumberOfSets {
                     }
                 }
             }
+
+            boolean ok = true;
+            for (int i = 0; i < n && ok; i++) {
+                if (((mask >> i) & 1) == 1) continue;
+                for (int j = i + 1; j < n; j++) {
+                    if (((mask >> j) & 1) == 1) continue;
+                    if (dist[i][j] > maxDistance) {
+                        ok = false;
+                        break;
+                    }
+                }
+            }
     }
 }
