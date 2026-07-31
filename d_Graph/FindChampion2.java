@@ -14,5 +14,7 @@ public class FindChampion2 {
                 ans = i;
             }
         }
+
+        return ans;
     }
 }
