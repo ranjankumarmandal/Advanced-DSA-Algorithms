@@ -19,5 +19,15 @@ public class MinCostToConvertString2 {
             if (cur.id == -1) cur.id = id++;
         }
 
+        for (String s : changed) {
+            Node cur = root;
+            for (char c : s.toCharArray()) {
+                int x = c - 'a';
+                if (cur.next[x] == null) cur.next[x] = new Node();
+                cur = cur.next[x];
+            }
+            if (cur.id == -1) cur.id = id++;
+        }
+
     }
 }
