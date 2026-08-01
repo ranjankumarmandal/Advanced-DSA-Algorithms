@@ -80,4 +80,11 @@ public class MinCostToConvertString2 {
 
         return dp[n] == INF ? -1 : dp[n];
     }
+
+    private int getId(Node root, String s) {
+        Node cur = root;
+        for (char c : s.toCharArray()) cur = cur.next[c - 'a'];
+
+        return cur.id;
+    }
 }
