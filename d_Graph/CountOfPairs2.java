@@ -10,5 +10,7 @@ public class CountOfPairs2 {
                 ans[d - 1]++;
             }
         }
+
+        return ans;
     }
 }
