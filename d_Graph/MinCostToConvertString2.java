@@ -58,5 +58,26 @@ public class MinCostToConvertString2 {
         for (int i = 0; i <= n; i++) dp[i] = INF;
         dp[0] = 0;
 
+        for (int i = 0; i < n; i++) {
+            if (dp[i] == INF) continue;
+            if (source.charAt(i) == target.charAt(i)) {
+                dp[i + 1] = Math.min(dp[i + 1], dp[i]);
+            }
+
+            Node a = root;
+            Node b = root;
+            for (int j = i; j < n; j++) {
+                int x = source.charAt(j) - 'a';
+                int y = target.charAt(j) - 'a';
+                if (a != null) a = a.next[x];
+                if (b != null) b = b.next[y];
+                if (a == null || b == null) break;
+                if (a.id != -1 && b.id != -1 && dist[a.id][b.id] != INF) {
+                    dp[j + 1] = Math.min(dp[j + 1], dp[i] + dist[a.id][b.id]);
+                }
+            }
+        }
+
+        return dp[n] == INF ? -1 : dp[n];
     }
 }
