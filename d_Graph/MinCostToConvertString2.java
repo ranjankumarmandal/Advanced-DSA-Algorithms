@@ -8,5 +8,16 @@ public class MinCostToConvertString2 {
         int m = original.length;
         Node root = new Node();
         int id = 0;
+
+        for (String s : original) {
+            Node cur = root;
+            for (char c : s.toCharArray()) {
+                int x = c - 'a';
+                if (cur.next[x] == null) cur.next[x] = new Node();
+                cur = cur.next[x];
+            }
+            if (cur.id == -1) cur.id = id++;
+        }
+
     }
 }
