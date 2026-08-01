@@ -41,5 +41,22 @@ public class MinCostToConvertString2 {
             dist[u][v] = Math.min(dist[u][v], cost[i]);
         }
 
+        for (int k = 0; k < id; k++) {
+            for (int i = 0; i < id; i++) {
+                if (dist[i][k] == INF) continue;
+                for (int j = 0; j < id; j++) {
+                    if (dist[k][j] == INF) continue;
+                    if (dist[i][j] > dist[i][k] + dist[k][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                    }
+                }
+            }
+        }
+
+        int n = source.length();
+        long[] dp = new long[n + 1];
+        for (int i = 0; i <= n; i++) dp[i] = INF;
+        dp[0] = 0;
+
     }
 }
